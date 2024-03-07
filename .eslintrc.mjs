@@ -1,9 +1,12 @@
 module.exports = {
   extends: [
-    "@thoughtbot/eslint-config",
-    "@thoughtbot/eslint-config/typescript",
+    '@thoughtbot/eslint-config',
+    '@thoughtbot/eslint-config/typescript',
     'plugin:astro/recommended',
   ],
+  rules: {
+    'import/prefer-default-export': 'off',
+  },
   overrides: [
     {
       // Define the configuration for `.astro` file.
