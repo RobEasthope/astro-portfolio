@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "astro-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . --color && tsc --pretty --noEmit",
-    "lint:fix": "eslint . --color --fix && tsc --pretty --noEmit",
+    "lint": "eslint ./src/ --color && tsc --pretty --noEmit",
+    "lint:fix": "eslint ./src/ --color --fix && tsc --pretty --noEmit",
     "typecheck": "tsc"
   },
   "dependencies": {
