@@ -43,18 +43,23 @@ export interface BoxProps
   as: string;
 }
 
+const stylesCheck = (styles) => {
+  if(!styles) return {};
+
+  return {
+    className: cn(styles)
+  }
+}
+
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  ({ as = 'div', className, variant, size, children, ...props }, ref) => {
+  ({ as = 'div', className,  children, ...props }, ref) => {
     return (
       <Slot
-        className={cn(boxVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       >{React.createElement(
     as,
-    {
-      
-    },
+    {...stylesCheck(cn(boxVariants(), className))},
     children,
   )}</Slot>
     );
