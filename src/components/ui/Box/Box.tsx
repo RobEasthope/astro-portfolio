@@ -10,7 +10,7 @@ const boxVariants = cva(
   {
     variants: {
       blockSpacing: {
-      true: 'px-1 md:px-2 print:px-0 print:md:px-0',
+        true: 'px-1 md:px-2 print:px-0 print:md:px-0',
       },
       breakout: {
         true: 'max-w-screen relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen',
@@ -33,7 +33,9 @@ const boxVariants = cva(
         full: 'w-screen',
       },
     },
-    defaultVariants: {},
+    defaultVariants: {
+      maxWidth: null
+    },
   },
 );
 
@@ -52,14 +54,14 @@ const stylesCheck = (styles) => {
 }
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  ({ as = 'div', className,  children, ...props }, ref) => {
+  ({ as = 'div', className, blockSpacing, breakout, columns, maxWidth, children, ...props }, ref) => {
     return (
       <Slot
         ref={ref}
         {...props}
       >{React.createElement(
     as,
-    {...stylesCheck(cn(boxVariants(), className))},
+    {...stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))},
     children,
   )}</Slot>
     );
