@@ -46,11 +46,11 @@ export function GalleryImage({
           </Box>
           <Box as="figure">
             <Box as="div" className="mx-auto">
-              <SanityImage
+              {/* <SanityImage
                 src={image}
                 alt={caption}
                 aspectRatio={aspectRatio}
-              />
+              /> */}
               <Type
                 as="figcaption"
                 className="my-0.5 max-w-prose font-serif text-sm italic text-center mx-auto"
