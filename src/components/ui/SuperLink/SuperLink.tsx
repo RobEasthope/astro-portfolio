@@ -25,13 +25,13 @@ export type SuperLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
   onClick?: () => void;
 };
 
-export const SuperLink = ({
+export function SuperLink({
   link,
   className,
   children,
   onClick,
   ...rest
-}: SuperLinkProps) => {
+}: SuperLinkProps) {
   if (!link && !children) {
     return null;
   }
@@ -76,4 +76,4 @@ export const SuperLink = ({
     default:
       return null;
   }
-};
+}
