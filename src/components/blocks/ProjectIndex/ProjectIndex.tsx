@@ -1,6 +1,7 @@
 import { ProjectIndexCard } from '@/components/blocks/ProjectIndex/components/ProjectIndexCard';
 
 import { Box } from '@/components/ui/Box/Box';
+import {v4 as uuidv4} from 'uuid';
 
 // TYPES
 export type ProjectIndexProps = {
@@ -22,7 +23,7 @@ export function ProjectIndex({ projects }: ProjectIndexProps) {
         >
           {projects?.map((project, i) => (
             <ProjectIndexCard
-              key={`${project?._id || ''}-${i}`}
+              key={uuidv4()}
               project={project}
             />
           ))}
