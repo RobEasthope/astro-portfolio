@@ -15,9 +15,11 @@ export function Header() {
           <NavListing links={[{
             title: 'Work',
             href: '/work',
+            type: 'internal',
           }, {
             title: 'About',
             href: '/About',
+            type: 'internal',
           }]} />
 
           <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} />
