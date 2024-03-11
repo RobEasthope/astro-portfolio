@@ -1,28 +1,13 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import type {
-  SanityImageAsset,
-  SanityImageCrop,
-  SanityImageHotspot,
-  SanityReference,
-} from 'sanity-codegen';
-
 import { Box } from '~/components/_base/Box/Box';
 import { SanityImage } from '~/components/_base/SanityImage/SanityImage';
 import { Type } from '~/components/_base/Type/Type';
 
 // TYPES
 export type GalleryImageProps = {
-  _type: 'GalleryImage';
-  _key?: string;
-  image?: {
-    _type: 'image';
-    asset: SanityReference<SanityImageAsset>;
-    crop?: SanityImageCrop;
-    hotspot?: SanityImageHotspot;
-  };
+  image?: string;
   galleryAspectRatio?: number;
   aspectRatio: number;
-  maxWidth?: 'small' | 'text' | 'medium' | 'large' | 'full';
   caption?: string;
 };
 
@@ -31,7 +16,6 @@ export function GalleryImage({
   image,
   galleryAspectRatio,
   aspectRatio = 1,
-  maxWidth = 'full',
   caption,
 }: GalleryImageProps) {
   if (!image) {

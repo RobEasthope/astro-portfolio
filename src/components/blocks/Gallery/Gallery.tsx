@@ -6,7 +6,6 @@ import { Type } from '~/components/_base/Type/Type';
 
 // TYPES
 export type GalleryProps = {
-  _type?: 'Gallery';
   images: GalleryImageProps[];
   galleryCaption?: string;
   columns: 'null' | '1' | '2' | '3' | '4' | '5' | undefined;
