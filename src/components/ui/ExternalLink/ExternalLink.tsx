@@ -1,10 +1,11 @@
 import { cn } from "@/utils/tailwind";
+import type React from "react";
 
 // Component props
 export type ExternalLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
-  href: string | null;
+  href: string;
   className?: string;
-  children: any;
+  children: React.ReactNode;
 };
 
 export function ExternalLink({
