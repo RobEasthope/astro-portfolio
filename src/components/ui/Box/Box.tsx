@@ -1,5 +1,4 @@
 import { createElement, forwardRef } from 'react';
-import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn, stylesCheck } from '@/utils/tailwind';
@@ -49,23 +48,18 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(
   ({ as = 'div', className, blockSpacing, breakout, columns, maxWidth, children, ...props }, ref) => {
     if(!children) return null;
 
-    return (
-      <Slot
-        className={stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))}
-        ref={ref}
-        {...props}
-      >{
-        createElement(
-          as,
-          {
-            // Props go here
-          },
-          children,
-      )}
-      </Slot>
+    return createElement(
+      as,
+      {
+        className:stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className)),
+        ref,
+        ...props
+      },
+      children,
     );
   },
 );
+
 Box.displayName = 'Box';
 
 export { Box, boxVariants };
