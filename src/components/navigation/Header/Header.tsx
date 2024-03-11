@@ -1,4 +1,3 @@
-import Headroom from 'react-headroom';
 import type {
   SanityImageAsset,
   SanityImageCrop,
@@ -50,7 +49,6 @@ export function Header({
   }
 
   return (
-    <Headroom className="print:hidden">
       <Box as="header" className="bg-white px-1 md:px-2 py-0.5 sm:py-1">
         <Box
           as="nav"
@@ -70,6 +68,5 @@ export function Header({
           />
         </Box>
       </Box>
-    </Headroom>
   );
 }
