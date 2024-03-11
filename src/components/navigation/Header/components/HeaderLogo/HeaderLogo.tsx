@@ -22,8 +22,8 @@ export type HeaderLogoProps = {
   homePageSlug: AppSettingsProps['homePageSlug'];
 };
 
-export const HeaderLogo = ({ logo, homePageSlug }: HeaderLogoProps) => (
-  <Box
+export function HeaderLogo({ logo, homePageSlug }: HeaderLogoProps) {
+  return <Box
     as="div"
     className="absolute left-1/2 flex flex-1 -translate-x-1/2 items-center justify-center"
   >
@@ -42,4 +42,4 @@ export const HeaderLogo = ({ logo, homePageSlug }: HeaderLogoProps) => (
       />
     </InternalLink>
   </Box>
-);
+}
