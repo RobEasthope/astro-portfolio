@@ -4,16 +4,16 @@ import type {
   SanityImageCrop,
   SanityReference,
 } from 'sanity-codegen';
-import { Box } from '~/components/_base/Box/Box';
-import type { EmailLinkWithTitleSchemaProps } from '~/components/_base/EmailLink/EmailLink';
-import type { ExternalLinkWithTitleSchemaProps } from '~/components/_base/ExternalLink/ExternalLink';
-import type { InternalLinkWithTitleSchemaProps } from '~/components/_base/InternalLink/InternalLink';
+import { Box } from '@/components/ui/Box/Box';
+import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
+import { NavListing } from '@/components/navigation/Header/components/NavListing/NavListing';
+import type { ExternalLinkWithTitleSchemaProps } from '@/components/ui/ExternalLink/ExternalLink';
+import type { InternalLinkWithTitleSchemaProps } from '@/components/ui/InternalLink/InternalLink';
+import type { EmailLinkWithTitleSchemaProps } from '@/components/ui/EmailLink/EmailLink';
 
 import type { AppSettingsProps } from '~/components/settings/AppSettings/AppSettings';
 
-import { HeaderLogo } from '~/components/navigation/Header/components/HeaderLogo/HeaderLogo';
-import { NavListing } from '~/components/navigation/Header/components/NavListing/NavListing';
-import { SmallNavigation } from '~/components/navigation/SmallNavigation/SmallNavigation';
+import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
 
 
 // TYPES
@@ -39,12 +39,12 @@ export type HeaderProps = {
 
 
 // MARKUP
-export const Header = ({
+export function Header({
   logo,
   primaryNavigation,
   secondaryNavigation,
   appSettings,
-}: HeaderProps) => {
+}: HeaderProps) {
   if (!logo && !primaryNavigation) {
     return null;
   }
@@ -72,4 +72,4 @@ export const Header = ({
       </Box>
     </Headroom>
   );
-};
+}
