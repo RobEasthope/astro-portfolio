@@ -16,7 +16,7 @@ export type FooterProps = {
 };
 
 // MARKUP
-export const Footer = ({ footerNavigation, copyrightText }: FooterProps) => {
+export function Footer({ footerNavigation, copyrightText }: FooterProps) {
   if (!footerNavigation && !copyrightText) {
     return null;
   }
@@ -53,4 +53,4 @@ export const Footer = ({ footerNavigation, copyrightText }: FooterProps) => {
       </Box>
     </Box>
   );
-};
+}
