@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createElement, forwardRef } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
@@ -45,25 +45,19 @@ export interface BoxProps
   as: string;
 }
 
-const stylesCheck = (styles) => {
-  if(!styles) return {};
-
-  return {
-    className: cn(styles)
-  }
-}
-
-const Box = React.forwardRef<HTMLDivElement, BoxProps>(
+const Box = forwardRef<HTMLDivElement, BoxProps>(
   ({ as = 'div', className, blockSpacing, breakout, columns, maxWidth, children, ...props }, ref) => {
     return (
       <Slot
         ref={ref}
         {...props}
-      >{React.createElement(
-    as,
-    {...stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))},
-    children,
-  )}</Slot>
+      >{
+        createElement(
+          as,
+          {...stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))},
+          children,
+      )}
+      </Slot>
     );
   },
 );
