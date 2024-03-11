@@ -1,7 +1,7 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import { Box } from '~/components/_base/Box/Box';
-import { SanityImage } from '~/components/_base/SanityImage/SanityImage';
-import { Type } from '~/components/_base/Type/Type';
+import { Box } from '@/components/ui/Box/Box';
+// import { SanityImage } from '@/components/ui/SanityImage/SanityImage';
+import { Type } from '@/components/ui/Type/Type';
 
 // TYPES
 export type GalleryImageProps = {
