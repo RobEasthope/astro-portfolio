@@ -10,21 +10,16 @@ export type FooterProps = {
 
 // MARKUP
 export function Footer({ copyrightText }: FooterProps) {
-  if (!copyrightText) {
-    return null;
-  }
   const timeStamp = new Date();
 
   return (
     <Box as="footer" className="print:hidden">
       <Box as="div" className="mx-auto flex flex-col gap-1 px-1 py-1">
-        
-
         <Type
           as="p"
           className="text-center text-sm hover:text-ink hover:cursor-default"
         >
-          {copyrightText} {copyrightText && romanize(timeStamp.getFullYear())}
+          © {romanize(timeStamp.getFullYear())}
         </Type>
       </Box>
     </Box>
