@@ -11,11 +11,11 @@ export type VimeoVideoProps = {
 };
 
 // MARKUP
-export const VimeoVideo = ({
+export function VimeoVideo({
   url,
   caption,
   maxWidth = 'medium',
-}: VimeoVideoProps) => {
+}: VimeoVideoProps) {
   if (!url) {
     return null;
   }
@@ -32,6 +32,6 @@ export const VimeoVideo = ({
       </Box>
     </Box>
   );
-};
+}
 
 export default VimeoVideo;
