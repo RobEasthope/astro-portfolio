@@ -47,6 +47,8 @@ export interface BoxProps
 
 const Box = forwardRef<HTMLDivElement, BoxProps>(
   ({ as = 'div', className, blockSpacing, breakout, columns, maxWidth, children, ...props }, ref) => {
+    if(!children) return null;
+    
     return (
       <Slot
         ref={ref}
