@@ -41,9 +41,9 @@ export interface BoxProps
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button';
+    // const Comp = asChild ? Slot : 'button';
     return (
-      <Comp
+      <Slot
         className={cn(boxVariants({ variant, size, className }))}
         ref={ref}
         {...props}
