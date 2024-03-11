@@ -18,10 +18,6 @@ export function InternalLink({
     return null;
   }
 
-  if (!href) {
-    return <span className={className}>{children || null}</span>;
-  }
-
   return (
     <a
       href={href}
