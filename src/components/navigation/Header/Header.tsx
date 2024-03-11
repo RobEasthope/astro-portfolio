@@ -24,7 +24,15 @@ export function Header() {
 
           <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} />
 
-          <NavListing links={secondaryNavigation} />
+          <NavListing links={[{
+            title: 'Github',
+            href: 'https://github.com/RobEasthope',
+            type: 'external',
+          }, {
+            title: 'Email',
+            href: 'hello@robeasthope.com',
+            type: 'email',
+          }]} />
 
           {/* <SmallNavigation
             logo={logo}
