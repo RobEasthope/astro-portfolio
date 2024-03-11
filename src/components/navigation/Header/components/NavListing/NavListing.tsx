@@ -1,9 +1,5 @@
-import { Box } from '~/components/_base/Box/Box';
-import type { EmailLinkWithTitleSchemaProps } from '~/components/_base/EmailLink/EmailLink';
-import type { ExternalLinkWithTitleSchemaProps } from '~/components/_base/ExternalLink/ExternalLink';
-import type { InternalLinkWithTitleSchemaProps } from '~/components/_base/InternalLink/InternalLink';
-import { SuperLink } from '~/components/_base/SuperLink/SuperLink';
-import { Type } from '~/components/_base/Type/Type';
+import { Box } from '@/components/ui/Box/Box';
+import { Type } from '@/components/ui/Type/Type';
 
 export type NavListingProps = {
   links:
