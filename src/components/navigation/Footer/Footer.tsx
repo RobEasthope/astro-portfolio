@@ -3,13 +3,7 @@ import { Type } from '@/components/ui/Type/Type';
 
 import { romanize } from './romanize';
 
-// TYPES
-export type FooterProps = {
-  copyrightText: string | undefined;
-};
-
-// MARKUP
-export function Footer({ copyrightText }: FooterProps) {
+export function Footer() {
   const timeStamp = new Date();
 
   return (
