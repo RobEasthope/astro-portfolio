@@ -1,23 +1,16 @@
 import { Box } from '@/components/ui/Box/Box';
-import type { ExternalLinkWithTitleSchemaProps } from '@/components/ui/ExternalLink/ExternalLink';
-import type { InternalLinkWithTitleSchemaProps } from '@/components/ui/InternalLink/InternalLink';
 import { Type } from '@/components/ui/Type/Type';
-import { SuperLink } from '~@components/_base/SuperLink/SuperLink';
 
 import { romanize } from './romanize';
 
 // TYPES
 export type FooterProps = {
-  _type?: 'Footer';
-  footerNavigation:
-    | [ExternalLinkWithTitleSchemaProps | InternalLinkWithTitleSchemaProps]
-    | undefined;
   copyrightText: string | undefined;
 };
 
 // MARKUP
-export function Footer({ footerNavigation, copyrightText }: FooterProps) {
-  if (!footerNavigation && !copyrightText) {
+export function Footer({ copyrightText }: FooterProps) {
+  if (!copyrightText) {
     return null;
   }
   const timeStamp = new Date();
@@ -25,24 +18,7 @@ export function Footer({ footerNavigation, copyrightText }: FooterProps) {
   return (
     <Box as="footer" className="print:hidden">
       <Box as="div" className="mx-auto flex flex-col gap-1 px-1 py-1">
-        <Box
-          as="nav"
-          className="flex flex-wrap justify-center"
-          aria-label="Footer"
-        >
-          <Box as="ul" className="flex gap-1">
-            {footerNavigation?.map((nav) => (
-              <Type as="li" key={nav?._key} className="text-base font-medium">
-                <SuperLink
-                  link={nav}
-                  className="decoration-2 underline-offset-2 hover:underline"
-                >
-                  {nav.title}
-                </SuperLink>
-              </Type>
-            ))}
-          </Box>
-        </Box>
+        
 
         <Type
           as="p"
