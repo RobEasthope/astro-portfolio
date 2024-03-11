@@ -1,6 +1,6 @@
-import { Box } from '~/components/_base/Box/Box';
-import { InternalLink } from '~/components/_base/InternalLink/InternalLink';
-import { Type } from '~/components/_base/Type/Type';
+import { Box } from '@/components/ui/Box/Box';
+import { InternalLink } from '@/components/ui/InternalLink/InternalLink';
+import { Type } from '@/components/ui/Type/Type';
 
 export type HeaderLogoProps = {
   logo: string;
