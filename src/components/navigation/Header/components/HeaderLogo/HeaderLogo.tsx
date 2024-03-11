@@ -19,11 +19,11 @@ export function HeaderLogo({ logo, homePageSlug }: HeaderLogoProps) {
       <Type as="span" className="sr-only">
         Rob Easthope
       </Type>
-      <SanityImage
+      {/* <SanityImage
         src={logo}
         alt={METADATA_HARD_CODED_FALLBACKS.TITLE}
         className="h-1.25 w-1.25"
-      />
+      /> */}
     </InternalLink>
   </Box>
 }
