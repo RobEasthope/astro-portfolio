@@ -1,6 +1,6 @@
-import { EmailLink } from '~/components/_base/EmailLink/EmailLink';
-import { ExternalLink } from '~/components/_base/ExternalLink/ExternalLink';
-import { InternalLink } from '~/components/_base/InternalLink/InternalLink';
+import { ExternalLink } from '@/components/ui/ExternalLink/ExternalLink';
+import { InternalLink } from '@/components/ui/InternalLink/InternalLink';
+import { EmailLink } from '@/components/ui/EmailLink/EmailLink';
 
 export type SuperLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
   href: string;
