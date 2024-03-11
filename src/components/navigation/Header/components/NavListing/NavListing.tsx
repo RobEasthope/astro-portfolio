@@ -2,13 +2,7 @@ import { Box } from '@/components/ui/Box/Box';
 import { Type } from '@/components/ui/Type/Type';
 
 export type NavListingProps = {
-  links:
-    | [
-        | ExternalLinkWithTitleSchemaProps
-        | InternalLinkWithTitleSchemaProps
-        | EmailLinkWithTitleSchemaProps,
-      ]
-    | null;
+  links: {title: string, href: string}[];
 };
 
 export function NavListing({ links }: NavListingProps) {
