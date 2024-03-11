@@ -1,4 +1,6 @@
 ---
+import { Footer } from '@/components/navigation/Footer/Footer.tsx'
+
 import '@/styles/app.css'
 
 interface Props {
@@ -63,7 +65,10 @@ const { title, description } = Astro.props;
     <meta name="theme-color" content="#ffffff" />
 	</head>
 	<body>
-		<slot />
+    <main>
+      <slot />
+    </main>
+		<Footer />
 	</body>
 </html>
 
