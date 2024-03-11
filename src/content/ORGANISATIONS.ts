@@ -1,9 +1,3 @@
-
-// Reformat the ORGANISATIONS array into an object name as a key for the objects in the array
-// Then, export the object
-// This will allow for easier access to the data in the array
-// This will also allow for easier access to the data in the array
-
 export const ORGANISATIONS = {
   "3cc": {
   "name": "3cc",
