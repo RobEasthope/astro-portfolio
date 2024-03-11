@@ -1,5 +1,5 @@
 import { Box } from '@/components/ui/Box/Box';
-import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
+// import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
 import { NavListing } from '@/components/navigation/Header/components/NavListing/NavListing';
 
 // import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
