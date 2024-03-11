@@ -15,13 +15,13 @@ export type GalleryProps = {
 };
 
 // MARKUP
-export const Gallery = ({
+export function Gallery({
   images,
   galleryCaption,
   columns,
   aspectRatio,
   maxWidth = 'large',
-}: GalleryProps) => {
+}: GalleryProps) {
   if (!images) {
     return null;
   }
@@ -54,6 +54,6 @@ export const Gallery = ({
       </Box>
     </Box>
   );
-};
+}
 
 export default Gallery;

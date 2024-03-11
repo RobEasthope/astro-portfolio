@@ -27,13 +27,13 @@ export type GalleryImageProps = {
 };
 
 // MARKUP
-export const GalleryImage = ({
+export function GalleryImage({
   image,
   galleryAspectRatio,
   aspectRatio = 1,
   maxWidth = 'full',
   caption,
-}: GalleryImageProps) => {
+}: GalleryImageProps) {
   if (!image) {
     return null;
   }
@@ -79,6 +79,6 @@ export const GalleryImage = ({
       </Dialog.Portal>
     </Dialog.Root>
   );
-};
+}
 
 export default GalleryImage;
