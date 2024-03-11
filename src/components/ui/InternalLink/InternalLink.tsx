@@ -8,12 +8,12 @@ export type InternalLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 };
 
-export function ExternalLink({
+export function InternalLink({
   href,
   children,
   className,
   ...rest
-}: ExternalLinkProps) {
+}: InternalLinkProps) {
   if (!href && !children) {
     return null;
   }
