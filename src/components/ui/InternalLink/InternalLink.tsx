@@ -30,7 +30,7 @@ export function InternalLink({
       className={cn(className, 'hover:text-saffron duration-300')}
       {...rest}
     >
-      {children || null}
+      {children}
     </a>
   );
 }
