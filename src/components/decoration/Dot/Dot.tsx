@@ -1,7 +1,6 @@
 import { BsDot } from 'react-icons/bs';
 
 import { cn } from '@/utils/tailwind';
-import { Box } from '@/components/_base/Box/Box';
 
 import type { SpacerProps } from '@/components/decoration/Spacer/Spacer';
 
@@ -16,8 +15,7 @@ export function Dot({
   spacingBottom = '0',
   className,
 }: DotProps) {
-  return <Box
-    as="div"
+  return <div
     className={cn(
       `flex w-full justify-center items-center h-1 mx-auto text-lg text-ink`,
       `mt-${spacingTop}`,
@@ -27,5 +25,5 @@ export function Dot({
     )}
   >
     <BsDot />
-  </Box>
+  </div>
 }
