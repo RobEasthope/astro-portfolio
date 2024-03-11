@@ -13,60 +13,52 @@ import type {
 import { InternalLink } from '~/components/_base/InternalLink/InternalLink';
 
 export type SuperLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
-  link:
-    | EmailLinkWithTitleSchemaProps
-    | ExternalLinkSchemaProps
-    | ExternalLinkWithTitleSchemaProps
-    | InternalLinkSchemaProps
-    | InternalLinkWithTitleSchemaProps
-    | undefined;
+  href: string;
   className?: string;
   children: unknown;
-  onClick?: () => void;
+  type?: 'email' | 'internal' | 'external';
 };
 
 export function SuperLink({
-  link,
+  href,
   className,
   children,
+  type,
   onClick,
   ...rest
 }: SuperLinkProps) {
-  if (!link && !children) {
+  if (!href && !children) {
     return null;
   }
 
-  switch (link?._type) {
-    case 'EmailLinkWithTitle':
+  switch (type) {
+    case 'email':
       return (
         <EmailLink
-          email={link?.email}
+          email={href}
           className={className}
-          onClick={onClick}
           {...rest}
         >
           {children}
         </EmailLink>
       );
 
-    case 'InternalLinkWithTitle':
+    case 'internal':
       return (
         <InternalLink
-          href={link?.to?.slug?.current}
+          href={href}
           className={className}
-          onClick={onClick}
           {...rest}
         >
           {children}
         </InternalLink>
       );
 
-    case 'ExternalLinkWithTitle':
+    case 'external':
       return (
         <ExternalLink
-          href={link?.url}
+          href={href}
           className={className}
-          onClick={onClick}
           {...rest}
         >
           {children}
