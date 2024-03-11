@@ -25,7 +25,7 @@ export function SuperLink({
     case 'email':
       return (
         <EmailLink
-          email={href}
+          emailAddress={href}
           className={className}
           {...rest}
         >
