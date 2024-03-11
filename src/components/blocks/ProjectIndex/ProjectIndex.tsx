@@ -9,7 +9,7 @@ export type ProjectIndexProps = {
 };
 
 // MARKUP
-export const ProjectIndex = ({ projects }: ProjectIndexProps) => {
+export function ProjectIndex({ projects }: ProjectIndexProps) {
   if (!projects) {
     return null;
   }
@@ -31,6 +31,6 @@ export const ProjectIndex = ({ projects }: ProjectIndexProps) => {
       )}
     </Box>
   );
-};
+}
 
 export default ProjectIndex;

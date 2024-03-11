@@ -9,7 +9,7 @@ export type ProjectIndexCardProps = {
   project: ProjectProps['page'];
 };
 
-export const ProjectIndexCard = ({ project }: ProjectIndexCardProps) => {
+export function ProjectIndexCard({ project }: ProjectIndexCardProps) {
   if (!project?.displayProject) {
     return null;
   }
@@ -36,4 +36,4 @@ export const ProjectIndexCard = ({ project }: ProjectIndexCardProps) => {
       </InternalLink>
     </Box>
   );
-};
+}
