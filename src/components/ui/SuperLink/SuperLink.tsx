@@ -1,12 +1,19 @@
 import { ExternalLink } from '@/components/ui/ExternalLink/ExternalLink';
 import { InternalLink } from '@/components/ui/InternalLink/InternalLink';
 import { EmailLink } from '@/components/ui/EmailLink/EmailLink';
+import type React from 'react';
 
-export type SuperLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
+export type SuperLinkProps = {
+  title: string;
+  href: string;
+  type?: 'email' | 'internal' | 'external';
+};
+
+export type SuperLinkMarkupProps = React.HTMLAttributes<HTMLAnchorElement> & {
   href: string;
   className?: string;
-  children: unknown;
   type?: 'email' | 'internal' | 'external';
+  children: React.ReactNode;
 };
 
 export function SuperLink({
@@ -16,7 +23,7 @@ export function SuperLink({
   type,
   onClick,
   ...rest
-}: SuperLinkProps) {
+}: SuperLinkMarkupProps) {
   if (!href && !children) {
     return null;
   }
