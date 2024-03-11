@@ -1,4 +1,4 @@
-export const TOOLS = [
+export const TOOLS = {
   {
   "name": "React Redux",
   "url": "https://react-redux.js.org/"
@@ -375,4 +375,4 @@ export const TOOLS = [
   "name": "Gatsby.js",
   "url": "https://www.gatsbyjs.org/"
   }
-];
+};
