@@ -2,7 +2,7 @@ import { Box } from '@/components/ui/Box/Box';
 import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
 import { NavListing } from '@/components/navigation/Header/components/NavListing/NavListing';
 
-import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
+// import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
 
 // MARKUP
 export function Header() {
@@ -18,12 +18,12 @@ export function Header() {
 
           <NavListing links={secondaryNavigation} />
 
-          <SmallNavigation
+          {/* <SmallNavigation
             logo={logo}
             primaryNavigation={primaryNavigation}
             secondaryNavigation={secondaryNavigation}
             appSettings={appSettings}
-          />
+          /> */}
         </Box>
       </Box>
   );
