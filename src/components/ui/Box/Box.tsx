@@ -48,15 +48,18 @@ export interface BoxProps
 const Box = forwardRef<HTMLDivElement, BoxProps>(
   ({ as = 'div', className, blockSpacing, breakout, columns, maxWidth, children, ...props }, ref) => {
     if(!children) return null;
-    
+
     return (
       <Slot
+        className={stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))}
         ref={ref}
         {...props}
       >{
         createElement(
           as,
-          {...stylesCheck(cn(boxVariants({ blockSpacing, breakout, columns, maxWidth}), className))},
+          {
+            // Props go here
+          },
           children,
       )}
       </Slot>
