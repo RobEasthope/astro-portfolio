@@ -8,7 +8,6 @@ import { getYoutubeIdfromUrl } from './getYoutubeIdfromUrl';
 
 // TYPES
 export type YoutubeVideoProps = {
-  _type: 'YoutubeVideo';
   url?: string;
   caption?: string;
   maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
