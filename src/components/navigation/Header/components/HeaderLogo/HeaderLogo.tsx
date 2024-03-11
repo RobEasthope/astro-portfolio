@@ -15,7 +15,6 @@ export function HeaderLogo({ logo, homePageSlug }: HeaderLogoProps) {
     <InternalLink
       href={homePageSlug}
       className="p-0.25"
-      homePageSlug={homePageSlug}
     >
       <Type as="span" className="sr-only">
         Rob Easthope
