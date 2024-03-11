@@ -36,18 +36,24 @@ const boxVariants = cva(
 export interface BoxProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof boxVariants> {
-  asChild?: boolean;
+  as: string;
 }
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ as = 'div', className, variant, size, children, ...props }, ref) => {
     // const Comp = asChild ? Slot : 'button';
     return (
       <Slot
         className={cn(boxVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-      />
+      >{React.createElement(
+    as,
+    {
+      
+    },
+    children,
+  )}</Slot>
     );
   },
 );
