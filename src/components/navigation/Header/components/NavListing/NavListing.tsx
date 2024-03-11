@@ -1,4 +1,5 @@
 import { Box } from '@/components/ui/Box/Box';
+import { SuperLink, type SuperLinkProps } from '@/components/ui/SuperLink/SuperLink';
 import { Type } from '@/components/ui/Type/Type';
 import { v4 as uuidv4 } from "uuid";
 
