@@ -1,35 +1,27 @@
-import type { PortableTextComponents } from '@portabletext/react';
-import { PortableText } from '@portabletext/react';
-import classNames from 'classnames';
-import { Box } from '~/components/_base/Box/Box';
-
+import { Box } from '@/components/ui/Box/Box';
+import { cn } from '@/utils/tailwind';
+import type { ReactNode } from 'react';
 import './prose.css';
 
 export type ProseProps = {
   as: string;
   className?: string;
-  content: any;
-  components: unknown;
+  children: ReactNode;
 };
-
 
 export function Prose({
   as = 'div',
-  content,
-  components,
   className,
+  children,
+
 }: ProseProps) {
-  if (!content) {
+  if (!children) {
     return null;
   }
 
   return (
-    <Box as={as} className={classNames('prose', 'text-ink', className)}>
-      <PortableText
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        value={content}
-        components={components as PortableTextComponents}
-      />
+    <Box as={as} className={cn('prose', 'text-ink', className)}>
+      {children}
     </Box>
   );
 }
