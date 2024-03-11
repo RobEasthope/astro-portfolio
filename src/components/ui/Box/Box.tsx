@@ -9,28 +9,31 @@ const boxVariants = cva(
   null,
   {
     variants: {
-      variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline',
+      blockSpacing: {
+      true: 'px-1 md:px-2 print:px-0 print:md:px-0',
       },
-      size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-11 rounded-md px-8',
-        icon: 'h-10 w-10',
+      breakout: {
+        true: 'max-w-screen relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen',
+      },
+      columns: {
+        null: '',
+        '1': 'grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1',
+        '2': 'grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2',
+        '3': 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3',
+        '4': 'grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4',
+        '5': 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5',
+      },
+      maxWidth: {
+        none: '',
+        auto: 'max-w-auto',
+        small: 'max-w-lg',
+        text: 'max-w-prose',
+        medium: 'max-w-5xl',
+        large: 'max-w-7xl',
+        full: 'w-screen',
       },
     },
-    defaultVariants: {
-      variant: 'default',
-      size: 'default',
-    },
+    defaultVariants: {},
   },
 );
 
