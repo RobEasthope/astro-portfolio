@@ -1,53 +1,11 @@
-import type {
-  SanityImageAsset,
-  SanityImageCrop,
-  SanityReference,
-} from 'sanity-codegen';
 import { Box } from '@/components/ui/Box/Box';
 import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
 import { NavListing } from '@/components/navigation/Header/components/NavListing/NavListing';
-import type { ExternalLinkWithTitleSchemaProps } from '@/components/ui/ExternalLink/ExternalLink';
-import type { InternalLinkWithTitleSchemaProps } from '@/components/ui/InternalLink/InternalLink';
-import type { EmailLinkWithTitleSchemaProps } from '@/components/ui/EmailLink/EmailLink';
-
-import type { AppSettingsProps } from '~/components/settings/AppSettings/AppSettings';
 
 import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
 
-
-// TYPES
-export type HeaderProps = {
-  _type?: 'Header';
-  logo?: {
-    _type: 'image';
-    asset: SanityReference<SanityImageAsset>;
-    crop?: SanityImageCrop;
-  };
-  primaryNavigation: [
-    | ExternalLinkWithTitleSchemaProps
-    | InternalLinkWithTitleSchemaProps
-    | EmailLinkWithTitleSchemaProps,
-  ];
-  secondaryNavigation: [
-    | ExternalLinkWithTitleSchemaProps
-    | InternalLinkWithTitleSchemaProps
-    | EmailLinkWithTitleSchemaProps,
-  ];
-  appSettings: AppSettingsProps;
-};
-
-
 // MARKUP
-export function Header({
-  logo,
-  primaryNavigation,
-  secondaryNavigation,
-  appSettings,
-}: HeaderProps) {
-  if (!logo && !primaryNavigation) {
-    return null;
-  }
-
+export function Header() {
   return (
       <Box as="header" className="bg-white px-1 md:px-2 py-0.5 sm:py-1">
         <Box
