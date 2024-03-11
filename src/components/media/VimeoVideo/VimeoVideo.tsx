@@ -5,7 +5,6 @@ import { Type } from '@/components/ui/Type/Type';
 
 // TYPES
 export type VimeoVideoProps = {
-  _type: 'VimeoVideo';
   url?: string;
   caption?: string;
   maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
