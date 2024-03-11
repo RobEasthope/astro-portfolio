@@ -22,7 +22,7 @@ export function Header() {
             type: 'internal',
           }]} />
 
-          <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} />
+          {/* <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} /> */}
 
           <NavListing links={[{
             title: 'Github',
