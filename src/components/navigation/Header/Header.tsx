@@ -12,7 +12,13 @@ export function Header() {
           as="nav"
           className="mx-auto flex w-full flex-row-reverse flex-wrap items-center justify-between leading-4 sm:flex-row"
         >
-          <NavListing links={primaryNavigation} />
+          <NavListing links={[{
+            title: 'Work',
+            href: '/work',
+          }, {
+            title: 'About',
+            href: '/About',
+          }]} />
 
           <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} />
 
