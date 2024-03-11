@@ -1,25 +1,10 @@
-import type {
-  SanityImageAsset,
-  SanityImageCrop,
-  SanityReference,
-} from 'sanity-codegen';
-
-import { METADATA_HARD_CODED_FALLBACKS } from '~/constants/METADATA_HARD_CODED_FALLBACKS';
-
-import type { AppSettingsProps } from '~/components/settings/AppSettings/AppSettings';
-
 import { Box } from '~/components/_base/Box/Box';
 import { InternalLink } from '~/components/_base/InternalLink/InternalLink';
-import { SanityImage } from '~/components/_base/SanityImage/SanityImage';
 import { Type } from '~/components/_base/Type/Type';
 
 export type HeaderLogoProps = {
-  logo?: {
-    _type: 'image';
-    asset: SanityReference<SanityImageAsset>;
-    crop?: SanityImageCrop;
-  };
-  homePageSlug: AppSettingsProps['homePageSlug'];
+  logo: string;
+  homePageSlug: string;
 };
 
 export function HeaderLogo({ logo, homePageSlug }: HeaderLogoProps) {
@@ -33,7 +18,7 @@ export function HeaderLogo({ logo, homePageSlug }: HeaderLogoProps) {
       homePageSlug={homePageSlug}
     >
       <Type as="span" className="sr-only">
-        {METADATA_HARD_CODED_FALLBACKS.TITLE}
+        Rob Easthope
       </Type>
       <SanityImage
         src={logo}
