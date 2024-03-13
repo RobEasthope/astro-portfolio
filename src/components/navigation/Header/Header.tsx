@@ -1,6 +1,8 @@
 import { Box } from '@/components/ui/Box/Box';
-// import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
+import { HeaderLogo } from '@/components/navigation/Header/components/HeaderLogo/HeaderLogo';
 import { NavListing } from '@/components/navigation/Header/components/NavListing/NavListing';
+import logoAsset from '@/components/navigation/Header/saffron-roundel-circle@2x.png'
+
 
 // import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
 
@@ -22,7 +24,7 @@ export function Header() {
             type: 'internal',
           }]} />
 
-          {/* <HeaderLogo logo={logo} homePageSlug={appSettings?.homePageSlug} /> */}
+          <HeaderLogo logo={logoAsset} />
 
           <NavListing links={[{
             title: 'Github',
