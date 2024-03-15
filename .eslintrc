@@ -3,14 +3,14 @@
     "@thoughtbot/eslint-config",
     "@thoughtbot/eslint-config/typescript",
     "plugin:astro/recommended",
-    "plugin:astro/jsx-a11y-recommended"
+    "plugin:astro/jsx-a11y-recommended",
   ],
   "rules": {
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": [
       1,
-      { "extensions": [".ts", ".tsx", ".astro"] }
-    ]
+      { "extensions": [".ts", ".tsx", ".astro"] },
+    ],
   },
   "overrides": [
     {
@@ -22,13 +22,21 @@
       // It's the setting you need when using TypeScript.
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
-        "extraFileExtensions": [".astro"]
+        "extraFileExtensions": [".astro"],
       },
-      "processor": "astro/client-side-ts", 
+      "processor": "astro/client-side-ts",
       "rules": {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
-      }
-    }
-  ]
+      },
+    },
+  ],
+  "ignorePatterns": [
+    "/.cache",
+    "/.vercel",
+    "/node_modules",
+    "/dist",
+    "/public",
+    "src/env.d.ts",
+  ],
 }
