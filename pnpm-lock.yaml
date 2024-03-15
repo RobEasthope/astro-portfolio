@@ -82,6 +82,9 @@ devDependencies:
   eslint-plugin-astro:
     specifier: ^0.31.4
     version: 0.31.4(eslint@8.57.0)
+  eslint-plugin-jsx-a11y:
+    specifier: ^6.8.0
+    version: 6.8.0(eslint@8.57.0)
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
