@@ -1,18 +1,18 @@
-import { Box } from '@/components/ui/Box/Box';
-import { Type } from '@/components/ui/Type/Type';
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
 
 // TYPES
 export type ImageBlockProps = {
   image?: string;
   caption?: string;
-  maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
+  maxWidth: "small" | "text" | "medium" | "large" | "full";
 };
 
 // MARKUP
 export function ImageBlock({
   image,
   caption,
-  maxWidth = 'medium',
+  maxWidth = "medium",
 }: ImageBlockProps) {
   if (!image) {
     return null;
@@ -31,4 +31,3 @@ export function ImageBlock({
     </Box>
   );
 }
-
