@@ -6,8 +6,8 @@ import { WorkSchemaZProps } from "@/schemas/work.schema";
 import type { Render } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("work");
-  return blogEntries.map((entry) => ({
+  const work = await getCollection("work");
+  return work.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
