@@ -1,12 +1,12 @@
 ---
-import { Footer } from '@/components/navigation/Footer/Footer'
-import { Header } from '@/components/navigation/Header/Header';
+import { Footer } from "@/components/navigation/Footer/Footer";
+import { Header } from "@/components/navigation/Header/Header";
 
-import '@/app.css'
+import "@/app.css";
 
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
 const { title, description } = Astro.props;
@@ -14,15 +14,15 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>{title || 'Rob Easthope'}</title>
-		<meta name="description" content={description || 'Portfolio'} />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title || "Rob Easthope"}</title>
+    <meta name="description" content={description || "Portfolio"} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
@@ -64,13 +64,12 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-	</head>
-	<body>
+  </head>
+  <body>
     <Header />
     <main>
       <slot />
     </main>
-		<Footer />
-	</body>
+    <Footer />
+  </body>
 </html>
-
