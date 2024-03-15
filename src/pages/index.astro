@@ -1,11 +1,14 @@
 ---
 import Base from '@/layouts/Base.astro';
 import { Box } from '@/components/ui/Box/Box';
+import { Image } from 'astro:assets';
+import logoAsset from '@/components/navigation/Header/saffron-roundel-circle@2x.png'
 ---
 
 <Base title="Rob Easthope">
 	<main>
 		<Box as="section">
+			<Image src={logoAsset} alt="Rob Easthope" width="200" height="200" />
       <h1>Landing</h1>
       <p>This is the landing section</p>
     </Box>
