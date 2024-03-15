@@ -3,7 +3,9 @@ import { InternalLink } from '@/components/ui/InternalLink/InternalLink';
 import { Type } from '@/components/ui/Type/Type';
 
 export type HeaderLogoProps = {
-  // logo: string;
+  logo: {
+    src: string
+  };
 };
 
 export function HeaderLogo({ logo }: HeaderLogoProps) {
