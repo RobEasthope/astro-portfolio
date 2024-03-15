@@ -1,13 +1,13 @@
 ---
-import { Box } from '@/components/ui/Box/Box';
-import { InternalLink } from '@/components/ui/InternalLink/InternalLink';
-import { Type } from '@/components/ui/Type/Type';
-import { Image } from 'astro:assets';
-import logoAsset from '@/components/navigation/Header/saffron-roundel-circle@2x.png'
+import { Box } from "@/components/ui/Box/Box";
+import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
+import { Type } from "@/components/ui/Type/Type";
+import { Image } from "astro:assets";
+import logoAsset from "./saffron-roundel-circle@2x.png";
 
 interface Props {
   logo: {
-    src: string
+    src: string;
   };
 }
 
@@ -18,13 +18,8 @@ const { logo } = Astro.props;
   as="div"
   className="absolute left-1/2 flex flex-1 -translate-x-1/2 items-center justify-center"
 >
-  <InternalLink
-    href="/"
-    className="p-0.25"
-  >
-    <Type as="span" className="sr-only">
-      Rob Easthope
-    </Type>
-    <Image src={logoAsset} alt="Rob Easthope" class="w-8 h-8" />
+  <InternalLink href="/" className="p-0.25">
+    <Type as="span" className="sr-only"> Rob Easthope </Type>
+    <Image src={logoAsset} alt="Rob Easthope" class="h-8 w-8" />
   </InternalLink>
 </Box>
