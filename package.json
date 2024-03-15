@@ -8,8 +8,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color && tsc --pretty --noEmit",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color --fix && tsc --pretty --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color --fix",
+    "tsc": "tsc --pretty --noEmit",
     "typecheck": "tsc"
   },
   "dependencies": {
