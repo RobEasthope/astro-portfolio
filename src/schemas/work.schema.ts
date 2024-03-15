@@ -1,4 +1,5 @@
-import z from "zod";
+// eslint-disable-next-line import/no-unresolved
+import { z } from "astro:content";
 
 export const WorkSchemaZProps = z.object({
   title: z.string(),
