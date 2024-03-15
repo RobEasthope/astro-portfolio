@@ -2,8 +2,6 @@
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
-import { Picture } from "astro:assets";
-import logoAsset from "./saffron-roundel-circle@2x.png";
 ---
 
 <Box
@@ -12,11 +10,6 @@ import logoAsset from "./saffron-roundel-circle@2x.png";
 >
   <InternalLink href="/" className="p-0.25">
     <Type as="span" className="sr-only"> Rob Easthope </Type>
-    <Picture
-      src={logoAsset}
-      alt="Rob Easthope"
-      formats={["avif", "webp"]}
-      class="h-8 w-8"
-    />
+    <img src="/saffron-roundel-circle@2x.png" alt="Rob Easthope" />
   </InternalLink>
 </Box>
