@@ -1,4 +1,5 @@
 // 1. Import utilities from `astro:content`
+// eslint-disable-next-line import/no-unresolved
 import { z, defineCollection } from "astro:content";
 import { WorkSchemaZProps } from "@/schemas/work.schema";
 
