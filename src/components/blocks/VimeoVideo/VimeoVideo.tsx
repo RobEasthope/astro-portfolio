@@ -1,20 +1,20 @@
-import Vimeo from '@u-wave/react-vimeo';
+import Vimeo from "@u-wave/react-vimeo";
 
-import { Box } from '@/components/ui/Box/Box';
-import { Type } from '@/components/ui/Type/Type';
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
 
 // TYPES
 export type VimeoVideoProps = {
   url?: string;
   caption?: string;
-  maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
+  maxWidth: "small" | "text" | "medium" | "large" | "full";
 };
 
 // MARKUP
 export function VimeoVideo({
   url,
   caption,
-  maxWidth = 'medium',
+  maxWidth = "medium",
 }: VimeoVideoProps) {
   if (!url) {
     return null;

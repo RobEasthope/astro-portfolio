@@ -5,10 +5,12 @@ export type LineBreakProps = {
 };
 
 export function LineBreak({ className }: LineBreakProps) {
-  return <hr
-    className={cn(
-      'flex items-center justify-center h-1 after:content-[""] after:block after:w-3 after:h-0.125 after:bg-darkSaffron  border-none',
-      className,
-    )}
-  />
+  return (
+    <hr
+      className={cn(
+        'after:h-0.125 after:bg-darkSaffron flex h-1 items-center justify-center border-none after:block after:w-3  after:content-[""]',
+        className,
+      )}
+    />
+  );
 }

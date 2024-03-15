@@ -1,20 +1,20 @@
-import YouTube from 'react-youtube';
-import { Box } from '@/components/ui/Box/Box';
-import { Type } from '@/components/ui/Type/Type';
+import YouTube from "react-youtube";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
 
-import './YoutubeVideo.css';
-import { getYoutubeIdfromUrl } from './getYoutubeIdfromUrl';
+import "./YoutubeVideo.css";
+import { getYoutubeIdfromUrl } from "./getYoutubeIdfromUrl";
 
 export type YoutubeVideoProps = {
   url?: string;
   caption?: string;
-  maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
+  maxWidth: "small" | "text" | "medium" | "large" | "full";
 };
 
 export function YoutubeVideo({
   url,
   caption,
-  maxWidth = 'medium',
+  maxWidth = "medium",
 }: YoutubeVideoProps) {
   if (!url) {
     return null;
