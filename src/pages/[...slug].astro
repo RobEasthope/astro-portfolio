@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import Base from "@/layouts/Base.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("work");
@@ -9,9 +10,30 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+interface Props {
+  entry: {
+    slug: string;
+    data: {
+      title: string;
+      description?: string;
+      client?: string;
+      tools?: string;
+      dates?: string;
+    };
+  };
+}
+// Pick off main content from the entry
+const { Content } = await Astro.props.entry.render();
+
+// Pick off the frontmatter
+const { title, description, client, dates, tools } = Astro.props.entry.data;
 ---
 
-<h1>{entry.data.title}</h1>
-<Content />
+<Base title={title}>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <p>Client: {client}</p>
+  <Content />
+  <p>{tools}</p>
+  <p>{dates}</p>
+</Base>
