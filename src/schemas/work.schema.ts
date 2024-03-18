@@ -4,6 +4,7 @@ import { z } from "astro:content";
 export const WorkSchemaZProps = z.object({
   title: z.string(),
   description: z.string(),
+  url: z.string(),
   agency: z.string().optional(),
   agencyUrl: z.string().url().optional(),
   client: z.string().optional(),
