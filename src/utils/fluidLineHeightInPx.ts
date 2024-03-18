@@ -1,7 +1,7 @@
 import {
   LOWER_SCREEN_SIZE,
   UPPER_SCREEN_SIZE,
-} from "@/utils/FLUID_SCREEN_SIZES";
+} from "./FLUID_SCREEN_SIZES";
 
 // Returns a fluid clamp value based line height in pixels based off the min and max font sizes and lineheights.
 export const fluidLineHeightInPx = ({

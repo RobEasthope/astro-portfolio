@@ -1,7 +1,7 @@
 import {
   LOWER_SCREEN_SIZE,
   UPPER_SCREEN_SIZE,
-} from "@/utils/FLUID_SCREEN_SIZES";
+} from "./FLUID_SCREEN_SIZES";
 
 // Returns a fluid clamp value based on screen size. Min and max values are in pixels.
 export const fluidPx = ({ min, max }: { min: number; max: number }) =>
