@@ -1,8 +1,8 @@
-import { AUTO_FLUID_DIVISOR } from "~/styles/AUTO_FLUID_DIVISOR";
+import { AUTO_FLUID_DIVISOR } from "@/utils/AUTO_FLUID_DIVISOR";
 import {
   LOWER_SCREEN_SIZE,
   UPPER_SCREEN_SIZE,
-} from "~/styles/FLUID_SCREEN_SIZES";
+} from "@/utils/FLUID_SCREEN_SIZES";
 
 export const autoFluidRem = ({
   max,
