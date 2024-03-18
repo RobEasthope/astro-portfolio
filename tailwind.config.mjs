@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -12,7 +15,19 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        xs: "420px",
+      },
       colors: {
+        // Saffron colours
+        ink: "rgb(21, 23, 24)",
+        saffron: "rgba(255, 153, 51, 1)",
+        darkSaffron: "rgba(250, 145, 46, 1)",
+        imperialRed: "rgb(170, 0, 0)",
+        japaneseRed: "rgb(193, 78, 95)",
+        highlight: "$saffron",
+
+        // Shadcn ui colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -47,6 +62,11 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
+        plantin: ["plantin", ...defaultTheme.fontFamily.serif],
+        sabon: ["linotype-sabon", ...defaultTheme.fontFamily.serif],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -70,4 +90,4 @@ module.exports = {
   },
   // eslint-disable-next-line global-require
   plugins: [require("tailwindcss-animate")],
-}
+};
