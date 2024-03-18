@@ -5,22 +5,15 @@ import { cn } from "@/utils/tailwind";
 import { WorkSchemaZProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
 
-export type ProjectIndexCardProps = z.infer<typeof WorkSchemaZProps>;
+export type ProjectIndexCardProps = Pick<
+  z.infer<typeof WorkSchemaZProps>,
+  "title" | "url" | "description"
+>;
 
 export function ProjectIndexCard({
   title,
   url,
   description,
-  agency,
-  agencyUrl,
-  client,
-  clientUrl,
-  projectUrlTitle,
-  projectUrl,
-  repoTitle,
-  repoUrl,
-  tools,
-  dates,
 }: ProjectIndexCardProps) {
   return (
     <Box as="li">
