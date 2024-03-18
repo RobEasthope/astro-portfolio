@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import tailwindTypography from "@tailwindcss/typography";
 import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
 const BASE_UNIT = "1.5rem";
