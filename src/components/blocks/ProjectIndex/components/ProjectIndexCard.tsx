@@ -22,10 +22,6 @@ export function ProjectIndexCard({
   tools,
   dates,
 }: ProjectIndexCardProps) {
-  // if (displayProject) {
-  //   return null;
-  // }
-
   return (
     <Box as="li">
       <InternalLink
