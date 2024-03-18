@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+
+import { fluidTypeSize } from '@/utils/fluidTypeSize';
+
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
@@ -71,6 +74,40 @@ module.exports = {
         sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
         plantin: ["plantin", ...defaultTheme.fontFamily.serif],
         sabon: ["linotype-sabon", ...defaultTheme.fontFamily.serif],
+      },
+      fontSize: {
+        xs: fluidTypeSize({
+          min: 12,
+          max: 14,
+        }),
+        sm: fluidTypeSize({
+          min: 14,
+          max: 16,
+        }),
+        base: fluidTypeSize({
+          min: 16,
+          max: 18,
+        }),
+        md: fluidTypeSize({
+          min: 18,
+          max: 21,
+        }),
+        lg: fluidTypeSize({
+          min: 19,
+          max: 32,
+        }),
+        xl: fluidTypeSize({
+          min: 28,
+          max: 42,
+        }),
+        "2xl": fluidTypeSize({
+          min: 34,
+          max: 56,
+        }),
+        "3xl": fluidTypeSize({
+          min: 40,
+          max: 76,
+        }),
       },
       spacing: {
         0: "0",
