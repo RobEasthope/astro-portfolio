@@ -22,7 +22,12 @@ export function ProjectIndex({ projects }: ProjectIndexProps) {
           className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
         >
           {projects?.map((project) => (
-            <ProjectIndexCard key={uuidv4()} project={project} />
+            <ProjectIndexCard
+              key={uuidv4()}
+              title={project?.title}
+              description={project?.description}
+              url={project?.url}
+            />
           ))}
         </Box>
       )}
