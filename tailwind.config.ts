@@ -1,16 +1,9 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-import { fluidTypeSize } from '@/utils/fluidTypeSize';
-
-/** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-const LOWER_SCREEN_SIZE = 320;
-const UPPER_SCREEN_SIZE = 1400;
+import defaultTheme from "tailwindcss/defaultTheme";
+import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
 const BASE_UNIT = "1.5rem";
-
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
