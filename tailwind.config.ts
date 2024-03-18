@@ -71,36 +71,36 @@ export default {
       },
       fontSize: {
         xs: fluidTypeSize({
-          min: 12,
-          max: 14,
+          minFontSize: 12,
+          maxFontSize: 14,
         }),
         sm: fluidTypeSize({
-          min: 14,
-          max: 16,
+          minFontSize: 14,
+          maxFontSize: 16,
         }),
         base: fluidTypeSize({
-          min: 16,
-          max: 18,
+          minFontSize: 16,
+          maxFontSize: 18,
         }),
         md: fluidTypeSize({
-          min: 18,
-          max: 21,
+          minFontSize: 18,
+          maxFontSize: 21,
         }),
         lg: fluidTypeSize({
-          min: 19,
-          max: 32,
+          minFontSize: 19,
+          maxFontSize: 32,
         }),
         xl: fluidTypeSize({
-          min: 28,
-          max: 42,
+          minFontSize: 28,
+          maxFontSize: 42,
         }),
         "2xl": fluidTypeSize({
-          min: 34,
-          max: 56,
+          minFontSize: 34,
+          maxFontSize: 56,
         }),
         "3xl": fluidTypeSize({
-          min: 40,
-          max: 76,
+          minFontSize: 40,
+          maxFontSize: 76,
         }),
       },
       spacing: {
