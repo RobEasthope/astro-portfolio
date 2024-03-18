@@ -2,6 +2,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
 const BASE_UNIT = "1.5rem";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
