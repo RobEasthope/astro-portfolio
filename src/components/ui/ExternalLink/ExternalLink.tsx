@@ -23,7 +23,7 @@ export function ExternalLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(className, "hover:text-saffron duration-300")}
+      className={cn(className, "duration-300 hover:text-saffron")}
       {...rest}
     >
       {children || null}
