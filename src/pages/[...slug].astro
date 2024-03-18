@@ -34,4 +34,72 @@ const { title, description, client, dates, tools } = Astro.props.entry.data;
   <Content />
   <p>{tools}</p>
   <p>{dates}</p>
+
+  <Box as="div" className="px-1 py-2 md:px-2">
+    <Box
+      as="div"
+      className="mb-1 flex flex-col justify-center gap-1 text-center"
+    >
+      <!-- <SanityImage
+        src={page?.thumbnailImage}
+        alt={page?.title}
+        mode={page?.containLogo ? "contain" : "responsive"}
+        aspectRatio={page?.containLogo ? 0 : 1}
+        className="mx-auto h-4 w-4 rounded-full"
+      /> -->
+
+      <Type as="h1" className="text-2xl">
+        {page?.title}
+      </Type>
+
+      <Type as="p">{page?.description}</Type>
+
+      <Box as="section" className="flex justify-center gap-1">
+        {
+          page?.clientOrg && (
+            <Type as="p">
+              <Box as="span">Client: </Box>
+              <ExternalLink href={page?.clientOrg?.url || null}>
+                {page?.clientOrg?.name}
+              </ExternalLink>
+            </Type>
+          )
+        }
+        {
+          page?.agencyOrg && (
+            <Type as="p">
+              <Box as="span">Agency: </Box>
+              <ExternalLink href={page?.agencyOrg?.url || null}>
+                {page?.agencyOrg?.name}
+              </ExternalLink>
+            </Type>
+          )
+        }
+      </Box>
+
+      <Dot />
+    </Box>
+
+    <Prose
+      as="div"
+      content={page?.projectText}
+      components={ProjectTextComponents}
+      className="mx-auto"
+    />
+
+    <Box as="div" className="flex flex-col gap-1 text-center">
+      <Dot className="mt-1" />
+      <ExternalLink href={page?.projectUrl || null}>
+        {page?.projectUrlTitle || page?.projectUrl}
+      </ExternalLink>
+
+      <!-- <TechList technologies={page?.technologies} /> -->
+
+      <ExternalLink href={page?.repoUrl || null}>
+        {page?.repoUrl}
+      </ExternalLink>
+
+      <Type as="p">{page?.date}</Type>
+    </Box>
+  </Box>
 </Base>
