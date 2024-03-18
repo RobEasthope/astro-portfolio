@@ -29,7 +29,20 @@ interface Props {
 const { Content } = await Astro.props.entry.render();
 
 // Pick off the frontmatter
-const { title, description, client, dates, tools } = Astro.props.entry.data;
+const {
+  title,
+  description,
+  agency,
+  agencyUrl,
+  client,
+  clientUrl,
+  projectUrlTitle,
+  projectUrl,
+  repoTitle,
+  repoUrl,
+  tools,
+  dates,
+} = Astro.props.entry.data;
 ---
 
 <Base title={title}>
@@ -46,37 +59,33 @@ const { title, description, client, dates, tools } = Astro.props.entry.data;
       className="mb-1 flex flex-col justify-center gap-1 text-center"
     >
       <!-- <SanityImage
-        src={page?.thumbnailImage}
-        alt={page?.title}
-        mode={page?.containLogo ? "contain" : "responsive"}
-        aspectRatio={page?.containLogo ? 0 : 1}
+        src={thumbnailImage}
+        alt={title}
+        mode={containLogo ? "contain" : "responsive"}
+        aspectRatio={containLogo ? 0 : 1}
         className="mx-auto h-4 w-4 rounded-full"
       /> -->
 
       <Type as="h1" className="text-2xl">
-        {page?.title}
+        {title}
       </Type>
 
-      <Type as="p">{page?.description}</Type>
+      <Type as="p">{description}</Type>
 
       <Box as="section" className="flex justify-center gap-1">
         {
-          page?.clientOrg && (
+          client && (
             <Type as="p">
               <Box as="span">Client: </Box>
-              <ExternalLink href={page?.clientOrg?.url || null}>
-                {page?.clientOrg?.name}
-              </ExternalLink>
+              <ExternalLink href={clientUrl}>{client}</ExternalLink>
             </Type>
           )
         }
         {
-          page?.agencyOrg && (
+          agency && (
             <Type as="p">
               <Box as="span">Agency: </Box>
-              <ExternalLink href={page?.agencyOrg?.url || null}>
-                {page?.agencyOrg?.name}
-              </ExternalLink>
+              <ExternalLink href={agencyUrl}>{agency}</ExternalLink>
             </Type>
           )
         }
@@ -85,26 +94,23 @@ const { title, description, client, dates, tools } = Astro.props.entry.data;
       <Dot />
     </Box>
 
-    <Prose
-      as="div"
-      content={page?.projectText}
-      components={ProjectTextComponents}
-      className="mx-auto"
-    />
+    <Prose as="div" className="mx-auto">
+      <Content />
+    </Prose>
 
     <Box as="div" className="flex flex-col gap-1 text-center">
       <Dot className="mt-1" />
-      <ExternalLink href={page?.projectUrl || null}>
-        {page?.projectUrlTitle || page?.projectUrl}
+      <ExternalLink href={projectUrl || null}>
+        {projectUrlTitle || projectUrl}
       </ExternalLink>
 
-      <!-- <TechList technologies={page?.technologies} /> -->
+      <!-- <TechList technologies={technologies} /> -->
 
-      <ExternalLink href={page?.repoUrl || null}>
-        {page?.repoUrl}
+      <ExternalLink href={repoUrl || null}>
+        {repoUrl}
       </ExternalLink>
 
-      <Type as="p">{page?.date}</Type>
+      <Type as="p">{dates}</Type>
     </Box>
   </Box>
 </Base>
