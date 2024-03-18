@@ -2,10 +2,12 @@ import { ProjectIndexCard } from "@/components/blocks/ProjectIndex/components/Pr
 
 import { Box } from "@/components/ui/Box/Box";
 import { v4 as uuidv4 } from "uuid";
+import { WorkSchemaZProps } from "@/schemas/work.schema";
+import type { z } from "astro:content";
 
 // TYPES
 export type ProjectIndexProps = {
-  projects: ProjectProps["page"][];
+  projects: z.infer<typeof WorkSchemaZProps>[];
 };
 
 // MARKUP
