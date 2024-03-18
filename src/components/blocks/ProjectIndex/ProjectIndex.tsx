@@ -1,11 +1,11 @@
-import { ProjectIndexCard } from '@/components/blocks/ProjectIndex/components/ProjectIndexCard';
+import { ProjectIndexCard } from "@/components/blocks/ProjectIndex/components/ProjectIndexCard";
 
-import { Box } from '@/components/ui/Box/Box';
-import {v4 as uuidv4} from 'uuid';
+import { Box } from "@/components/ui/Box/Box";
+import { v4 as uuidv4 } from "uuid";
 
 // TYPES
 export type ProjectIndexProps = {
-  projects: ProjectProps['page'][];
+  projects: ProjectProps["page"][];
 };
 
 // MARKUP
@@ -22,10 +22,7 @@ export function ProjectIndex({ projects }: ProjectIndexProps) {
           className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
         >
           {projects?.map((project, i) => (
-            <ProjectIndexCard
-              key={uuidv4()}
-              project={project}
-            />
+            <ProjectIndexCard key={uuidv4()} project={project} />
           ))}
         </Box>
       )}
