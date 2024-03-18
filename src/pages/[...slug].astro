@@ -4,6 +4,11 @@ import { getCollection, z } from "astro:content";
 import Base from "@/layouts/Base.astro";
 import { WorkSchemaZProps } from "@/schemas/work.schema";
 import type { Render } from "astro:content";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
+import { Dot } from "@/components/decoration/Dot/Dot";
+import { Prose } from "@/components/ui/Prose/Prose";
+import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
