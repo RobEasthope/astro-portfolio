@@ -3,7 +3,7 @@ import type React from "react";
 
 // Component props
 export type ExternalLinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
-  href: string;
+  href: string | undefined;
   className?: string;
   children: React.ReactNode;
 };
