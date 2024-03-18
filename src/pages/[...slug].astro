@@ -1,0 +1,37 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection, z } from "astro:content";
+import Base from "@/layouts/Base.astro";
+import { WorkSchemaZProps } from "@/schemas/work.schema";
+import type { Render } from "astro:content";
+
+export async function getStaticPaths() {
+  const work = await getCollection("work");
+  return work.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: {
+    slug: string;
+    data: z.infer<typeof WorkSchemaZProps>;
+    render(): Render[".mdx"];
+  };
+}
+// Pick off main content from the entry
+const { Content } = await Astro.props.entry.render();
+
+// Pick off the frontmatter
+const { title, description, client, dates, tools } = Astro.props.entry.data;
+---
+
+<Base title={title}>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <p>Client: {client}</p>
+  <Content />
+  <p>{tools}</p>
+  <p>{dates}</p>
+</Base>
