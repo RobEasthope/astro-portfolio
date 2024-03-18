@@ -47,10 +47,7 @@ const {
 
 <Base title={title}>
   <Box as="div" className="px-1 py-2 md:px-2">
-    <Box
-      as="div"
-      className="mb-1 flex flex-col justify-center gap-1 text-center"
-    >
+    <Box as="div" className="mb-1 flex flex-col justify-center gap-1">
       <!-- <SanityImage
         src={thumbnailImage}
         alt={title}
@@ -65,7 +62,7 @@ const {
 
       <Type as="p">{description}</Type>
 
-      <Box as="section" className="flex justify-center gap-1">
+      <Box as="section" className="flex gap-1">
         {
           client && (
             <Type as="p">
@@ -87,11 +84,11 @@ const {
       <Dot />
     </Box>
 
-    <Prose as="div" className="mx-auto">
+    <Prose as="div">
       <Content />
     </Prose>
 
-    <Box as="div" className="flex flex-col gap-1 text-center">
+    <Box as="div" className="flex flex-col gap-1">
       <Dot className="mt-1" />
       <ExternalLink href={projectUrl}>
         {projectUrlTitle || projectUrl}
