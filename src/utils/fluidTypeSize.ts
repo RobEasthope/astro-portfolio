@@ -10,16 +10,17 @@ export const fluidTypeSize = ({
 }: {
   minFontSize: number;
   maxFontSize: number;
-  minLineHeight: number;
-  maxLineHeight: number;
+  minLineHeight?: number;
+  maxLineHeight?: number;
 }) => [
   [fluidPx({ min: minFontSize, max: maxFontSize })],
-  {
-    lineHeight: fluidLineHeightInPx({
-      minFontSize,
-      maxFontSize,
-      minLineHeight,
-      maxLineHeight,
-    }),
-  },
+  minLineHeight &&
+    maxLineHeight && {
+      lineHeight: fluidLineHeightInPx({
+        minFontSize,
+        maxFontSize,
+        minLineHeight,
+        maxLineHeight,
+      }),
+    },
 ];
