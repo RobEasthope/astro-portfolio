@@ -5,12 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 import { WorkSchemaZProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
 
-// TYPES
 export type ProjectIndexProps = {
   projects: z.infer<typeof WorkSchemaZProps>[];
 };
 
-// MARKUP
 export function ProjectIndex({ projects }: ProjectIndexProps) {
   if (!projects) {
     return null;
