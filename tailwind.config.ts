@@ -163,6 +163,5 @@ export default {
       },
     },
   },
-  // eslint-disable-next-line global-require
-  plugins: [tailwindTypography, require("tailwindcss-animate")],
+  plugins: [tailwindTypography],
 };
