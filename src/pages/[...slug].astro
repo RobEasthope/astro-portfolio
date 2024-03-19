@@ -10,6 +10,7 @@ import { Dot } from "@/components/decoration/Dot/Dot";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
+import type { ImageMetadata } from "astro";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -22,7 +23,9 @@ export async function getStaticPaths() {
 interface Props {
   entry: {
     slug: string;
-    data: z.infer<typeof WorkSchemaProps>;
+    data: z.infer<typeof WorkSchemaProps> & {
+      thumbnailImage: ImageMetadata;
+    };
     render(): Render[".mdx"];
   };
 }
