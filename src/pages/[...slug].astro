@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection, z } from "astro:content";
 import Base from "@/layouts/Base.astro";
-import { WorkSchemaZProps } from "@/schemas/work.schema";
+import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { Render } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 interface Props {
   entry: {
     slug: string;
-    data: z.infer<typeof WorkSchemaZProps>;
+    data: z.infer<typeof WorkSchemaProps>;
     render(): Render[".mdx"];
   };
 }
