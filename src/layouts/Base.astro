@@ -1,6 +1,6 @@
 ---
-import { Footer } from "@/components/navigation/Footer/Footer";
 import Header from "@/components/navigation/Header/Header.astro";
+import Footer from "@/components/navigation/Footer/Footer.astro";
 
 import "@/app.css";
 
@@ -20,6 +20,9 @@ const { title, description } = Astro.props;
     <meta name="description" content={description || "Portfolio"} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Adobe Fonts/Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/jpv8zzo.css" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -65,9 +68,9 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body>
+  <body class="font-plantin text-base text-ink">
     <Header />
-    <main>
+    <main class="min-h-[calc(100vh_-((1.5rem*2)+(1.333rem_*_4)))]">
       <slot />
     </main>
     <Footer />

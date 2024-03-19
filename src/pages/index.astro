@@ -1,25 +1,35 @@
 ---
 import Base from "@/layouts/Base.astro";
 import { Box } from "@/components/ui/Box/Box";
+import WorkIndex from "@/components/blocks/WorkIndex/WorkIndex.astro";
 ---
 
 <Base title="Rob Easthope">
-  <main>
-    <Box as="section">
-      <h1>Landing</h1>
-      <p>This is the landing section</p>
+  <main class="grid gap-1">
+    <Box id="landing" as="section" className="w-full px-1">
+      <Box as="section" className="mx-auto max-w-prose">
+        <h1>Landing</h1>
+        <p>This is the landing section</p>
+      </Box>
     </Box>
-    <Box as="section">
-      <h1>About</h1>
-      <p>This is the about section</p>
+    <Box id="about" as="section" className="w-full px-1">
+      <Box as="section" className="mx-auto max-w-prose">
+        <h1>About</h1>
+        <p>This is the about section</p>
+      </Box>
     </Box>
-    <Box as="section">
-      <h1>Work</h1>
-      <p>This is the work section</p>
+    <Box id="work" as="section" className="w-full px-1">
+      <Box as="section" className="mx-auto max-w-prose">
+        <h1>Work</h1>
+        <p>This is the work section</p>
+        <WorkIndex />
+      </Box>
     </Box>
-    <Box as="section">
-      <h1>Contact</h1>
-      <p>This is the contact section</p>
+    <Box id="contact" as="section" className="w-full px-1">
+      <Box as="section" className="mx-auto max-w-prose">
+        <h1>Contact</h1>
+        <p>This is the contact section</p>
+      </Box>
     </Box>
   </main>
 </Base>

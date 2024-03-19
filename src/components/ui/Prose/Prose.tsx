@@ -15,7 +15,7 @@ export function Prose({ as = "div", className, children }: ProseProps) {
   }
 
   return (
-    <Box as={as} className={cn("prose", "text-ink", className)}>
+    <Box as={as} className={cn("prose text-base text-ink", className)}>
       {children}
     </Box>
   );

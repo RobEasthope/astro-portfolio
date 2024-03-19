@@ -1,0 +1,17 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+
+import WorkCard from "@/components/blocks/WorkIndex/components/WorkCard/WorkCard.astro";
+import { Box } from "@/components/ui/Box/Box";
+
+const projects = await getCollection("work");
+---
+
+<Box as="ul" className="grid grid-cols-1 gap-0.25 sm:grid-cols-2">
+  {
+    projects?.map((project) => (
+      <WorkCard title={project?.data?.title} url={project?.data?.url} />
+    ))
+  }
+</Box>
