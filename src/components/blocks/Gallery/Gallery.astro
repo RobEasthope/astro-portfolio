@@ -12,13 +12,7 @@ interface Props {
   maxWidth: "small" | "text" | "medium" | "large" | "full";
 }
 
-const {
-  images,
-  galleryCaption,
-  columns,
-  aspectRatio,
-  maxWidth = "large",
-} = Astro.props;
+const { images, galleryCaption, columns, maxWidth = "large" } = Astro.props;
 ---
 
 <Box as="section" breakout blockSpacing>
