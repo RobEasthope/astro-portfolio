@@ -13,4 +13,14 @@ interface Props {
 const { src, width, height, className, alt = "" } = Astro.props;
 ---
 
-<Image src={src} width={width} height={height} class={className} alt={alt} />
+{
+  src && (
+    <Image
+      src={src}
+      width={width}
+      height={height}
+      class={className}
+      alt={alt}
+    />
+  )
+}
