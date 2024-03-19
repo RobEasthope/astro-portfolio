@@ -1,18 +1,11 @@
 ---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+
 import WorkCard from "@/components/blocks/WorkIndex/components/WorkCard/WorkCard.astro";
 import { Box } from "@/components/ui/Box/Box";
-import { WorkSchemaZProps } from "@/schemas/work.schema";
-import type { z } from "astro:content";
-// import { getCollection } from "astro:content";
 
-// const projects: z.infer<typeof WorkSchemaZProps>[] =
-//   await getCollection("work");
-
-interface Props {
-  projects: Pick<z.infer<typeof WorkSchemaZProps>, "title" | "url">[];
-}
-
-const { projects } = Astro.props;
+const projects = await getCollection("work");
 ---
 
 <Box as="section" blockSpacing>

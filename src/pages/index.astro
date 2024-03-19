@@ -2,9 +2,6 @@
 import Base from "@/layouts/Base.astro";
 import { Box } from "@/components/ui/Box/Box";
 import WorkIndex from "@/components/blocks/WorkIndex/WorkIndex.astro";
-import { getCollection } from "astro:content";
-
-const projects = await getCollection("work");
 ---
 
 <Base title="Rob Easthope">
@@ -20,7 +17,7 @@ const projects = await getCollection("work");
     <Box as="section">
       <h1>Work</h1>
       <p>This is the work section</p>
-      <WorkIndex projects={projects} />
+      <WorkIndex />
     </Box>
     <Box as="section">
       <h1>Contact</h1>
