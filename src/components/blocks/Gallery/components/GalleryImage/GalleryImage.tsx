@@ -1,7 +1,8 @@
-import * as Dialog from '@radix-ui/react-dialog';
-import { Box } from '@/components/ui/Box/Box';
+import * as Dialog from "@radix-ui/react-dialog";
+import { Box } from "@/components/ui/Box/Box";
 // import { SanityImage } from '@/components/ui/SanityImage/SanityImage';
-import { Type } from '@/components/ui/Type/Type';
+import { Type } from "@/components/ui/Type/Type";
+import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 
 // TYPES
 export type GalleryImageProps = {
@@ -46,14 +47,10 @@ export function GalleryImage({
           </Box>
           <Box as="figure">
             <Box as="div" className="mx-auto">
-              {/* <SanityImage
-                src={image}
-                alt={caption}
-                aspectRatio={aspectRatio}
-              /> */}
+              <AstroImage src={image} className="h-1.5 w-1.5" alt={alt} />
               <Type
                 as="figcaption"
-                className="my-0.5 max-w-prose font-serif text-sm italic text-center mx-auto"
+                className="mx-auto my-0.5 max-w-prose text-center font-serif text-sm italic"
               >
                 {caption}
               </Type>
