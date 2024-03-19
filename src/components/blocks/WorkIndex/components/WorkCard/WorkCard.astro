@@ -5,10 +5,14 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { cn } from "@/utils/tailwind";
 import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
+import type { ImageMetadata } from "astro";
+import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 
-type Props = Pick<z.infer<typeof WorkSchemaProps>, "title" | "url">;
+type Props = Pick<z.infer<typeof WorkSchemaProps>, "title" | "url"> & {
+  thumbnailImage: ImageMetadata;
+};
 
-const { title, url } = Astro.props;
+const { title, url, thumbnailImage } = Astro.props;
 ---
 
 <Box as="li">
@@ -26,6 +30,7 @@ const { title, url } = Astro.props;
           cover={!project?.containLogo}
         /> */
     }
+    <AstroImage src={thumbnailImage} alt={title} className="h-2 w-2" />
 
     {title}
   </InternalLink>
