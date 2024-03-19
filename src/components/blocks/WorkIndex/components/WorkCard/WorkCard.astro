@@ -16,7 +16,10 @@ const { title, url, thumbnailImage } = Astro.props;
 ---
 
 <Box as="li">
-  <InternalLink href={url} className="flex h-full flex-row gap-0.5">
+  <InternalLink
+    href={url}
+    className="flex h-full flex-row items-center gap-0.5"
+  >
     {
       /* <SanityImage
           src={project?.thumbnailImage}
