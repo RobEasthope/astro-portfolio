@@ -15,4 +15,5 @@ export const WorkSchemaZProps = z.object({
   repoUrl: z.string().url().optional(),
   tools: z.string().optional(),
   dates: z.string(),
+  thumbnailImage: z.any().optional(),
 });
