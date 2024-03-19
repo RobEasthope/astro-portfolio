@@ -1,16 +1,15 @@
-import type { GalleryImageProps } from '@/components/blocks/Gallery/components/GalleryImage/GalleryImage';
-import { GalleryImage } from '@/components/blocks/Gallery/components/GalleryImage/GalleryImage';
-
-import { Box } from '@/components/ui/Box/Box';
-import { Type } from '@/components/ui/Type/Type';
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
+import type { GalleryImageProps } from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage";
+import { GalleryImage } from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage";
 
 // TYPES
 export type GalleryProps = {
   images: GalleryImageProps[];
   galleryCaption?: string;
-  columns: 'null' | '1' | '2' | '3' | '4' | '5' | undefined;
+  columns: "null" | "1" | "2" | "3" | "4" | "5" | undefined;
   aspectRatio: number;
-  maxWidth: 'small' | 'text' | 'medium' | 'large' | 'full';
+  maxWidth: "small" | "text" | "medium" | "large" | "full";
 };
 
 // MARKUP
@@ -19,7 +18,7 @@ export function Gallery({
   galleryCaption,
   columns,
   aspectRatio,
-  maxWidth = 'large',
+  maxWidth = "large",
 }: GalleryProps) {
   if (!images) {
     return null;
@@ -33,7 +32,7 @@ export function Gallery({
         maxWidth={maxWidth}
         columns={columns}
       >
-        {images &&
+        {images.length > 0 &&
           images?.map((card) => (
             <GalleryImage
               key={card?._key}
