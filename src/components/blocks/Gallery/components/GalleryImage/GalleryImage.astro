@@ -17,7 +17,7 @@ const { image, alt, caption } = Astro.props;
 <Dialog.Root>
   <Dialog.Trigger>
     <Box as="figure">
-      <AstroImage src={image} className="h-1.5 w-1.5" alt={alt} />
+      <AstroImage src={image} alt={alt} />
     </Box>
   </Dialog.Trigger>
   <Dialog.Portal>
@@ -41,7 +41,7 @@ const { image, alt, caption } = Astro.props;
       </Box>
       <Box as="figure">
         <Box as="div" className="mx-auto">
-          <AstroImage src={image} className="h-1.5 w-1.5" alt={alt} />
+          <AstroImage src={image} alt={alt} />
           <Type
             as="figcaption"
             className="mx-auto my-0.5 max-w-prose text-center font-serif text-sm italic"
