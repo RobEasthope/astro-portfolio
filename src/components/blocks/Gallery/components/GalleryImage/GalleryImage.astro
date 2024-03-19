@@ -3,13 +3,9 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
-import type { ImageMetadata } from "astro";
+import type { GalleryImageProps } from "./GalleryImage";
 
-interface Props {
-  image: ImageMetadata;
-  alt?: string;
-  caption?: string;
-}
+type Props = GalleryImageProps;
 
 const { image, alt, caption } = Astro.props;
 ---

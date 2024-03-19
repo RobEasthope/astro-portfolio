@@ -2,9 +2,10 @@
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import GalleryImage from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage.astro";
+import type { GalleryImageProps } from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage";
 
 interface Props {
-  images: GalleryImage[];
+  images: GalleryImageProps[];
   galleryCaption?: string;
   columns: "null" | "1" | "2" | "3" | "4" | "5" | undefined;
   aspectRatio: number;
