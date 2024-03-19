@@ -24,15 +24,11 @@ const { images, galleryCaption, columns, maxWidth = "large" } = Astro.props;
   >
     {
       images.length > 0 &&
-        images?.map((card) => (
+        images?.map((image) => (
           <GalleryImage
-            key={card?._key}
-            _type={card?._type}
-            image={card?.image}
-            galleryAspectRatio={aspectRatio}
-            aspectRatio={card?.aspectRatio}
-            maxWidth={card?.maxWidth}
-            caption={card?.caption}
+            image={image?.image}
+            alt={image?.alt}
+            caption={image?.caption}
           />
         ))
     }
