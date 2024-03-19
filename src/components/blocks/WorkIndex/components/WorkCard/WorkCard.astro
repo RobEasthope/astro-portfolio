@@ -3,19 +3,16 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 // import { SanityImage } from '@/components/_base/SanityImage/SanityImage';
 import { cn } from "@/utils/tailwind";
-import { WorkSchemaZProps } from "@/schemas/work.schema";
+import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
 
-type Props = Pick<z.infer<typeof WorkSchemaZProps>, "title" | "url">;
+type Props = Pick<z.infer<typeof WorkSchemaProps>, "title" | "url">;
 
 const { title, url } = Astro.props;
 ---
 
 <Box as="li">
-  <InternalLink
-    href={url}
-    className="flex h-full flex-row items-center gap-0.5 text-left sm:flex-col sm:gap-0.25 sm:text-center"
-  >
+  <InternalLink href={url} className="flex h-full flex-row gap-0.5">
     {
       /* <SanityImage
           src={project?.thumbnailImage}

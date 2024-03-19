@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { z } from "astro:content";
 
-export const WorkSchemaZProps = z.object({
+export const WorkSchemaDataProps = {
   title: z.string(),
   description: z.string(),
   url: z.string(),
@@ -15,4 +15,6 @@ export const WorkSchemaZProps = z.object({
   repoUrl: z.string().url().optional(),
   tools: z.string().optional(),
   dates: z.string(),
-});
+};
+
+export const WorkSchemaProps = z.object({ ...WorkSchemaDataProps });

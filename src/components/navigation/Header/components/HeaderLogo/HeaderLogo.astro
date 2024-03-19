@@ -2,14 +2,18 @@
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
+import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
+import logoAsset from "./saffron-roundel-circle@2x.png";
 ---
 
 <Box as="div" className="flex items-center">
   <InternalLink href="/" className="py-0.25">
     <Type as="span" className="sr-only"> Rob Easthope </Type>
-    <img
-      src="/saffron-roundel-circle@2x.png"
-      class="h-1.25 w-1.25"
+    <AstroImage
+      src={logoAsset}
+      width={64}
+      height={64}
+      className="h-1.5 w-1.5"
       alt="Rob Easthope"
     />
   </InternalLink>
