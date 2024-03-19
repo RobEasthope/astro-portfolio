@@ -11,7 +11,11 @@ const projects = await getCollection("work");
 <Box as="ul" className="grid grid-cols-1 gap-0.25 sm:grid-cols-2">
   {
     projects?.map((project) => (
-      <WorkCard title={project?.data?.title} url={project?.data?.url} />
+      <WorkCard
+        title={project?.data?.title}
+        url={project?.data?.url}
+        thumbnailImage={project?.data?.thumbnailImage}
+      />
     ))
   }
 </Box>
