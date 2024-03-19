@@ -3,6 +3,10 @@ import WorkCard from "@/components/blocks/WorkIndex/components/WorkCard/WorkCard
 import { Box } from "@/components/ui/Box/Box";
 import { WorkSchemaZProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
+// import { getCollection } from "astro:content";
+
+// const projects: z.infer<typeof WorkSchemaZProps>[] =
+//   await getCollection("work");
 
 interface Props {
   projects: Pick<z.infer<typeof WorkSchemaZProps>, "title" | "url">[];
@@ -12,16 +16,14 @@ const { projects } = Astro.props;
 ---
 
 <Box as="section" blockSpacing>
-  {
-    projects?.length > 0 && (
-      <Box
-        as="ul"
-        className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
-      >
-        {projects?.map((project) => (
-          <WorkCard title={project?.title} url={project?.url} />
-        ))}
-      </Box>
-    )
-  }
+  <Box
+    as="ul"
+    className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
+  >
+    {
+      projects?.map((project) => (
+        <WorkCard title={project?.data?.title} url={project?.data?.url} />
+      ))
+    }
+  </Box>
 </Box>
