@@ -3,10 +3,10 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 // import { SanityImage } from '@/components/_base/SanityImage/SanityImage';
 import { cn } from "@/utils/tailwind";
-import { WorkSchemaZProps } from "@/schemas/work.schema";
+import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { z } from "astro:content";
 
-type Props = Pick<z.infer<typeof WorkSchemaZProps>, "title" | "url">;
+type Props = Pick<z.infer<typeof WorkSchemaProps>, "title" | "url">;
 
 const { title, url } = Astro.props;
 ---
