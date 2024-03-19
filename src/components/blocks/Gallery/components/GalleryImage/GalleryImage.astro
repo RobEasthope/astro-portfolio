@@ -1,0 +1,55 @@
+---
+import * as Dialog from "@radix-ui/react-dialog";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
+import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
+
+interface Props {
+  image?: ImageMetadata;
+  galleryAspectRatio?: number;
+  aspectRatio: number;
+  caption?: string;
+}
+
+const { image, galleryAspectRatio, aspectRatio = 1, caption } = Astro.props;
+---
+
+<Dialog.Root>
+  <Dialog.Trigger>
+    <Box as="figure">
+      <SanityImage src={image} alt="" aspectRatio={galleryAspectRatio} />
+    </Box>
+  </Dialog.Trigger>
+  <Dialog.Portal>
+    <Dialog.Overlay
+      className="fixed left-0 top-0 z-10 h-screen w-screen bg-white"
+    />
+
+    <Dialog.Content
+      className="bg-whitefocus:outline-none fixed left-0 top-0 z-50 h-screen w-screen overflow-y-auto sm:px-1 sm:pb-1 lg:px-2 lg:pb-2 lg:pt-0"
+    >
+      <Dialog.Title className="sr-only">{caption}</Dialog.Title>
+      <Box
+        as="div"
+        className="flex w-full flex-nowrap items-center justify-end"
+      >
+        <Dialog.Close className="p-0.5">
+          <Type as="span" className="text-sm font-medium leading-none">
+            Close
+          </Type>
+        </Dialog.Close>
+      </Box>
+      <Box as="figure">
+        <Box as="div" className="mx-auto">
+          <AstroImage src={image} className="h-1.5 w-1.5" alt={alt} />
+          <Type
+            as="figcaption"
+            className="mx-auto my-0.5 max-w-prose text-center font-serif text-sm italic"
+          >
+            {caption}
+          </Type>
+        </Box>
+      </Box>
+    </Dialog.Content>
+  </Dialog.Portal>
+</Dialog.Root>
