@@ -45,8 +45,6 @@ const {
   dates,
   thumbnailImage,
 } = Astro.props.entry.data;
-
-console.log(Astro.props.entry.data);
 ---
 
 <Base title={title}>
@@ -55,11 +53,11 @@ console.log(Astro.props.entry.data);
       as="div"
       className="mb-1 flex flex-col justify-center gap-1 text-center"
     >
-      <!-- <AstroImage
+      <AstroImage
         src={thumbnailImage}
         alt={title}
         className="mx-auto h-4 w-4 rounded-full"
-      /> -->
+      />
       <Type as="h1" className="text-2xl">
         {title}
       </Type>
