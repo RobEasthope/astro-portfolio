@@ -9,6 +9,7 @@ import { Type } from "@/components/ui/Type/Type";
 import { Dot } from "@/components/decoration/Dot/Dot";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
+import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -42,7 +43,10 @@ const {
   repoUrl,
   tools,
   dates,
+  thumbnailImage,
 } = Astro.props.entry.data;
+
+console.log(Astro.props.entry.data);
 ---
 
 <Base title={title}>
@@ -51,14 +55,11 @@ const {
       as="div"
       className="mb-1 flex flex-col justify-center gap-1 text-center"
     >
-      <!-- <SanityImage
+      <!-- <AstroImage
         src={thumbnailImage}
         alt={title}
-        mode={containLogo ? "contain" : "responsive"}
-        aspectRatio={containLogo ? 0 : 1}
         className="mx-auto h-4 w-4 rounded-full"
       /> -->
-
       <Type as="h1" className="text-2xl">
         {title}
       </Type>
