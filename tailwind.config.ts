@@ -29,6 +29,7 @@ export default {
         imperialRed: "rgb(170, 0, 0)",
         japaneseRed: "rgb(193, 78, 95)",
         highlight: "$saffron",
+        offWhite: "rgba(170, 163, 128, 0.03)",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
