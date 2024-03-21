@@ -1,7 +1,7 @@
 ---
 // eslint-disable-next-line import/no-unresolved
 import { getCollection, z } from "astro:content";
-import Base from "@/layouts/Base.astro";
+import Root from "@/layouts/Root.astro";
 import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { Render } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
@@ -51,7 +51,7 @@ const {
 } = Astro.props.entry.data;
 ---
 
-<Base title={title}>
+<Root title={title}>
   <Box as="div" className="px-1 py-6 md:px-2">
     <Box
       as="div"
@@ -110,4 +110,4 @@ const {
       <Type as="p">{dates}</Type>
     </Box>
   </Box>
-</Base>
+</Root>

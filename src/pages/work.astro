@@ -7,12 +7,12 @@ import { Type } from "@/components/ui/Type/Type";
 
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
-import Base from "@/layouts/Base.astro";
+import Root from "@/layouts/Root.astro";
 
 const projects = await getCollection("work");
 ---
 
-<Base title="Work - Rob Easthope">
+<Root title="Work - Rob Easthope">
   <Box id="work" as="section" className="w-full px-1">
     <Box as="section" className="mx-auto max-w-prose">
       <Type as="h2" className="mb-1 text-center text-2xl leading-none"
@@ -40,4 +40,4 @@ const projects = await getCollection("work");
       </Box>
     </Box>
   </Box>
-</Base>
+</Root>
