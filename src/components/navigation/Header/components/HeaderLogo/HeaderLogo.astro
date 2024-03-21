@@ -6,11 +6,8 @@ import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 import logoAsset from "./saffron-roundel-circle@2x.png";
 ---
 
-<Box
-  as="div"
-  className="absolute left-1/2 flex flex-1 -translate-x-1/2 items-center justify-center"
->
-  <InternalLink href="/" className="p-0.25">
+<Box as="div" className="flex items-center">
+  <InternalLink href="/" className="py-0.25">
     <Type as="span" className="sr-only"> Rob Easthope </Type>
     <AstroImage
       src={logoAsset}

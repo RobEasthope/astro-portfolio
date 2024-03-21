@@ -11,6 +11,7 @@ import { Prose } from "@/components/ui/Prose/Prose";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 import type { ImageMetadata } from "astro";
+import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -51,50 +52,54 @@ const {
 ---
 
 <Base title={title}>
-  <Box as="div" className="px-1 py-2 md:px-2">
+  <Box as="div" className="px-1 py-3 md:px-2">
     <Box
       as="div"
-      className="mb-1 flex flex-col justify-center gap-1 text-center"
+      className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
-      <AstroImage
+      <!-- <AstroImage
         src={thumbnailImage}
         alt={title}
-        className="mx-auto h-4 w-4 rounded-full"
-      />
-      <Type as="h1" className="text-2xl">
+        className="mb-2 h-4 w-4 rounded-full "
+      /> -->
+      <Type as="h1" className="mb-0.5 text-3xl leading-tight">
         {title}
       </Type>
 
-      <Type as="p">{description}</Type>
+      <Type as="p" className="mb-1 text-md italic">{description}</Type>
 
-      <Box as="section" className="flex justify-center gap-1">
+      <Box as="section" className="mb-0.5 flex gap-2">
         {
           client && (
-            <Type as="p">
-              <Box as="span">Client: </Box>
+            <Box as="section">
+              <Type as="div" className="text-xs">
+                Client
+              </Type>
               <ExternalLink href={clientUrl}>{client}</ExternalLink>
-            </Type>
+            </Box>
           )
         }
         {
           agency && (
-            <Type as="p">
-              <Box as="span">Agency: </Box>
+            <Box as="section">
+              <Type as="div" className="text-xs">
+                Agency
+              </Type>
               <ExternalLink href={agencyUrl}>{agency}</ExternalLink>
-            </Type>
+            </Box>
           )
         }
       </Box>
 
-      <Dot />
+      <LineBreak />
     </Box>
 
     <Prose as="div" className="mx-auto">
       <Content />
     </Prose>
 
-    <Box as="div" className="flex flex-col gap-1 text-center">
-      <Dot className="mt-1" />
+    <Box as="div" className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5">
+      <LineBreak />
       <ExternalLink href={projectUrl}>
         {projectUrlTitle || projectUrl}
       </ExternalLink>
