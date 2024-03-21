@@ -94,9 +94,14 @@ const {
 
     <Box as="div" className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5">
       <LineBreak />
-      <ExternalLink href={projectUrl}>
-        {projectUrlTitle || projectUrl}
-      </ExternalLink>
+
+      {
+        projectUrlTitle && (
+          <Type as="p" className="mb-1 text-center">
+            <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
+          </Type>
+        )
+      }
 
       <Type as="p">{tools}</Type>
 
