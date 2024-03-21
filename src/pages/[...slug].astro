@@ -70,27 +70,9 @@ const {
         >{description}</Type
       >
 
-      <Box as="section" className="mb-0.5 flex gap-2">
-        {
-          client && (
-            <Box as="section">
-              <Type as="div" className="text-xs">
-                Client
-              </Type>
-              <ExternalLink href={clientUrl}>{client}</ExternalLink>
-            </Box>
-          )
-        }
-        {
-          agency && (
-            <Box as="section">
-              <Type as="div" className="text-xs">
-                Agency
-              </Type>
-              <ExternalLink href={agencyUrl}>{agency}</ExternalLink>
-            </Box>
-          )
-        }
+      <Box as="section" className="mb-0.5 flex justify-center gap-2">
+        {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+        {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
       </Box>
 
       <LineBreak />
