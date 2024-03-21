@@ -1,0 +1,38 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+import { Box } from "@/components/ui/Box/Box";
+
+import { Type } from "@/components/ui/Type/Type";
+
+import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
+import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
+
+const projects = await getCollection("work");
+---
+
+<Box id="work" as="section" className="w-full px-1">
+  <Box as="section" className="mx-auto max-w-prose">
+    <Type as="h2" className="mb-1 text-center text-2xl leading-none">Work</Type>
+    <Type as="p" className="text-center"
+      >Some of the recent projects I've worked on
+    </Type>
+
+    <LineBreak className="my-2" />
+
+    <Box as="ul" className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
+      {
+        projects?.map((project) => (
+          <Type as="li">
+            <InternalLink
+              href={project.data.url}
+              className="flex h-full flex-row gap-0.5"
+            >
+              {project.data.title}
+            </InternalLink>
+          </Type>
+        ))
+      }
+    </Box>
+  </Box>
+</Box>
