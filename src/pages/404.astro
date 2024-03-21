@@ -6,16 +6,21 @@ import StandardPage from "@/layouts/StandardPage.astro";
 ---
 
 <StandardPage title="Don't Panic!">
-  <Box as="section">
-    <LineBreak className="mb-2" />
-    <Type as="h1" className="mb-1 text-center text-3xl leading-none">
-      Apologies
-    </Type>
+  <Box
+    as="section"
+    className="flex min-h-[calc(100vh_-((1.5rem*14)+(1.333rem_*_4)))] items-center justify-center"
+  >
+    <Box as="section" className="max-w-prose">
+      <LineBreak className="mb-2" />
+      <Type as="h1" className="mb-1 text-center text-3xl leading-none">
+        Apologies
+      </Type>
 
-    <Type as="p" className="mb-1 text-center text-md italic"
-      >The page you are looking for cannot be found</Type
-    >
+      <Type as="p" className="mb-1 text-center text-md italic"
+        >The page you are looking for cannot be found</Type
+      >
 
-    <LineBreak className="mt-2" />
+      <LineBreak className="mt-2" />
+    </Box>
   </Box>
 </StandardPage>
