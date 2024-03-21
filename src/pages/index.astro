@@ -1,27 +1,22 @@
 ---
-import { Box } from "@/components/ui/Box/Box";
-import StandardPage from "@/layouts/StandardPage.astro";
+import LandingPage from "@/layouts/LandingPage.astro";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+
+import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 ---
 
-<StandardPage title="Rob Easthope">
-  <main class="grid gap-5">
-    <Box id="landing" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>Landing</h1>
-        <p>This is the landing section</p>
-      </Box>
-    </Box>
-    <Box id="about" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>About</h1>
-        <p>This is the about section</p>
-      </Box>
-    </Box>
-    <Box id="contact" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>Contact</h1>
-        <p>This is the contact section</p>
-      </Box>
-    </Box>
-  </main>
-</StandardPage>
+<LandingPage title="Rob Easthope">
+  <MuxPlayer
+    playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
+    metadata={{
+      video_id: "mW42mk9Ia1svcpqMPkj02Xh12q7TG01CX3",
+      video_title: "Flight off Great End",
+      viewer_user_id: "user-id-007",
+    }}
+    streamType="on-demand"
+    loop
+    autoPlay
+    muted
+    client:load
+  />
+</LandingPage>
