@@ -20,6 +20,9 @@ dependencies:
   '@astrojs/ts-plugin':
     specifier: ^1.6.0
     version: 1.6.0
+  '@mux/mux-player-react':
+    specifier: ^2.4.0
+    version: 2.4.0(@types/react-dom@18.2.21)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-dialog':
     specifier: ^1.0.5
     version: 1.0.5(@types/react-dom@18.2.21)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
@@ -1430,6 +1433,52 @@ packages:
       vfile: 6.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@mux/mux-player-react@2.4.0(@types/react-dom@18.2.21)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-N0zHfNYXo9eNHLlYcHydLDFHk8TQpt4Psi2MyjIn7o8IR2dDsTHNxF5nxVTAMtCx7owohePgXa8g5nvXMixORQ==}
+    peerDependencies:
+      '@types/react': ^17.0.0 || ^18
+      '@types/react-dom': '*'
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@mux/mux-player': 2.4.0
+      '@mux/playback-core': 0.22.3
+      '@types/react': 18.2.64
+      '@types/react-dom': 18.2.21
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@mux/mux-player@2.4.0:
+    resolution: {integrity: sha512-6F6RvXyIWwYtwh29+bmoqa5Nd1z31wGafeKtIds0BYP+PdVYRSRhQ16B8tajUb0+yeCVbqyvBnITEUoAZ0zuIQ==}
+    dependencies:
+      '@mux/mux-video': 0.17.4
+      '@mux/playback-core': 0.22.3
+      media-chrome: 3.1.1
+    dev: false
+
+  /@mux/mux-video@0.17.4:
+    resolution: {integrity: sha512-ePTL+Kxtw03OmCQ6y34A8tTdK4ctsHPzuOY7etCFldhdAMTomwxSacdNwa8BpZ23umkXHp+FQXPyJQIfv4G++Q==}
+    dependencies:
+      '@mux/playback-core': 0.22.3
+      castable-video: 1.0.6
+      custom-media-element: 1.2.3
+      media-tracks: 0.3.0
+    dev: false
+
+  /@mux/playback-core@0.22.3:
+    resolution: {integrity: sha512-IZBMMhUKsEtSrxb8XyhfJVzI9g6Ca0poCDrJQy9hCV3+DmgfFPDLSxZZvtSglH5CsmFPHL+hOFD/qn9ewCmAOA==}
+    dependencies:
+      hls.js: 1.4.14
+      mux-embed: 4.30.0
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -3028,6 +3077,12 @@ packages:
   /caniuse-lite@1.0.30001596:
     resolution: {integrity: sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==}
 
+  /castable-video@1.0.6:
+    resolution: {integrity: sha512-Ykw2uL4ZQnqX0j9KF9ksbDpyc8I53mFMswCKW9yV5TrwpWkdNqRHLlcU85W30BIw61fgDjgm0Xh5G0rbcmv23g==}
+    dependencies:
+      custom-media-element: 1.2.3
+    dev: false
+
   /ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
     dev: false
@@ -3260,6 +3315,10 @@ packages:
 
   /csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
+    dev: false
+
+  /custom-media-element@1.2.3:
+    resolution: {integrity: sha512-xr9Hbrslkjm1fapJP5hL98pySeZmNepBSefQS/XTxynamqPTfRBK5MnhReMOiAj8xvJApVPrVnlYxIrknay8jg==}
     dev: false
 
   /damerau-levenshtein@1.0.8:
@@ -4643,6 +4702,10 @@ packages:
       space-separated-tokens: 2.0.2
     dev: false
 
+  /hls.js@1.4.14:
+    resolution: {integrity: sha512-UppQjyvPVclg+6t2KY/Rv03h0+bA5u6zwqVoz4LAC/L0fgYmIaCD7ZCrwe8WI1Gv01be1XL0QFsRbSdIHV/Wbw==}
+    dev: false
+
   /html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
     dev: true
@@ -5922,6 +5985,14 @@ packages:
       '@types/mdast': 4.0.3
     dev: false
 
+  /media-chrome@3.1.1:
+    resolution: {integrity: sha512-EqofPNX7Eq1dv9ixuRo51Wv/Wo3P4PIPjY4iM1jGqu/Jyond8BqdigQKdhxPM2rH9SohdUXZvUWS1OJ1xMO6Ww==}
+    dev: false
+
+  /media-tracks@0.3.0:
+    resolution: {integrity: sha512-kicD8eOFwe6nD7jn7iM/0yuLzWuo6abWHURYwY7NhxL1dBif+lt0on4rLTs6VhKwAEE/BjT3wr+0vn1w8SBpag==}
+    dev: false
+
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -6328,6 +6399,10 @@ packages:
 
   /muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
+    dev: false
+
+  /mux-embed@4.30.0:
+    resolution: {integrity: sha512-XAgAp4CEvsiZL26GbruzeG1g33OWyrzuskDMavXUxDufTxS0/AxAhwoTTRqEzEJS9vnZa/X9R2GV3xRX1XMp2w==}
     dev: false
 
   /mz@2.7.0:
