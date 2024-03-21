@@ -25,10 +25,10 @@ export default {
         // Saffron colours
         ink: "rgb(21, 23, 24)",
         saffron: "rgba(255, 153, 51, 1)",
-        darkSaffron: "rgba(250, 145, 46, 1)",
-        imperialRed: "rgb(170, 0, 0)",
-        japaneseRed: "rgb(193, 78, 95)",
-        offWhite: "rgba(170, 163, 128, 0.03)",
+        "dark-saffron": "rgba(250, 145, 46, 1)",
+        "imperial-red": "rgb(170, 0, 0)",
+        "japanese-red": "rgb(193, 78, 95)",
+        "off-white": "rgba(170, 163, 128, 0.03)",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
