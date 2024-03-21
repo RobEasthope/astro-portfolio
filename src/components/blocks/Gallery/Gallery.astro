@@ -10,12 +10,19 @@ interface Props {
   columns: "null" | "1" | "2" | "3" | "4" | "5" | undefined;
   aspectRatio: number;
   maxWidth: "small" | "text" | "medium" | "large" | "full";
+  className?: string;
 }
 
-const { images, galleryCaption, columns, maxWidth = "large" } = Astro.props;
+const {
+  images,
+  galleryCaption,
+  columns,
+  maxWidth = "large",
+  className,
+} = Astro.props;
 ---
 
-<Box as="section" breakout blockSpacing>
+<Box as="section" className={className} breakout blockSpacing>
   <Box
     as="div"
     className="mx-auto grid gap-0.75"
