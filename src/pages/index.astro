@@ -1,27 +1,30 @@
 ---
 import Root from "@/layouts/Root.astro";
 import { Box } from "@/components/ui/Box/Box";
+import StandardPage from "@/layouts/StandardPage.astro";
 ---
 
 <Root title="Rob Easthope">
-  <main class="grid gap-5">
-    <Box id="landing" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>Landing</h1>
-        <p>This is the landing section</p>
+  <StandardPage>
+    <main class="grid gap-5">
+      <Box id="landing" as="section" className="w-full px-1">
+        <Box as="section" className="mx-auto max-w-prose">
+          <h1>Landing</h1>
+          <p>This is the landing section</p>
+        </Box>
       </Box>
-    </Box>
-    <Box id="about" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>About</h1>
-        <p>This is the about section</p>
+      <Box id="about" as="section" className="w-full px-1">
+        <Box as="section" className="mx-auto max-w-prose">
+          <h1>About</h1>
+          <p>This is the about section</p>
+        </Box>
       </Box>
-    </Box>
-    <Box id="contact" as="section" className="w-full px-1">
-      <Box as="section" className="mx-auto max-w-prose">
-        <h1>Contact</h1>
-        <p>This is the contact section</p>
+      <Box id="contact" as="section" className="w-full px-1">
+        <Box as="section" className="mx-auto max-w-prose">
+          <h1>Contact</h1>
+          <p>This is the contact section</p>
+        </Box>
       </Box>
-    </Box>
-  </main>
+    </main>
+  </StandardPage>
 </Root>

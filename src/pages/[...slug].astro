@@ -12,6 +12,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 import type { ImageMetadata } from "astro";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
+import StandardPage from "@/layouts/StandardPage.astro";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -52,62 +53,64 @@ const {
 ---
 
 <Root title={title}>
-  <Box as="div" className="px-1 py-6 md:px-2">
-    <Box
-      as="div"
-      className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
-    >
-      <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
-        {title}
-      </Type>
-
-      <Type as="p" className="mb-1 text-center text-md italic"
-        >{description}</Type
+  <StandardPage>
+    <Box as="div" className="px-1 py-6 md:px-2">
+      <Box
+        as="div"
+        className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
       >
+        <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
+          {title}
+        </Type>
+
+        <Type as="p" className="mb-1 text-center text-md italic"
+          >{description}</Type
+        >
+
+        <Box
+          as="section"
+          className="my-1 flex items-center justify-center gap-0.25"
+        >
+          {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+          {
+            client && agency && (
+              <Type as="span" className="text-sm">
+                x
+              </Type>
+            )
+          }
+          {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
+        </Box>
+
+        <LineBreak />
+      </Box>
+
+      <Prose as="div" className="mx-auto">
+        <Content />
+      </Prose>
 
       <Box
-        as="section"
-        className="my-1 flex items-center justify-center gap-0.25"
+        as="div"
+        className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
       >
-        {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+        <LineBreak />
+
         {
-          client && agency && (
-            <Type as="span" className="text-sm">
-              x
+          projectUrlTitle && (
+            <Type as="p" className="mb-1 text-center">
+              <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
             </Type>
           )
         }
-        {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
+
+        <Type as="p">{tools}</Type>
+
+        <ExternalLink href={repoUrl}>
+          {repoTitle}
+        </ExternalLink>
+
+        <Type as="p">{dates}</Type>
       </Box>
-
-      <LineBreak />
     </Box>
-
-    <Prose as="div" className="mx-auto">
-      <Content />
-    </Prose>
-
-    <Box
-      as="div"
-      className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
-    >
-      <LineBreak />
-
-      {
-        projectUrlTitle && (
-          <Type as="p" className="mb-1 text-center">
-            <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
-          </Type>
-        )
-      }
-
-      <Type as="p">{tools}</Type>
-
-      <ExternalLink href={repoUrl}>
-        {repoTitle}
-      </ExternalLink>
-
-      <Type as="p">{dates}</Type>
-    </Box>
-  </Box>
+  </StandardPage>
 </Root>
