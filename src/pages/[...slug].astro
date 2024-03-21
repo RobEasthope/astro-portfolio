@@ -54,39 +54,43 @@ const {
   <Box as="div" className="px-1 py-2 md:px-2">
     <Box
       as="div"
-      className="mx-auto mb-1 flex max-w-prose flex-col justify-center gap-1"
+      className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
-      <AstroImage
+      <!-- <AstroImage
         src={thumbnailImage}
         alt={title}
-        className="h-4 w-4 rounded-full"
-      />
-      <Type as="h1" className="text-2xl">
+        className="mx-auto h-4 w-4 rounded-full"
+      /> -->
+      <Type as="h1" className="text-3xl">
         {title}
       </Type>
 
-      <Type as="p">{description}</Type>
+      <Type as="p" className="mb-2 text-md italic">{description}</Type>
 
-      <Box as="section" className="flex gap-1">
+      <Box as="section" className="mb-1 flex gap-2">
         {
           client && (
-            <Type as="p">
-              <Box as="span">Client: </Box>
+            <Box as="section">
+              <Type as="div" className="text-xs">
+                Client
+              </Type>
               <ExternalLink href={clientUrl}>{client}</ExternalLink>
-            </Type>
+            </Box>
           )
         }
         {
           agency && (
-            <Type as="p">
-              <Box as="span">Agency: </Box>
+            <Box as="section">
+              <Type as="div" className="text-xs">
+                Agency
+              </Type>
               <ExternalLink href={agencyUrl}>{agency}</ExternalLink>
-            </Type>
+            </Box>
           )
         }
       </Box>
 
-      <Dot />
+      <!-- <Dot /> -->
     </Box>
 
     <Prose as="div" className="mx-auto">
