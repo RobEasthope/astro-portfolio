@@ -1,9 +1,21 @@
 ---
+import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
 import StandardPage from "@/layouts/StandardPage.astro";
 ---
 
 <StandardPage title="Don't Panic!">
-  <main>
-    <h1>404</h1>
-  </main>
+  <Box as="section">
+    <LineBreak className="my-2" />
+    <Type as="h1" className="mb-1 text-center text-3xl leading-none">
+      Apologies
+    </Type>
+
+    <Type as="p" className="mb-1 text-center text-md italic"
+      >The page you are looking for cannot be found</Type
+    >
+
+    <LineBreak className="my-2" />
+  </Box>
 </StandardPage>
