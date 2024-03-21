@@ -1,10 +1,9 @@
 ---
-import Base from "@/layouts/Base.astro";
 import { Box } from "@/components/ui/Box/Box";
-import WorkSection from "@/components/content-sections/WorkSection/WorkSection.astro";
+import StandardPage from "@/layouts/StandardPage.astro";
 ---
 
-<Base title="Rob Easthope">
+<StandardPage title="Rob Easthope">
   <main class="grid gap-5">
     <Box id="landing" as="section" className="w-full px-1">
       <Box as="section" className="mx-auto max-w-prose">
@@ -18,7 +17,6 @@ import WorkSection from "@/components/content-sections/WorkSection/WorkSection.a
         <p>This is the about section</p>
       </Box>
     </Box>
-    <WorkSection />
     <Box id="contact" as="section" className="w-full px-1">
       <Box as="section" className="mx-auto max-w-prose">
         <h1>Contact</h1>
@@ -26,4 +24,4 @@ import WorkSection from "@/components/content-sections/WorkSection/WorkSection.a
       </Box>
     </Box>
   </main>
-</Base>
+</StandardPage>

@@ -7,16 +7,20 @@ import { Type } from "@/components/ui/Type/Type";
 
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
+import StandardPage from "@/layouts/StandardPage.astro";
 
 const projects = await getCollection("work");
 ---
 
-<Box id="work" as="section" className="w-full px-1">
+<StandardPage title="Work by Rob Easthope">
   <Box as="section" className="mx-auto max-w-prose">
-    <Type as="h2" className="mb-1 text-center text-2xl leading-none">Work</Type>
-    <Type as="p" className="text-center"
-      >Some of the recent projects I've worked on
+    <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
+      Work
     </Type>
+
+    <Type as="p" className="mb-1 text-center text-md italic"
+      >Some of the recent projects I have worked on</Type
+    >
 
     <LineBreak className="my-2" />
 
@@ -35,4 +39,4 @@ const projects = await getCollection("work");
       }
     </Box>
   </Box>
-</Box>
+</StandardPage>
