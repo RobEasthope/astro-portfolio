@@ -1,12 +1,13 @@
 ---
 import WorkIndex from "@/components/content-sections/WorkSection/components/WorkIndex/WorkIndex.astro";
 import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
 ---
 
 <Box id="work" as="section" className="w-full px-1">
   <Box as="section" className="mx-auto max-w-prose">
-    <h1>Work</h1>
-    <p>This is the work section</p>
+    <Type as="h2">Work</Type>
+    <Type as="p">This is the work section</Type>
     <WorkIndex />
   </Box>
 </Box>
