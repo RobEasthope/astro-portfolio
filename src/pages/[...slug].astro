@@ -62,7 +62,9 @@ const {
         alt={title}
         className="mb-2 h-4 w-4 rounded-full "
       /> -->
-      <Type as="h1" className="mb-0.5 text-center text-3xl leading-tight">
+        className="mx-auto mb-1 h-4 w-4 rounded-full "
+      />
+      <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
         {title}
       </Type>
 
@@ -70,8 +72,18 @@ const {
         >{description}</Type
       >
 
-      <Box as="section" className="mb-0.5 flex justify-center gap-2">
+      <Box
+        as="section"
+        className="my-1 flex items-center justify-center gap-0.25"
+      >
         {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+        {
+          client && agency && (
+            <Type as="span" className="text-sm">
+              x
+            </Type>
+          )
+        }
         {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
       </Box>
 
