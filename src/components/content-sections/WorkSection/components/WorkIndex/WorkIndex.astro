@@ -2,8 +2,8 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 
-import WorkCard from "@/components/blocks/WorkIndex/components/WorkCard/WorkCard.astro";
 import { Box } from "@/components/ui/Box/Box";
+import WorkCard from "@/components/content-sections/WorkSection/components/WorkIndex/components/WorkCard/WorkCard.astro";
 
 const projects = await getCollection("work");
 ---
