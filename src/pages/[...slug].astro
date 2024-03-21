@@ -48,7 +48,7 @@ const {
 } = Astro.props.entry.data;
 ---
 
-<StandardPage>
+<StandardPage title={title} description={description}>
   <Box
     as="div"
     className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
