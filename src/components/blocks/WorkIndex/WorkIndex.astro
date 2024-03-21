@@ -8,7 +8,7 @@ import { Box } from "@/components/ui/Box/Box";
 const projects = await getCollection("work");
 ---
 
-<Box as="ul" className="grid grid-cols-1 gap-0.25 sm:grid-cols-2">
+<Box as="ul" className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
   {
     projects?.map((project) => (
       <WorkCard
