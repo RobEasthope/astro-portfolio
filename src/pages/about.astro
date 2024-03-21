@@ -1,0 +1,37 @@
+---
+import { Box } from "@/components/ui/Box/Box";
+
+import { Type } from "@/components/ui/Type/Type";
+
+import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
+import StandardPage from "@/layouts/StandardPage.astro";
+import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+---
+
+<StandardPage title="About Rob Easthope">
+  <Box as="section" className="mx-auto max-w-prose">
+    <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
+      About
+    </Type>
+
+    <LineBreak className="my-2" />
+    <Box as="section" className="prose text-base">
+      <p>
+        I'm a senior front end developer based in Cumbria, England. specialising
+        in building (and occasionally designing) digital experiences for the
+        web.
+      </p>
+
+      <p>
+        With over twelve years of industry experience, I have worked for some of
+        London's leading agencies, consulted for start ups, and worked with
+        clients including the United Nations, NASA, and global multi-nationals.
+      </p>
+      <p>
+        Interested in working together? <EmailLink
+          emailAddress="hello@robeasthope.com">Lets talk.</EmailLink
+        >
+      </p>
+    </Box>
+  </Box>
+</StandardPage>
