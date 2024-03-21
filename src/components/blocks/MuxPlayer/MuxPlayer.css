@@ -1,4 +1,10 @@
 mux-player {
+  /* Fill the container */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  --media-object-fit: cover;
+
   /* Hide all controls at once */
   --controls: none;
 
