@@ -52,43 +52,32 @@ const {
 ---
 
 <Base title={title}>
-  <Box as="div" className="px-1 py-3 md:px-2">
+  <Box as="div" className="px-1 py-6 md:px-2">
     <Box
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
-      <!-- <AstroImage
-        src={thumbnailImage}
-        alt={title}
-        className="mb-2 h-4 w-4 rounded-full "
-      /> -->
-      <Type as="h1" className="mb-0.5 text-3xl leading-tight">
+      <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
         {title}
       </Type>
 
-      <Type as="p" className="mb-1 text-md italic">{description}</Type>
+      <Type as="p" className="mb-1 text-center text-md italic"
+        >{description}</Type
+      >
 
-      <Box as="section" className="mb-0.5 flex gap-2">
+      <Box
+        as="section"
+        className="my-1 flex items-center justify-center gap-0.25"
+      >
+        {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
         {
-          client && (
-            <Box as="section">
-              <Type as="div" className="text-xs">
-                Client
-              </Type>
-              <ExternalLink href={clientUrl}>{client}</ExternalLink>
-            </Box>
+          client && agency && (
+            <Type as="span" className="text-sm">
+              x
+            </Type>
           )
         }
-        {
-          agency && (
-            <Box as="section">
-              <Type as="div" className="text-xs">
-                Agency
-              </Type>
-              <ExternalLink href={agencyUrl}>{agency}</ExternalLink>
-            </Box>
-          )
-        }
+        {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
       </Box>
 
       <LineBreak />
@@ -98,11 +87,19 @@ const {
       <Content />
     </Prose>
 
-    <Box as="div" className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5">
+    <Box
+      as="div"
+      className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
+    >
       <LineBreak />
-      <ExternalLink href={projectUrl}>
-        {projectUrlTitle || projectUrl}
-      </ExternalLink>
+
+      {
+        projectUrlTitle && (
+          <Type as="p" className="mb-1 text-center">
+            <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
+          </Type>
+        )
+      }
 
       <Type as="p">{tools}</Type>
 
