@@ -19,11 +19,13 @@ const { title, description } = Astro.props;
     <title>{title || "Rob Easthope"}</title>
 
     <meta property="og:title" content={title || "Rob Easthope"} />
+    <meta property="twitter:title" content={title || "Rob Easthope"} />
     <meta
       name="description"
       property="og:description"
       content={description || "Portfolio"}
     />
+    <meta property="twitter:description" content={description || "Portfolio"} />
     <meta property="og:site_name" content="Rob Easthope" />
     <meta property="og:type" content="website" />
 
