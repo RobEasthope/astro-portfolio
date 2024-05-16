@@ -12,8 +12,16 @@ agencyUrl: "https://www.browserlondon.com/"
 tools: "Next.js, Typescript, Framer Motion, Radix UI, Tailwind"
 ---
 
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+
+import aaltoHeroAsset from "../../assets/aalto/Aalto hero.png";
+
 Aalto Haps is a small marketing site to investment in the Aalto's high altitude Zephyr drone program from Airbus Industries.
 
-Built with Next.js on the front end and supported by Sanity CMS on the backend. Styled with Tailwind CSS and typed in Typescript.
+Built with Next.js on the front end and supported by Sanity CMS on the backend. Styled with Tailwind CSS and typed in Typescript. The website makes extensive use of Framer Motion and parallax animations.
 
-The website makes extensive use of Framer Motion and parallax animations.
+<Gallery
+  images={[{ image: aaltoHeroAsset, alt: "Aalto landing page" }]}
+  columns={1}
+  className="mt-2"
+/>
