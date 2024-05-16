@@ -13,11 +13,23 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en_GB">
   <head>
     <meta charset="UTF-8" />
     <title>{title || "Rob Easthope"}</title>
-    <meta name="description" content={description || "Portfolio"} />
+
+    <meta property="og:title" content={title || "Rob Easthope"} />
+    <meta property="twitter:title" content={title || "Rob Easthope"} />
+    <meta
+      name="description"
+      property="og:description"
+      content={description || "Portfolio"}
+    />
+    <meta property="twitter:description" content={description || "Portfolio"} />
+    <meta property="og:site_name" content="Rob Easthope" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:locale" content="en_GB" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
