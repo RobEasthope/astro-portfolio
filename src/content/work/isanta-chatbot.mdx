@@ -10,6 +10,16 @@ clientUrl: "https://thisplace.com/"
 tools: "React"
 ---
 
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+
+import landingAsset from "../../assets/isanta-chatbot/Merry Christmas 2019.png";
+
 iSanta was a simple chatbot quickly built in React over two days for as a fun, Christmas piece for This Place's clients.
 
 Building off the react-simple-chatbot package I supported a junior developer adding in the app's data flows and major functionality.
+
+<Gallery
+  images={[{ image: landingAsset, alt: "iSanta chatbot" }]}
+  columns={1}
+  className="mt-2"
+/>
