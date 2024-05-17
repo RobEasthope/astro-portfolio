@@ -11,6 +11,16 @@ agency: "Hill+Knowlton Strategies"
 agencyUrl: "http://hkstrategies.studio/"
 ---
 
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+
+import landingAsset from "../../assets/pladis/Pladis Landing Page 2x.jpg";
+
 The Pladis site is a brand new responsive, multi-lingual website for the Turkish Pladis holding group, bringing together information on their Ulker, Mcvities, and Godiva holdings.
 
 Pladis was designed from the start as an international, multilingual site, with a requirement to be easily updated by communications staff without the need for specialist developer knowledge.
+
+<Gallery
+  images={[{ image: landingAsset, alt: "Pladis landing page" }]}
+  columns={1}
+  className="mt-2"
+/>
