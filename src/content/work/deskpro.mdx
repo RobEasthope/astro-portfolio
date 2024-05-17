@@ -9,6 +9,16 @@ client: "Deskpro"
 clientUrl: "https://www.deskpro.com/"
 ---
 
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+
+import landingAsset from "../../assets/deskpro/Deskpro helpdesk software screenshot Jan 21.png";
+
 Deskpro was a large scale static site build that made extensive use of Nunjucks templating to speed development and promote code reusability.
 
 Built virtually from scratch over a nine week period, development was built in tandem with rapid design and copy iterations as concepts were created and refined on a daily basis.
+
+<Gallery
+  images={[{ image: landingAsset, alt: "Deskpro landing page" }]}
+  columns={1}
+  className="mt-2"
+/>
