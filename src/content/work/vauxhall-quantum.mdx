@@ -11,6 +11,16 @@ agency: "MRM//McCann"
 agencyUrl: "https://mrm-mccann.com/"
 ---
 
-The Vauxhall Quantum Forms project was a complex set of data capture forms to drive Vauxhall’s sales process.
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
 
-Built on top of Drupal 8 and Drupal Form Builder it needed to connect to multiple API’sand receive data passed in via an iFrame URL, while remaining fully modular.
+import landingAsset from "../../assets/vauxhall-quantum/Portfolio Media Screenshot.png";
+
+The Vauxhall Quantum Forms project was a complex set of data capture forms to drive Vauxhall's sales process.
+
+Built on top of Drupal 8 and Drupal Form Builder it needed to connect to multiple API'sand receive data passed in via an iFrame URL, while remaining fully modular.
+
+<Gallery
+  images={[{ image: landingAsset, alt: "Vauxhall Quantum landing page" }]}
+  columns={1}
+  className="mt-2"
+/>

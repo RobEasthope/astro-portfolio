@@ -10,6 +10,10 @@ clientUrl: "https://foundersfactory.com/"
 tools: "Gatsby.js, StoryBlok, Styled Components, Storybook"
 ---
 
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+
+import asset from "../../assets/founders-factory/Work with us.png";
+
 The Founders Factory project was a full refactor of an existing three year old site Gatsby.js site. This included:
 
 - Switching to us StoryBlok headless CMS from a combination of Contentful and static content
@@ -18,3 +22,9 @@ The Founders Factory project was a full refactor of an existing three year old s
 - Individual component theming with CSM integration
 - Storybook component library
 - Mailchimp newsletter signup functionality
+
+<Gallery
+  images={[{ image: asset, alt: "Founders Factory site" }]}
+  columns={1}
+  className="mt-2"
+/>
