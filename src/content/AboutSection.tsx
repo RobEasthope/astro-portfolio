@@ -19,10 +19,12 @@ export function AboutSection() {
           experiences for the web.
         </p>
         <p>
-          I'm currently freelancing and working on a number of personal
-          projects.
+          With over twelve years of industry experience, I have worked for some
+          of London's leading agencies, consulted for start ups, and worked with
+          clients including the United Nations, NASA, and global
+          multi-nationals.
         </p>
-
+        <p>You can find me on GitHub, on LinkedIn, and on Instagram.</p>
         <p>
           I recently returned from a month in Nepal where I summitted{" "}
           <ExternalLink href="https://en.wikipedia.org/wiki/Pokalde">
@@ -38,16 +40,9 @@ export function AboutSection() {
           </ExternalLink>
           .
         </p>
-
         <p>
-          With over twelve years of industry experience, I have worked for some
-          of London's leading agencies, consulted for start ups, and worked with
-          clients including the United Nations, NASA, and global
-          multi-nationals.
-        </p>
-        <p>
-          Interested in working together?{" "}
-          <EmailLink emailAddress="hello@robeasthope.com">Lets talk.</EmailLink>
+          Want to chat? Feel free to{" "}
+          <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
         </p>
       </Box>
     </>
