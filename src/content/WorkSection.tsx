@@ -11,7 +11,7 @@ const projects = await getCollection("work");
 export function WorkSection() {
   return (
     <Box as="section" id="work" className="mx-auto w-full max-w-prose">
-      <Type as="h1" className="mb-0.5 text-2xl leading-none">
+      <Type as="h1" className="mb-0.5 text-2xl leading-tight">
         Work
       </Type>
 
