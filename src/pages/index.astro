@@ -9,6 +9,7 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+import { AboutSection } from "@/content/AboutSection";
 
 const projects = await getCollection("work");
 ---
@@ -16,35 +17,7 @@ const projects = await getCollection("work");
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="grid gap-3 md:gap-6">
     <Box id="about" as="section" className="mx-auto max-w-prose">
-      <Type as="h1" className="mb-0.5 text-2xl leading-none">
-        Hello, I'm Rob Easthope
-      </Type>
-
-      <LineBreak className="my-2" />
-      <Box as="section" className="prose text-base">
-        <p>
-          I'm a senior front end developer based in Cumbria, England.
-          specialising in building (and occasionally designing) digital
-          experiences for the web.
-        </p>
-        <p>
-          With over twelve years of industry experience, I have worked for some
-          of London's leading agencies, consulted for start ups, and worked with
-          clients including the United Nations, NASA, and global
-          multi-nationals.
-        </p>
-        <p>You can find me on GitHub, on LinkedIn, and on Instagram.</p>
-        <p>
-          Outside of work, I can be found paragliding or trail running on the
-          fells. I recently returned from a month in Nepal where I summitted
-          Pokalde (5806m), Island Peak(6165m), and Lobuche East (6119m).
-        </p>
-        <p>
-          Want to chat? Feel free to <EmailLink
-            emailAddress="hello@robeasthope.com">email me</EmailLink
-          >.
-        </p>
-      </Box>
+      <AboutSection />
     </Box>
     <Box as="section" id="work">
       <Box as="div" className="mx-auto max-w-prose">
