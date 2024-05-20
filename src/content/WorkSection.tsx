@@ -25,7 +25,7 @@ export function WorkSection() {
 
       <Box
         as="ul"
-        className="mx-auto grid w-full max-w-prose grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-3"
+        className="mx-auto grid w-full max-w-20 grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-4 md:gap-y-1 lg:grid-cols-2"
       >
         {projects?.map((project) => (
           <Type as="li">
