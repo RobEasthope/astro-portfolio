@@ -7,8 +7,9 @@ import { Type } from "@/components/ui/Type/Type";
 export function AboutSection() {
   return (
     <>
-      <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
-        About
+      <Type as="h1" className="mb-0.5 text-2xl leading-tight">
+        Hello,
+        <br /> I'm Rob Easthope.
       </Type>
 
       <LineBreak className="my-2" />
