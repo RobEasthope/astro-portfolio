@@ -6,12 +6,13 @@ import { Type } from "@/components/ui/Type/Type";
 
 export function AboutSection() {
   return (
-    <>
-      <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
-        About
+    <Box as="section" id="about" className="mx-auto max-w-prose">
+      <Type as="h1" className="text-2xl leading-tight">
+        Hello,
+        <br /> I'm Rob Easthope.
       </Type>
 
-      <LineBreak className="my-2" />
+      <LineBreak className="my-1" align="left" />
       <Box as="section" className="prose text-base">
         <p>
           I'm a senior front end developer based in Cumbria, England.
@@ -45,6 +46,6 @@ export function AboutSection() {
           <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
         </p>
       </Box>
-    </>
+    </Box>
   );
 }
