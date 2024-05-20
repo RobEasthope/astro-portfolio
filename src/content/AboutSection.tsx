@@ -1,6 +1,7 @@
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import { Box } from "@/components/ui/Box/Box";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import { Type } from "@/components/ui/Type/Type";
 
 export function AboutSection() {
@@ -23,8 +24,19 @@ export function AboutSection() {
         </p>
 
         <p>
-          I recently returned from a month in Nepal where I summitted Pokalde
-          (5806m), Island Peak(6165m), and Lobuche East (6119m).
+          I recently returned from a month in Nepal where I summitted{" "}
+          <ExternalLink href="https://en.wikipedia.org/wiki/Pokalde">
+            Pokalde
+          </ExternalLink>
+          ,{" "}
+          <ExternalLink href="https://en.wikipedia.org/wiki/Imja_Tse">
+            Island Peak
+          </ExternalLink>
+          , and{" "}
+          <ExternalLink href="https://en.wikipedia.org/wiki/Lobuche">
+            Lobuche East
+          </ExternalLink>
+          .
         </p>
 
         <p>
