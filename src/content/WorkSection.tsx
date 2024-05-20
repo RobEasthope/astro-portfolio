@@ -19,7 +19,7 @@ export function WorkSection() {
         Some of the projects I have worked on
       </Type>
 
-      <LineBreak className="my-2" align="left" />
+      <LineBreak className="my-1" align="left" />
 
       <Box
         as="ul"
