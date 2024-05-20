@@ -10,7 +10,7 @@ const projects = await getCollection("work");
 
 export function WorkSection() {
   return (
-    <Box as="section">
+    <Box as="section" id="work">
       <Box as="div" className="mx-auto max-w-prose">
         <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
           Work

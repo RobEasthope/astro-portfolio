@@ -6,7 +6,7 @@ import { Type } from "@/components/ui/Type/Type";
 
 export function AboutSection() {
   return (
-    <>
+    <Box as="section" id="about" className="mx-auto max-w-prose">
       <Type as="h1" className="text-2xl leading-tight">
         Hello,
         <br /> I'm Rob Easthope.
@@ -46,6 +46,6 @@ export function AboutSection() {
           <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
         </p>
       </Box>
-    </>
+    </Box>
   );
 }
