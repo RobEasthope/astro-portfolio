@@ -1,14 +1,22 @@
 ---
-import { Box } from "@/components/ui/Box/Box";
+import LandingPage from "@/layouts/LandingPage.astro";
+import MuxPlayer from "@mux/mux-player-react/lazy";
 
-import StandardPage from "@/layouts/StandardPage.astro";
-import { AboutSection } from "@/content/AboutSection";
-import { WorkSection } from "@/content/WorkSection";
+import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 ---
 
-<StandardPage title="Work by Rob Easthope">
-  <Box as="div" className="grid gap-3 md:gap-6">
-    <AboutSection />
-    <WorkSection />
-  </Box>
-</StandardPage>
+<LandingPage title="Rob Easthope">
+  <MuxPlayer
+    playbackId="9VeINC4f1SC23jNX01VDhxV6rmwI3DTz01"
+    metadata={{
+      video_id: "Yytp7lXoNk1ndRc8a01TK3nbn02XdNmhq7",
+      video_title: "Flight off Great End",
+      viewer_user_id: "user-id-007",
+    }}
+    streamType="on-demand"
+    loop
+    autoPlay
+    muted
+    client:load
+  />
+</LandingPage>
