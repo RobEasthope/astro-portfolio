@@ -12,7 +12,7 @@ export function AboutSection() {
         <br /> I'm Rob Easthope.
       </Type>
 
-      <LineBreak className="my-1" />
+      <LineBreak className="my-1" align="left" />
       <Box as="section" className="prose text-base">
         <p>
           I'm a senior front end developer based in Cumbria, England.
