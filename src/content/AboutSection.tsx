@@ -7,12 +7,12 @@ import { Type } from "@/components/ui/Type/Type";
 export function AboutSection() {
   return (
     <Box as="section" id="about" className="mx-auto max-w-prose">
-      <Type as="h1" className="text-2xl leading-tight">
+      <Type as="h1" className="text-center text-2xl leading-tight">
         Hello,
         <br /> I'm Rob Easthope.
       </Type>
 
-      <LineBreak className="my-1" align="left" />
+      <LineBreak className="my-1" align="centre" />
       <Box as="section" className="prose text-base">
         <p>
           I'm a senior front end developer based in Cumbria, England.
