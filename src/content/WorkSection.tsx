@@ -10,22 +10,20 @@ const projects = await getCollection("work");
 
 export function WorkSection() {
   return (
-    <Box as="section" id="work">
-      <Box as="div" className="mx-auto max-w-prose">
-        <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
-          Work
-        </Type>
+    <Box as="section" id="work" className="mx-auto w-full max-w-prose">
+      <Type as="h1" className="mb-0.5 text-2xl leading-none">
+        Work
+      </Type>
 
-        <Type as="p" className="mb-1 text-center text-md italic">
-          Some of the projects I have worked on
-        </Type>
+      <Type as="p" className="mb-1 text-md italic">
+        Some of the projects I have worked on
+      </Type>
 
-        <LineBreak className="my-1" />
-      </Box>
+      <LineBreak className="my-2" align="left" />
 
       <Box
         as="ul"
-        className="mx-auto grid grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1"
+        className="mx-auto grid grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-2 md:gap-x-2 md:gap-y-1"
         maxWidth="medium"
       >
         {projects?.map((project) => (
