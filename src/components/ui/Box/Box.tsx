@@ -29,11 +29,12 @@ const boxVariants = cva(
         text: "max-w-prose",
         medium: "max-w-5xl",
         large: "max-w-7xl",
-        full: "w-screen",
+        full: "max-w-full",
+        screen: "max-w-screen",
       },
     },
     defaultVariants: {
-      maxWidth: null,
+      maxWidth: "none",
     },
   },
 );
