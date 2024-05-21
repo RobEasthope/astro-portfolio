@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
 import "@/app.css";
 
 interface Props {
@@ -78,8 +76,6 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-
-    <ViewTransitions />
   </head>
   <body class="font-plantin text-base text-ink">
     <slot />
