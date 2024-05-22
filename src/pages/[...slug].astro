@@ -44,7 +44,7 @@ const {
   repoTitle,
   repoUrl,
   tools,
-  dates,
+  writtenDate,
 } = Astro.props.entry.data;
 ---
 
@@ -102,6 +102,6 @@ const {
       {repoTitle}
     </ExternalLink>
 
-    <Type as="p">{dates}</Type>
+    <Type as="p">{writtenDate}</Type>
   </Box>
 </StandardPage>
