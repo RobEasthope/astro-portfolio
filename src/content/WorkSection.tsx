@@ -7,6 +7,11 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 
 const projects = await getCollection("work");
+const projectsByDate = projects.sort((a, b) => {
+  return (
+    new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
+  );
+});
 
 export function WorkSection() {
   return (
@@ -27,7 +32,7 @@ export function WorkSection() {
         as="ul"
         className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-4"
       >
-        {projects?.map((project) => (
+        {projectsByDate?.map((project) => (
           <Type as="li">
             <InternalLink
               href={project.data.url}
