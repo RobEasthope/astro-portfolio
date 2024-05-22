@@ -7,6 +7,9 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 
 const projects = await getCollection("work");
+const projectsByDate = projects.sort((a, b) => {
+  return new Date(b.data.date) - new Date(a.data.date);
+});
 
 export function WorkSection() {
   return (
