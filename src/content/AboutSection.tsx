@@ -53,7 +53,6 @@ export function AboutSection() {
           </ExternalLink>
           .
         </p>
-
         <p>
           Want to chat? Feel free to{" "}
           <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
