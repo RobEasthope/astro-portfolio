@@ -14,7 +14,7 @@ export const WorkSchemaDataProps = {
   repoTitle: z.string().optional(),
   repoUrl: z.string().url().optional(),
   tools: z.string().optional(),
-  dates: z.string(),
+  writtenDate: z.string(),
 };
 
 export const WorkSchemaProps = z.object({ ...WorkSchemaDataProps });
