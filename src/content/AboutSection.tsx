@@ -25,7 +25,17 @@ export function AboutSection() {
           clients including the United Nations, NASA, and global
           multi-nationals.
         </p>
-        <p>You can find me on GitHub, on LinkedIn, and on Instagram.</p>
+        <p>
+          You can find me on{" "}
+          <ExternalLink href="https://github.com/RobEasthope">
+            Github
+          </ExternalLink>
+          , on{" "}
+          <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
+            LinkedIn
+          </ExternalLink>
+          .
+        </p>
         <p>
           I recently returned from a month in Nepal where I summitted{" "}
           <ExternalLink href="https://en.wikipedia.org/wiki/Pokalde">
