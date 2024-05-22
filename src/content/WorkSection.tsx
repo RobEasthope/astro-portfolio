@@ -5,14 +5,12 @@ import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
-import { WorkSchemaProps } from "@/schemas/work.schema";
-import type { z } from "astro/zod";
-
-type WorkSchemaPropsTS = z.infer<typeof WorkSchemaProps>;
 
 const projects = await getCollection("work");
-const projectsByDate: WorkSchemaPropsTS[] = projects.sort((a, b) => {
-  return new Date(b.data.endDate) - new Date(a.data.endDate);
+const projectsByDate = projects.sort((a, b) => {
+  return (
+    new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
+  );
 });
 
 export function WorkSection() {
