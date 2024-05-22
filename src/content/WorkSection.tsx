@@ -5,9 +5,13 @@ import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
+import { WorkSchemaProps } from "@/schemas/work.schema";
+import type { z } from "astro/zod";
+
+type WorkSchemaPropsTS = z.infer<typeof WorkSchemaProps>;
 
 const projects = await getCollection("work");
-const projectsByDate = projects.sort((a, b) => {
+const projectsByDate: WorkSchemaPropsTS[] = projects.sort((a, b) => {
   return new Date(b.data.endDate) - new Date(a.data.endDate);
 });
 
@@ -30,7 +34,7 @@ export function WorkSection() {
         as="ul"
         className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-4"
       >
-        {projects?.map((project) => (
+        {projectsByDate?.map((project) => (
           <Type as="li">
             <InternalLink
               href={project.data.url}
