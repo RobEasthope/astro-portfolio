@@ -26,18 +26,9 @@ export function AboutSection() {
           multi-nationals.
         </p>
         <p>
-          You can find me on{" "}
-          <ExternalLink href="https://github.com/RobEasthope">
-            Github
-          </ExternalLink>
-          , on{" "}
-          <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
-            LinkedIn
-          </ExternalLink>
-          .
-        </p>
-        <p>
-          I recently returned from a month in Nepal where I summitted{" "}
+          Outside of work I can usually by found on the fells, paragliding or
+          trail running. I recently returned from a month in Nepal where I
+          summitted{" "}
           <ExternalLink href="https://en.wikipedia.org/wiki/Pokalde">
             Pokalde
           </ExternalLink>
@@ -51,6 +42,18 @@ export function AboutSection() {
           </ExternalLink>
           .
         </p>
+        <p>
+          You can find me on{" "}
+          <ExternalLink href="https://github.com/RobEasthope">
+            Github
+          </ExternalLink>
+          , on{" "}
+          <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
+            LinkedIn
+          </ExternalLink>
+          .
+        </p>
+
         <p>
           Want to chat? Feel free to{" "}
           <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
