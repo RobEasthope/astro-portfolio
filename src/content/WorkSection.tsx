@@ -8,7 +8,7 @@ import { Type } from "@/components/ui/Type/Type";
 
 const projects = await getCollection("work");
 const projectsByDate = projects.sort((a, b) => {
-  return new Date(b.data.date) - new Date(a.data.date);
+  return new Date(b.data.endDate) - new Date(a.data.endDate);
 });
 
 export function WorkSection() {
