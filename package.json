@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,astro,.mjs --color --fix",
     "tsc": "tsc --pretty --noEmit",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
