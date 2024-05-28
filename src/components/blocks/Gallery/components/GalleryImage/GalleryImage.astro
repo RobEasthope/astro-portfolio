@@ -5,7 +5,9 @@ import { Type } from "@/components/ui/Type/Type";
 import AstroImage from "@/components/ui/AstroImage/AstroImage.astro";
 import type { GalleryImageProps } from "./GalleryImage";
 
-type Props = GalleryImageProps;
+type Props = GalleryImageProps & {
+  key: string;
+};
 
 const { image, alt, caption } = Astro.props;
 ---

@@ -3,6 +3,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import GalleryImage from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage.astro";
 import type { GalleryImageProps } from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage";
+import { v4 as uuidv4 } from "uuid";
 
 interface Props {
   images: GalleryImageProps[];
@@ -33,6 +34,7 @@ const {
       images.length > 0 &&
         images?.map((image) => (
           <GalleryImage
+            key={uuidv4()}
             image={image?.image}
             alt={image?.alt}
             caption={image?.caption}
