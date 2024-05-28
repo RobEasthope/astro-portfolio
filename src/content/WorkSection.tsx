@@ -6,7 +6,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 
-const projects = await getCollection("projects");
+const projects = await getCollection("listed-projects");
 const projectsByDate = projects.sort((a, b) => {
   return (
     new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
