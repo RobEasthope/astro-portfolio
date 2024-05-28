@@ -12,7 +12,7 @@ import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import StandardPage from "@/layouts/StandardPage.astro";
 
 export async function getStaticPaths() {
-  const work = await getCollection("listed-projects");
+  const work = await getCollection("listed-work");
   return work.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
