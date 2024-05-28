@@ -2,8 +2,8 @@
 import { z } from "astro:content";
 
 export const GigSchemaDataProps = {
-  employer: z.string().optional(),
-  employerUrl: z.string().url().optional(),
+  employer: z.string(),
+  employerUrl: z.string().url(),
   jobTitle: z.string(),
   jobType: z.string(),
   startDate: z.string(),
