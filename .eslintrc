@@ -34,6 +34,7 @@
   ],
   "ignorePatterns": [
     "/.cache",
+    "/.astro",
     "/.vercel",
     "/node_modules",
     "/dist",
