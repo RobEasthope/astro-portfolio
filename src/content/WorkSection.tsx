@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 import { v4 as uuidv4 } from "uuid";
 
-const listedProjects = await getCollection("listed-work");
+const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
   return (
     new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
