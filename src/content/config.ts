@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { defineCollection, z } from "astro:content";
 import { WorkSchemaDataProps } from "@/schemas/work.schema";
+import { GigSchemaDataProps } from "@/schemas/gig.schema";
 
 // 2. Define your collection(s)
 const workCollection = defineCollection({
@@ -17,8 +18,17 @@ const workCollection = defineCollection({
     }),
 });
 
+const gigCollection = defineCollection({
+  type: "content", // v2.5.0 and later
+  schema: ({ image }) =>
+    z.object({
+      ...GigSchemaDataProps,
+    }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   work: workCollection,
+  gigs: gigCollection,
 };
