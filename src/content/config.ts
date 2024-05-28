@@ -20,7 +20,7 @@ const workCollection = defineCollection({
 
 const gigCollection = defineCollection({
   type: "content", // v2.5.0 and later
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       ...GigSchemaDataProps,
     }),
