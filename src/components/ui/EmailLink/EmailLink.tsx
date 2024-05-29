@@ -21,7 +21,7 @@ export function EmailLink({
   return (
     <a
       href={`mailto:${emailAddress}`}
-      className={cn(className, "hover:text-saffron duration-300")}
+      className={cn(className, "duration-300 hover:text-tomato-11")}
       {...rest}
     >
       {children}
