@@ -14,7 +14,7 @@ export function GigList({ gigs }: GigListProps) {
   // Pick off main content from the entry
 
   return (
-    <Box as="ul" className="flex flex-col gap-1.5 print:gap-0.5">
+    <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
       {gigs?.map((gig) => (
         <Gig
           key={uuidv4()}
