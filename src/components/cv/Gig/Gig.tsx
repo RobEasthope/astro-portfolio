@@ -1,7 +1,6 @@
-import { Box } from "~/components/ui/Box/Box";
-import { Type } from "~/components/_base/Type/Type";
-
-import { GigDate } from "~/components/about/GigIndex/components/Gig/GigDate";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
+import { GigDate } from "@/components/cv/GigDate/GigDate";
 
 export type GigProps = {
   employer: string;
