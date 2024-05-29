@@ -19,7 +19,7 @@ export function GigList({ gigs }: GigListProps) {
         <Gig
           key={uuidv4()}
           employer={gig?.data?.employer}
-          employeerUrl={gig?.data?.employerUrl}
+          employerUrl={gig?.data?.employerUrl}
           jobTitle={gig?.data?.jobTitle}
           jobType={gig?.data?.jobType}
           startDate={gig?.data?.startDate}
