@@ -1,32 +1,32 @@
-import { Box } from '~/components/_base/Box/Box';
-import { Type } from '~/components/_base/Type/Type';
+import { Box } from "~/components/_base/Box/Box";
+import { Type } from "~/components/_base/Type/Type";
 
-import type { GigProps } from '~/components/about/GigIndex/components/Gig/Gig';
+import type { GigProps } from "~/components/about/GigIndex/components/Gig/Gig";
 
 export type GigDateProps = {
-  startDate: GigProps['startDate'];
-  endDate: GigProps['endDate'] | Date;
+  startDate: GigProps["startDate"];
+  endDate: GigProps["endDate"] | Date;
 };
 
-export const GigDate = ({ startDate, endDate = new Date() }: GigDateProps) => {
+export function GigDate({ startDate, endDate = new Date() }: GigDateProps) {
   const parsedStartDate = new Date(startDate);
   const parsedEndDate = new Date(endDate);
 
-  const startDateFull = parsedStartDate.toLocaleString('default', {
-    month: 'long',
-    year: 'numeric',
+  const startDateFull = parsedStartDate.toLocaleString("default", {
+    month: "long",
+    year: "numeric",
   });
-  const startMonth = parsedStartDate.toLocaleString('default', {
-    month: 'long',
+  const startMonth = parsedStartDate.toLocaleString("default", {
+    month: "long",
   });
   const startYear = parsedStartDate.getFullYear();
 
-  const endDateFull = parsedEndDate.toLocaleString('default', {
-    month: 'long',
-    year: 'numeric',
+  const endDateFull = parsedEndDate.toLocaleString("default", {
+    month: "long",
+    year: "numeric",
   });
-  const endMonth = parsedEndDate.toLocaleString('default', {
-    month: 'long',
+  const endMonth = parsedEndDate.toLocaleString("default", {
+    month: "long",
   });
   const endYear = parsedEndDate.getFullYear();
 
@@ -46,4 +46,4 @@ export const GigDate = ({ startDate, endDate = new Date() }: GigDateProps) => {
       </Type>
     </Box>
   );
-};
+}
