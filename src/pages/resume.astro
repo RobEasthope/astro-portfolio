@@ -1,9 +1,22 @@
 ---
+import { GigList } from "@/components/cv/GigList/GigList";
 import { Box } from "@/components/ui/Box/Box";
 
 import StandardPage from "@/layouts/StandardPage.astro";
+import { getCollection } from "astro:content";
+
+const gigs = await getCollection("gigs");
+const allGigsByDate = gigs.sort((a, b) => {
+  return (
+    new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
+  );
+});
+
+console.log(allGigsByDate);
 ---
 
 <StandardPage title="Work by Rob Easthope">
-  <Box as="div" className="grid justify-center gap-3 md:gap-6"> Resume </Box>
+  <Box as="div" className="grid justify-center gap-3 md:gap-6">
+    <GigList gigs={allGigsByDate} />
+  </Box>
 </StandardPage>
