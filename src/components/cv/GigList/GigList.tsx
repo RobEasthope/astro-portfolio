@@ -5,7 +5,7 @@ import type { z } from "astro:content";
 import { v4 as uuidv4 } from "uuid";
 
 export type GigListProps = {
-  gigs: { data: z.infer<typeof GigSchemaProps>[] };
+  gigs: { data: z.infer<typeof GigSchemaProps> }[];
 };
 
 export function GigList({ gigs }: GigListProps) {
