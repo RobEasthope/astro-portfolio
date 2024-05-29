@@ -1,11 +1,11 @@
-import { Box } from "~/components/_base/Box/Box";
-import { Type } from "~/components/_base/Type/Type";
-
-import type { GigProps } from "~/components/about/GigIndex/components/Gig/Gig";
+import { Box } from "@/components/ui/Box/Box";
+import { Type } from "@/components/ui/Type/Type";
+import type { GigSchemaProps } from "@/schemas/gig.schema";
+import type { z } from "astro:content";
 
 export type GigDateProps = {
-  startDate: GigProps["startDate"];
-  endDate: GigProps["endDate"] | Date;
+  startDate: z.infer<typeof GigSchemaProps>["startDate"];
+  endDate: z.infer<typeof GigSchemaProps>["endDate"] | Date;
 };
 
 export function GigDate({ startDate, endDate = new Date() }: GigDateProps) {
