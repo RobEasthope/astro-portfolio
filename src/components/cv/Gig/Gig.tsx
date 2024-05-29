@@ -4,25 +4,22 @@ import { Type } from "~/components/_base/Type/Type";
 import { GigDate } from "~/components/about/GigIndex/components/Gig/GigDate";
 
 export type GigProps = {
-  _id?: string;
-  client: OrganisationProps;
+  employer: string;
   jobTitle: string;
-  description: BasicTextProps;
   startDate: string;
   endDate?: string;
 };
 
 export function Gig({
-  client,
+  employer,
   jobTitle,
-  description,
   startDate,
   endDate = "present",
 }: GigProps) {
   return (
     <Box as="article">
       <Type as="h4" className="font-bold">
-        {client?.name} / {jobTitle}
+        {employer} / {jobTitle}
       </Type>
 
       <GigDate startDate={startDate} endDate={endDate} />
