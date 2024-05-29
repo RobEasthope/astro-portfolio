@@ -9,6 +9,7 @@ export function Gig({
   jobTitle,
   startDate,
   endDate,
+  body,
 }: z.infer<typeof GigSchemaProps>) {
   return (
     <Box as="article">
@@ -18,7 +19,7 @@ export function Gig({
 
       <GigDate startDate={startDate} endDate={endDate} />
 
-      {/* <Content /> */}
+      {body}
     </Box>
   );
 }
