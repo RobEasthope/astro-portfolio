@@ -1,7 +1,5 @@
-import { Box } from "~/components/_base/Box/Box";
-
-import type { GigProps } from "~/components/about/GigIndex/components/Gig/Gig";
-import { Gig } from "~/components/about/GigIndex/components/Gig/Gig";
+import Gig from "@/components/cv/Gig/Gig.astro";
+import { Box } from "@/components/ui/Box/Box";
 
 export type GigListProps = {
   gigs: GigProps[];
