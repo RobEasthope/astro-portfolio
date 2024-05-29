@@ -15,10 +15,11 @@ export function GigList({ gigs }: GigListProps) {
     <Box as="ul" className="flex flex-col gap-1.5 print:gap-0.5">
       {gigs?.map((gig) => (
         <Gig
-          client={gig.client}
           key={uuidv4()}
+          employeer={gig.employer}
+          employeerUrl={gig.employerUrl}
           jobTitle={gig.jobTitle}
-          description={gig.description}
+          jobType={gig.jobType}
           startDate={gig.startDate}
           endDate={gig.endDate}
         />
