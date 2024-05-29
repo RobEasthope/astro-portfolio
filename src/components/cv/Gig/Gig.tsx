@@ -1,11 +1,7 @@
-import { Box } from '~/components/_base/Box/Box';
-import { Prose } from '~/components/_base/Prose/Prose';
-import type { BasicTextProps } from '~/components/_base/Prose/components/BasicText/BasicText';
-import { BasicTextComponents } from '~/components/_base/Prose/components/BasicText/BasicText';
-import { Type } from '~/components/_base/Type/Type';
+import { Box } from "~/components/ui/Box/Box";
+import { Type } from "~/components/_base/Type/Type";
 
-import { GigDate } from '~/components/about/GigIndex/components/Gig/GigDate';
-import type { OrganisationProps } from '~/components/about/Organisation/Organisations';
+import { GigDate } from "~/components/about/GigIndex/components/Gig/GigDate";
 
 export type GigProps = {
   _id?: string;
@@ -16,25 +12,27 @@ export type GigProps = {
   endDate?: string;
 };
 
-export const Gig = ({
+export function Gig({
   client,
   jobTitle,
   description,
   startDate,
-  endDate = 'present',
-}: GigProps) => (
-  <Box as="article">
-    <Type as="h4" className="font-bold">
-      {client?.name} / {jobTitle}
-    </Type>
+  endDate = "present",
+}: GigProps) {
+  return (
+    <Box as="article">
+      <Type as="h4" className="font-bold">
+        {client?.name} / {jobTitle}
+      </Type>
 
-    <GigDate startDate={startDate} endDate={endDate} />
+      <GigDate startDate={startDate} endDate={endDate} />
 
-    <Prose
+      {/* <Prose
       as="div"
       content={description}
       components={BasicTextComponents}
       className="print:max-w-full"
-    />
-  </Box>
-);
+    /> */}
+    </Box>
+  );
+}
