@@ -28,7 +28,7 @@ export function LineBreak({ align, className }: LineBreakProps) {
     <hr
       className={stylesCheck(
         cn(
-          'flex h-1 items-center border-none after:block after:h-[2px] after:w-3 after:bg-tomato-11  after:content-[""]',
+          'after:bg-decoration flex h-1 items-center border-none after:block after:h-[2px] after:w-3  after:content-[""]',
           lineBreakVariants({ align }),
           className,
         ),

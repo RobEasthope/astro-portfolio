@@ -18,7 +18,7 @@ export function Dot({
   return (
     <div
       className={cn(
-        `flex h-1 w-full items-center justify-center text-lg text-tomato-10`,
+        `text-decoration flex h-1 w-full items-center justify-center text-lg`,
         `mt-${spacingTop}`,
         `mb-${spacingBottom}`,
         "print:my-0.5",
