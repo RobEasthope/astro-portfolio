@@ -53,27 +53,38 @@ const {
     as="div"
     className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
   >
-    <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
-      {title}
-    </Type>
+    {
+      title && (
+        <Type as="h1" className="mb-0.5 text-center text-3xl leading-none">
+          {title}
+        </Type>
+      )
+    }
 
-    <Type as="p" className="mb-1 text-center text-md italic">{description}</Type
-    >
+    {
+      description && (
+        <Type as="p" className="mb-1 text-center text-md italic">
+          {description}
+        </Type>
+      )
+    }
 
-    <Box
-      as="section"
-      className="my-1 flex items-center justify-center gap-0.25"
-    >
-      {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
-      {
-        client && agency && (
-          <Type as="span" className="text-sm">
-            x
-          </Type>
-        )
-      }
-      {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
-    </Box>
+    {
+      (client || agency) && (
+        <Box
+          as="section"
+          className="my-1 flex items-center justify-center gap-0.25"
+        >
+          {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+          {client && agency && (
+            <Type as="span" className="text-sm">
+              x
+            </Type>
+          )}
+          {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
+        </Box>
+      )
+    }
 
     <LineBreak />
   </Box>
@@ -96,12 +107,10 @@ const {
       )
     }
 
-    <Type as="p">{tools}</Type>
+    {tools && <Type as="p">{tools}</Type>}
 
-    <ExternalLink href={repoUrl}>
-      {repoTitle}
-    </ExternalLink>
+    {repoUrl && <ExternalLink href={repoUrl}>{repoTitle}</ExternalLink>}
 
-    <Type as="p">{writtenDate}</Type>
+    {writtenDate && <Type as="p">{writtenDate}</Type>}
   </Box>
 </StandardPage>
