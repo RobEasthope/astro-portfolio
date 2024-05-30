@@ -103,6 +103,10 @@ export default {
           minFontSize: 40,
           maxFontSize: 76,
         }),
+        "4xl": fluidTypeSize({
+          minFontSize: 52,
+          maxFontSize: 96,
+        }),
       },
       spacing: {
         0: "0",
