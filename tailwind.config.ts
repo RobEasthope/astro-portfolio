@@ -68,7 +68,7 @@ export default {
       },
       fontFamily: {
         sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
-        sabon: ["linotype-sabon", ...defaultTheme.fontFamily.serif],
+        plantin: ["plantin", ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
         xs: fluidTypeSize({
