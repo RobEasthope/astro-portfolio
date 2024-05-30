@@ -14,7 +14,7 @@ export function AboutSection() {
         I'm Rob Easthope
       </Type>
 
-      <Dot className="my-1 text-tomato-10" />
+      <Dot className="my-1 " />
 
       <Box as="section" className="prose text-base">
         <p>

@@ -27,7 +27,7 @@ export function WorkSection() {
           Some of the projects I have worked on
         </Type>
 
-        <Dot className="my-1 text-tomato-10" />
+        <Dot className="my-1 " />
       </Box>
 
       <Box
