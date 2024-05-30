@@ -24,27 +24,22 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
     client:load
     className="grayscale filter"
   />
+
   <Box
     as="section"
     id="about"
-    className="absolute h-full w-full bg-grass-12/80"
+    className="absolute left-1/2 top-1/2 mx-auto w-full max-w-[100rem] -translate-x-1/2 -translate-y-1/2 px-1 py-2 opacity-90 md:mx-2 md:py-4"
   >
-    <Box
-      as="section"
-      id="about"
-      className="absolute left-1/2 top-1/2 mx-auto w-full max-w-[100rem] -translate-x-1/2 -translate-y-1/2 px-1 py-2 opacity-90 md:mx-2 md:py-4"
-    >
-      <Type as="h1" className="text-4xl leading-tight text-white">
-        Hello there!
-        <br />I am Rob Easthope, a front end developer working on the web.
-      </Type>
+    <Type as="h1" className="text-4xl leading-tight text-white">
+      Hello there!
+      <br />I am Rob Easthope, a front end developer working on the web.
+    </Type>
 
-      <Type as="p" className="prose mt-1 text-lg text-white">
-        Want to chat? Feel free to{" "}
-        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-          >email me</EmailLink
-        >.
-      </Type>
-    </Box>
+    <Type as="p" className="prose mt-1 text-lg text-white">
+      Want to chat? Feel free to{" "}
+      <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
+        >email me</EmailLink
+      >.
+    </Type>
   </Box>
 </LandingPage>
