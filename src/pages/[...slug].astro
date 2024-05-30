@@ -10,6 +10,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import type { ImageMetadata } from "astro";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import StandardPage from "@/layouts/StandardPage.astro";
+import { Dot } from "@/components/decoration/Dot/Dot";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -86,7 +87,7 @@ const {
       )
     }
 
-    <LineBreak />
+    <Dot />
   </Box>
 
   <Prose as="div" className="mx-auto">
@@ -97,8 +98,7 @@ const {
     as="div"
     className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
   >
-    <LineBreak />
-
+    <Dot />
     {
       projectUrlTitle && (
         <Type as="p" className="mb-1 text-center">
