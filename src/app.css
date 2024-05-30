@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --terracotta: #da4f34;
+    --terracotta: 9.76, 69.17%, 52.94%;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
