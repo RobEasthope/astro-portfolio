@@ -21,7 +21,7 @@ export function InternalLink({
   return (
     <a
       href={href}
-      className={cn(className, "duration-300 hover:text-tomato-11")}
+      className={cn(className, "hover:text-general-link duration-300")}
       {...rest}
     >
       {children}
