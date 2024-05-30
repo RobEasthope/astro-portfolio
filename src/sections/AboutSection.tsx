@@ -10,7 +10,8 @@ export function AboutSection() {
     <Box as="section" id="about" className="mx-auto max-w-prose">
       <Type as="h1" className="text-center text-2xl leading-tight">
         Hello,
-        <br /> I'm Rob Easthope.
+        <br />
+        I'm Rob Easthope.
       </Type>
 
       <Dot className="my-1 text-tomato-10" />
