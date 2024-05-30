@@ -3,7 +3,10 @@ import tailwindTypography from "@tailwindcss/typography";
 import tailwindcssRadixColors from "tailwindcss-radix-colors";
 import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
-const BASE_UNIT = "1.5rem";
+// Handle fluid spacing with clamp function
+const MIN_SPACING_SIZE = "16";
+const MAX_SPACING_SIZE = "19";
+export const BASE_UNIT = `clamp(${MIN_SPACING_SIZE}px, calc(${MIN_SPACING_SIZE}px + (${MAX_SPACING_SIZE} - ${MIN_SPACING_SIZE}) * ((100vw - 320px) / (1934 - 320))), ${MAX_SPACING_SIZE}px)`;
 
 /** @type {import('tailwindcss').Config} */
 export default {
