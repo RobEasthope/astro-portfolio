@@ -1,3 +1,4 @@
+import { Dot } from "@/components/decoration/Dot/Dot";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import { Box } from "@/components/ui/Box/Box";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
@@ -10,10 +11,11 @@ export function AboutSection() {
     <Box as="section" id="about" className="mx-auto max-w-prose">
       <Type as="h1" className="text-center text-2xl leading-tight">
         Hello,
-        <br /> I'm Rob Easthope.
+        <br />
+        I'm Rob Easthope
       </Type>
 
-      <LineBreak className="my-1" align="centre" />
+      <Dot className="my-1" />
       <Prose as="section">
         <p>
           I'm a senior front end developer based in Cumbria, England.
