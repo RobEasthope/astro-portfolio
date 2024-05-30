@@ -15,7 +15,7 @@ export function AboutSection() {
         I'm Rob Easthope
       </Type>
 
-      <LineBreak className="my-1" align="centre" />
+      <Dot className="my-1" />
       <Prose as="section">
         <p>
           I'm a senior front end developer based in Cumbria, England.
