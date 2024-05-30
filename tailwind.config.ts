@@ -30,7 +30,7 @@ export default {
         "imperial-red": "rgb(170, 0, 0)",
         "japanese-red": "rgb(193, 78, 95)",
         "off-white": "rgba(170, 163, 128, 0.03)",
-        "standard-link": "hsl(var(--terracota))",
+        link: "hsl(var(--terracota))",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
