@@ -3,6 +3,7 @@ import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import { Box } from "@/components/ui/Box/Box";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
+import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
 
 export function AboutSection() {
@@ -14,9 +15,8 @@ export function AboutSection() {
         I'm Rob Easthope
       </Type>
 
-      <Dot className="my-1 " />
-
-      <Box as="section" className="prose text-base">
+      <LineBreak className="my-1" align="centre" />
+      <Prose as="section">
         <p>
           I'm a senior front end developer based in Cumbria, England.
           specialising in building (and occasionally designing) digital
@@ -60,7 +60,7 @@ export function AboutSection() {
           Want to chat? Feel free to{" "}
           <EmailLink emailAddress="hello@robeasthope.com">email me</EmailLink>.
         </p>
-      </Box>
+      </Prose>
     </Box>
   );
 }
