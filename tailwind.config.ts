@@ -81,7 +81,7 @@ export default {
         }),
         base: fluidTypeSize({
           minFontSize: 16,
-          maxFontSize: 18,
+          maxFontSize: 19,
         }),
         md: fluidTypeSize({
           minFontSize: 18,
