@@ -6,6 +6,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 import { v4 as uuidv4 } from "uuid";
+import { Dot } from "@/components/decoration/Dot/Dot";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -26,7 +27,7 @@ export function WorkSection() {
           Some of the projects I have worked on
         </Type>
 
-        <LineBreak className="my-1" align="centre" />
+        <Dot className="my-1 text-tomato-10" />
       </Box>
 
       <Box
