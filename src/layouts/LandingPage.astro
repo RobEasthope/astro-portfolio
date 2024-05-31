@@ -1,5 +1,7 @@
 ---
+import Footer from "@/components/navigation/Footer/Footer.astro";
 import Header from "@/components/navigation/Header/Header.astro";
+import { Box } from "@/components/ui/Box/Box";
 import Root from "@/layouts/Root.astro";
 
 interface Props {
@@ -13,5 +15,14 @@ const { title, description } = Astro.props;
 <Root title={title} description={description}>
   <Header />
 
-  <slot />
+  <Box
+    as="main"
+    className="flex min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*6)] flex-col justify-center"
+  >
+    <Box as="div" className="w-full">
+      <slot />
+    </Box>
+  </Box>
+
+  <Footer />
 </Root>
