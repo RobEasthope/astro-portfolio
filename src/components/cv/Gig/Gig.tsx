@@ -10,7 +10,7 @@ import { Prose } from "@/components/ui/Prose/Prose";
 export function Gig({
   gig,
 }: {
-  gig: { data: z.infer<typeof GigSchemaProps> };
+  gig: { data: z.infer<typeof GigSchemaProps>; body: string };
 }) {
   const { employer, employerUrl, jobTitle, startDate, endDate } = gig.data;
 
