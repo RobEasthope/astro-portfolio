@@ -32,18 +32,20 @@ import { TbArrowDownRhombus } from "react-icons/tb";
 
   <Box
     as="section"
-    className="absolute left-1/2 top-1/2 mx-auto w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 p-1 md:p-2"
+    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center p-1 md:p-2"
   >
-    <Type as="h1" className="text-3xl leading-tight text-white">
-      Hello there!
-      <br />I am Rob Easthope, a front end developer working on the web.
-    </Type>
+    <Box as="section" className="mx-auto max-w-4xl">
+      <Type as="h1" className="text-3xl leading-tight text-white">
+        Hello there!
+        <br />I am Rob Easthope, a front end developer working on the web.
+      </Type>
 
-    <Type as="p" className="prose mt-1 text-lg text-white">
-      <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-        >Contact me</EmailLink
-      > or learn a little <a href="#about" class="text-white">about me</a> first.
-    </Type>
+      <Type as="p" className="prose mt-1 text-lg text-white">
+        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
+          >Contact me</EmailLink
+        > or learn a little <a href="#about" class="text-white">about me</a> first.
+      </Type>
+    </Box>
   </Box>
 
   <Box as="div" className="translate-y-1 md:translate-y-1">
