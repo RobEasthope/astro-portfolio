@@ -13,7 +13,7 @@ import { getCollection } from "astro:content";
 
 const indexSections = await getCollection("index");
 
-const AboutSection = indexSections.find((section) => section.slug === "about");
+const aboutSection = indexSections.find((section) => section.slug === "about");
 
 console.log(indexSections);
 ---
@@ -58,7 +58,7 @@ console.log(indexSections);
     </Box>
   </Box>
 
-  <MarkdownRender page={AboutSection} />
+  <MarkdownRender page={aboutSection} />
 
   <Work />
 </StandardPage>
