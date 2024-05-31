@@ -1,0 +1,13 @@
+---
+import type { Render } from "astro:content";
+
+interface Props {
+  page: { data: { title: string }; render(): Render[".mdx"] };
+}
+
+const { Content } = await Astro.props.page.render();
+---
+
+<div>
+  <Content />
+</div>
