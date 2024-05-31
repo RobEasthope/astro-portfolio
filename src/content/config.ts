@@ -28,10 +28,7 @@ const gigCollection = defineCollection({
 
 const indexCollection = defineCollection({
   type: "content", // v2.5.0 and later
-  schema: () =>
-    z.object({
-      title: z.string(),
-    }),
+  schema: () => z.object({}),
 });
 
 // 3. Export a single `collections` object to register your collection(s)
