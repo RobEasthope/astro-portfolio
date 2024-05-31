@@ -6,6 +6,8 @@ import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
+
+import { TbArrowDownRhombus } from "react-icons/tb";
 ---
 
 <Box
@@ -46,5 +48,13 @@ import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/Hea
     </Type>
   </Box>
 
-  <Box as="div" className="translate-y-1 md:translate-y-1"><HeaderLogo /></Box>
+  <Box as="div" className="translate-y-1 md:translate-y-1">
+    <HeaderLogo />
+  </Box>
+  <Box
+    as="div"
+    className="absolute bottom-0 flex w-full -translate-y-1 justify-center md:-translate-y-1"
+  >
+    <TbArrowDownRhombus className="text-xl text-white" />
+  </Box>
 </Box>
