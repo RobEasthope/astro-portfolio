@@ -12,6 +12,8 @@ interface Props {
 
 const { employer, employerUrl, jobTitle, startDate, endDate } =
   Astro.props.gig.data;
+
+const { Content } = await Astro.props.gig.render();
 ---
 
 <Box as="article">
@@ -20,4 +22,6 @@ const { employer, employerUrl, jobTitle, startDate, endDate } =
   </Type>
 
   <GigDate startDate={startDate} endDate={endDate} />
+
+  <Content />
 </Box>
