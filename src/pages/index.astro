@@ -1,14 +1,14 @@
 ---
-import LandingPage from "@/layouts/LandingPage.astro";
 import MuxPlayer from "@mux/mux-player-react/lazy";
 
 import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+import StandardPage from "@/layouts/StandardPage.astro";
 ---
 
-<LandingPage title="Rob Easthope">
+<StandardPage title="Rob Easthope">
   <Box
     as="main"
     className="relative min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*3)] bg-off-white md:mx-2 md:min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*5)]"
@@ -47,4 +47,4 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
       </Type>
     </Box>
   </Box>
-</LandingPage>
+</StandardPage>
