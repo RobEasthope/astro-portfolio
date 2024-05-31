@@ -12,7 +12,9 @@ import MarkdownRender from "@/components/MarkdownRender.astro";
 
 const indexSections = await getCollection("index");
 
-const aboutSection = indexSections.find((section) => section.slug === "about");
+const aboutSection = indexSections.find(
+  (section) => section.slug === "about-blurb",
+);
 ---
 
 <StandardPage title="Rob Easthope">
