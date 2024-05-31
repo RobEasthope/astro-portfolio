@@ -5,13 +5,11 @@ import type { z } from "astro:content";
 import { v4 as uuidv4 } from "uuid";
 
 export type GigListProps = {
-  gigs: { data: z.infer<typeof GigSchemaProps> }[];
+  gigs: { data: z.infer<typeof GigSchemaProps>; body: string }[];
 };
 
 export function GigList({ gigs }: GigListProps) {
   if (!gigs?.length) return null;
-
-  // Pick off main content from the entry
 
   return (
     <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
