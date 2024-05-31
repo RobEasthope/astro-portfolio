@@ -6,16 +6,15 @@ import type { GigSchemaProps } from "@/schemas/gig.schema";
 import type { z } from "astro:content";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 
-interface GigProps {
+interface Props {
   gig: { data: z.infer<typeof GigSchemaProps> };
 }
 
 const { employer, employerUrl, jobTitle, startDate, endDate } =
   Astro.props.gig.entry.data;
-const { Content } = await gig.render();
+const { Content } = await Astro.props.entry.render();
 ---
 
-return (
 <Box as="article">
   <Type as="h4" className="font-bold">
     <ExternalLink href={employerUrl}>{employer}</ExternalLink> / {jobTitle}
@@ -25,5 +24,3 @@ return (
 
   <Content />
 </Box>
-);
-}
