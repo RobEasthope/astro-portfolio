@@ -1,54 +1,12 @@
 ---
-// eslint-disable-next-line import/no-unresolved
-import MuxPlayer from "@mux/mux-player-react/lazy";
-import "@/components/blocks/MuxPlayer/MuxPlayer.css";
-import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
-import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import StandardPage from "@/layouts/StandardPage.astro";
 import Work from "@/landing-sections/work.astro";
 import About from "@/landing-sections/about.astro";
+import Intro from "@/landing-sections/intro.astro";
 ---
 
 <StandardPage title="Rob Easthope">
-  <Box
-    as="main"
-    className="relative min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*3)] bg-off-white md:mx-2 md:min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*5)]"
-  >
-    <MuxPlayer
-      playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
-      metadata={{
-        video_id: "Yytp7lXoNk1ndRc8a01TK3nbn02XdNmhq7",
-        video_title: "Flight off Great End",
-        viewer_user_id: "user-id-007",
-      }}
-      streamType="on-demand"
-      playbackRate={0.5}
-      loop
-      autoPlay
-      muted
-      client:load
-      className="grayscale filter"
-    />
-
-    <Box
-      as="section"
-      id="about"
-      className="absolute left-0 top-1/2 mx-auto w-full max-w-6xl -translate-y-1/2 p-1 md:p-2"
-    >
-      <Type as="h1" className="text-2xl leading-tight text-white">
-        Hello there!
-        <br />I am Rob Easthope, a front end developer working on the web.
-      </Type>
-
-      <Type as="p" className="prose mt-1 text-md text-white">
-        Want to chat? Feel free to{" "}
-        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-          >email me</EmailLink
-        >.
-      </Type>
-    </Box>
-  </Box>
+  <Intro />
 
   <About />
 
