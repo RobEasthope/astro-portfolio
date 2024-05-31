@@ -7,6 +7,15 @@ import { Type } from "@/components/ui/Type/Type";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import StandardPage from "@/layouts/StandardPage.astro";
 import Work from "@/pages/work.astro";
+import MarkdownRender from "@/components/MarkdownRender.astro";
+import { getCollection } from "astro:content";
+// import * as aboutSection from "@/content/index/about.mdx";
+
+const indexSections = await getCollection("index");
+
+const AboutSection = indexSections.find((section) => section.slug === "about");
+
+console.log(indexSections);
 ---
 
 <StandardPage title="Rob Easthope">
@@ -48,6 +57,8 @@ import Work from "@/pages/work.astro";
       </Type>
     </Box>
   </Box>
+
+  <MarkdownRender page={AboutSection} />
 
   <Work />
 </StandardPage>
