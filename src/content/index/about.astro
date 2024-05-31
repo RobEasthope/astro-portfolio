@@ -1,12 +1,12 @@
 ---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
 import { Dot } from "@/components/decoration/Dot/Dot";
 import { Box } from "@/components/ui/Box/Box";
-import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
-import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
 import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
-import { getCollection } from "astro:content";
+
 import MarkdownRender from "@/components/MarkdownRender.astro";
 
 const indexSections = await getCollection("index");
