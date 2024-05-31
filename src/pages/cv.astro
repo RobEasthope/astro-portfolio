@@ -6,8 +6,6 @@ import { Box } from "@/components/ui/Box/Box";
 
 import StandardPage from "@/layouts/StandardPage.astro";
 
-import { v4 as uuidv4 } from "uuid";
-
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
   return (
@@ -19,7 +17,7 @@ const allGigsByDate = gigs.sort((a, b) => {
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="grid justify-center gap-3 md:gap-6">
     <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
-      {allGigsByDate?.map((gig) => <Gig key={uuidv4()} gig={gig} />)}
+      {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
     </Box>
   </Box>
 </StandardPage>
