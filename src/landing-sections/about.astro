@@ -16,14 +16,16 @@ const aboutBlurb = indexSections.find(
 );
 ---
 
-<StandardContentContainer>
-  <Box as="section" id="about" className="mx-auto max-w-prose">
-    <Type as="h1" className="text-center text-2xl leading-tight">About</Type>
+<Box as="section" id="about">
+  <StandardContentContainer>
+    <Box as="div" className="mx-auto max-w-prose">
+      <Type as="h1" className="text-center text-2xl leading-tight">About</Type>
 
-    <Dot className="my-1" />
+      <Dot className="my-1" />
 
-    <Prose as="section" className="text-base">
-      {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
-    </Prose>
-  </Box>
-</StandardContentContainer>
+      <Prose as="section" className="text-base">
+        {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+      </Prose>
+    </Box>
+  </StandardContentContainer>
+</Box>
