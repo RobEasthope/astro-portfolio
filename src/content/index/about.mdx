@@ -8,9 +8,9 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
-import StandardPage from "@/layouts/StandardPage.astro";
+import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 
-<StandardPage title="About Rob Easthope">
+<StandardContentContainer>
   <Box as="section" id="about" className="mx-auto max-w-prose">
     <Type as="h1" className="text-center text-2xl leading-tight"
       >About</Type>
@@ -37,4 +37,4 @@ import StandardPage from "@/layouts/StandardPage.astro";
     </Prose>
 
   </Box>
-</StandardPage>
+</StandardContentContainer>
