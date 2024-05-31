@@ -3,11 +3,11 @@ import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import { GigDate } from "@/components/cv/GigDate/GigDate";
 import type { GigSchemaProps } from "@/schemas/gig.schema";
-import type { z } from "astro:content";
+import type { z, Render } from "astro:content";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 
 interface Props {
-  gig: { data: z.infer<typeof GigSchemaProps> };
+  gig: { data: z.infer<typeof GigSchemaProps>; render(): Render[".mdx"] };
 }
 
 const { employer, employerUrl, jobTitle, startDate, endDate } =
