@@ -26,9 +26,18 @@ const gigCollection = defineCollection({
     }),
 });
 
+const indexCollection = defineCollection({
+  type: "content", // v2.5.0 and later
+  schema: () =>
+    z.object({
+      title: z.string(),
+    }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   work: workCollection,
   gigs: gigCollection,
+  index: indexCollection,
 };
