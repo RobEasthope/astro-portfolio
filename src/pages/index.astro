@@ -16,8 +16,6 @@ import MarkdownRender from "@/components/MarkdownRender.astro";
 const indexSections = await getCollection("index");
 
 const aboutSection = indexSections.find((section) => section.slug === "about");
-
-console.log(indexSections);
 ---
 
 <StandardPage title="Rob Easthope">
