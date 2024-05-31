@@ -3,5 +3,5 @@ export function StandardContentContainer({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="bg-off-white px-1 py-2">{children}</div>;
+  return <div className="bg-sage-3 px-1 py-2">{children}</div>;
 }
