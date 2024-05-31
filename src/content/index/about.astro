@@ -6,6 +6,14 @@ import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
 import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
+import { getCollection } from "astro:content";
+import MarkdownRender from "@/components/MarkdownRender.astro";
+
+const indexSections = await getCollection("index");
+
+const aboutBlurb = indexSections.find(
+  (section) => section.slug === "about-blurb",
+);
 ---
 
 <StandardContentContainer>
@@ -15,27 +23,7 @@ import { StandardContentContainer } from "@/components/containers/StandardConten
     <Dot className="my-1" />
 
     <Prose as="section" className="text-base">
-      I'm a senior front end developer based in the UK. specialising in building
-      (and occasionally designing) digital experiences for the web. With over
-      twelve years of industry experience, I have worked for some of London's
-      leading agencies, consulted for start ups, and worked with clients
-      including the United Nations, NASA, and global multi-nationals. Outside of
-      work I can usually by found on the fells, paragliding or trail running. I
-      recently returned from a month in Nepal where I summitted <ExternalLink
-        href="https://en.wikipedia.org/wiki/Pokalde">Pokalde</ExternalLink
-      >,
-      <ExternalLink href="https://en.wikipedia.org/wiki/Imja_Tse"
-        >Island Peak</ExternalLink
-      >,
-      <ExternalLink href="https://en.wikipedia.org/wiki/Lobuche"
-        >Lobuche East</ExternalLink
-      >. You can find me on <ExternalLink href="https://github.com/RobEasthope"
-        >Github</ExternalLink
-      >, on <ExternalLink href="https://www.linkedin.com/in/rob-easthope/"
-        >LinkedIn</ExternalLink
-      >. Want to chat? Feel free to <EmailLink
-        emailAddress="hello@robeasthope.com">email me</EmailLink
-      >.
+      {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
     </Prose>
   </Box>
 </StandardContentContainer>
