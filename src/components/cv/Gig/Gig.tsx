@@ -5,12 +5,13 @@ import type { GigSchemaProps } from "@/schemas/gig.schema";
 import type { z } from "astro:content";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 
-export function Gig({
+export async function Gig({
   gig,
 }: {
   gig: { data: z.infer<typeof GigSchemaProps> };
 }) {
   const { employer, employerUrl, jobTitle, startDate, endDate } = gig.data;
+  const { Content } = await gig.render();
 
   return (
     <Box as="article">
@@ -19,6 +20,8 @@ export function Gig({
       </Type>
 
       <GigDate startDate={startDate} endDate={endDate} />
+
+      <Content />
     </Box>
   );
 }
