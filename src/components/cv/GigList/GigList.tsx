@@ -15,17 +15,7 @@ export function GigList({ gigs }: GigListProps) {
 
   return (
     <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
-      {gigs?.map((gig) => (
-        <Gig
-          key={uuidv4()}
-          employer={gig?.data?.employer}
-          employerUrl={gig?.data?.employerUrl}
-          jobTitle={gig?.data?.jobTitle}
-          jobType={gig?.data?.jobType}
-          startDate={gig?.data?.startDate}
-          endDate={gig?.data?.endDate}
-        />
-      ))}
+      {gigs?.map((gig) => <Gig key={uuidv4()} gig={gig} />)}
     </Box>
   );
 }
