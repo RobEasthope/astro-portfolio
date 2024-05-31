@@ -5,11 +5,12 @@ import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
 ---
 
 <Box
   as="main"
-  className="relative min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*3)] bg-off-white md:mx-2 md:min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*5)]"
+  className="relative mt-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*3)] bg-off-white md:mx-1 md:min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)]"
 >
   <MuxPlayer
     playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
@@ -30,18 +31,20 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
   <Box
     as="section"
     id="about"
-    className="absolute left-0 top-1/2 mx-auto w-full max-w-6xl -translate-y-1/2 p-1 md:p-2"
+    className="absolute left-1/2 top-1/2 mx-auto w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 p-1 md:p-2"
   >
-    <Type as="h1" className="text-2xl leading-tight text-white">
+    <Type as="h1" className="text-3xl leading-tight text-white">
       Hello there!
       <br />I am Rob Easthope, a front end developer working on the web.
     </Type>
 
-    <Type as="p" className="prose mt-1 text-md text-white">
+    <Type as="p" className="prose mt-1 text-lg text-white">
       Want to chat? Feel free to{" "}
       <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
         >email me</EmailLink
       >.
     </Type>
   </Box>
+
+  <Box as="div" className="translate-y-1 md:translate-y-1"><HeaderLogo /></Box>
 </Box>
