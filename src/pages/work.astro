@@ -37,7 +37,7 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
     >
       {
         listedProjectsByDate?.map((project) => (
-          <Type key={uuidv4()} as="li">
+          <Type as="li">
             <InternalLink
               href={project.data.url}
               className="flex h-full flex-row gap-0.5"
