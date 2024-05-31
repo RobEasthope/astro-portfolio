@@ -6,12 +6,12 @@ import type { z } from "astro:content";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 
 export function Gig({
-  employer,
-  employerUrl,
-  jobTitle,
-  startDate,
-  endDate,
-}: z.infer<typeof GigSchemaProps>) {
+  gig,
+}: {
+  gig: { data: z.infer<typeof GigSchemaProps> };
+}) {
+  const { employer, employerUrl, jobTitle, startDate, endDate } = gig.data;
+
   return (
     <Box as="article">
       <Type as="h4" className="font-bold">
