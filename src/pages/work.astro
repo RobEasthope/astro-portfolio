@@ -1,13 +1,12 @@
 ---
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
-import StandardPage from "@/layouts/StandardPage.astro";
 
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 import { Dot } from "@/components/decoration/Dot/Dot";
-import { StandardContentContainer } from "@/components/misc/StandardContentContainer/StandardContentContainer";
+import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
