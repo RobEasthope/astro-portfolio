@@ -9,12 +9,7 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import StandardPage from "@/layouts/StandardPage.astro";
 import Work from "@/content/index/work.astro";
 import MarkdownRender from "@/components/MarkdownRender.astro";
-
-const indexSections = await getCollection("index");
-
-const aboutBlurb = indexSections.find(
-  (section) => section.slug === "about-blurb",
-);
+import About from "@/content/index/about.astro";
 ---
 
 <StandardPage title="Rob Easthope">
@@ -58,7 +53,7 @@ const aboutBlurb = indexSections.find(
   </Box>
 
   <!-- About section -->
-  {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+  <About />
 
   <!-- Work section -->
   <Work />
