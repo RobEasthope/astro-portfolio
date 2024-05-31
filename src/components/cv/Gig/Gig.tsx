@@ -7,11 +7,11 @@ import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import ReactMarkdown from "react-markdown";
 import { Prose } from "@/components/ui/Prose/Prose";
 
-export function Gig({
-  gig,
-}: {
+export type GigProps = {
   gig: { data: z.infer<typeof GigSchemaProps>; body: string };
-}) {
+};
+
+export function Gig({ gig }: GigProps) {
   const { employer, employerUrl, jobTitle, startDate, endDate } = gig.data;
 
   return (
