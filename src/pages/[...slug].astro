@@ -11,6 +11,7 @@ import type { ImageMetadata } from "astro";
 import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { Dot } from "@/components/decoration/Dot/Dot";
+import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -50,67 +51,69 @@ const {
 ---
 
 <StandardPage title={title} description={description}>
-  <Box
-    as="div"
-    className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
-  >
-    {
-      title && (
-        <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
-          {title}
-        </Type>
-      )
-    }
+  <StandardContentContainer>
+    <Box
+      as="div"
+      className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
+    >
+      {
+        title && (
+          <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
+            {title}
+          </Type>
+        )
+      }
 
-    {
-      description && (
-        <Type as="p" className="mb-1 text-center text-md italic">
-          {description}
-        </Type>
-      )
-    }
+      {
+        description && (
+          <Type as="p" className="mb-1 text-center text-md italic">
+            {description}
+          </Type>
+        )
+      }
 
-    {
-      (client || agency) && (
-        <Box
-          as="section"
-          className="my-1 flex items-center justify-center gap-0.25"
-        >
-          {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
-          {client && agency && (
-            <Type as="span" className="text-sm">
-              x
-            </Type>
-          )}
-          {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
-        </Box>
-      )
-    }
+      {
+        (client || agency) && (
+          <Box
+            as="section"
+            className="my-1 flex items-center justify-center gap-0.25"
+          >
+            {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
+            {client && agency && (
+              <Type as="span" className="text-sm">
+                x
+              </Type>
+            )}
+            {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
+          </Box>
+        )
+      }
 
-    <Dot className="" />
-  </Box>
+      <Dot className="" />
+    </Box>
 
-  <Prose as="div" className="mx-auto">
-    <Content />
-  </Prose>
+    <Prose as="div" className="mx-auto">
+      <Content />
+    </Prose>
 
-  <Box
-    as="div"
-    className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
-  >
-    <Dot className="mb-1 " />
-    {
-      projectUrlTitle && (
-        <Type as="p" className="mb-1 text-center">
-          <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
-        </Type>
-      )
-    }
+    <Box
+      as="div"
+      className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
+    >
+      <Dot className="mb-1 " />
+      {
+        projectUrlTitle && (
+          <Type as="p" className="mb-1 text-center">
+            <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
+          </Type>
+        )
+      }
 
-    {tools && <Type as="p">{tools}</Type>}
+      {tools && <Type as="p">{tools}</Type>}
 
-    {repoUrl && <ExternalLink href={repoUrl}>{repoTitle}</ExternalLink>}
+      {repoUrl && <ExternalLink href={repoUrl}>{repoTitle}</ExternalLink>}
 
-    {writtenDate && <Type as="p">{writtenDate}</Type>}
-  </Box>
+      {writtenDate && <Type as="p">{writtenDate}</Type>}
+    </Box>
+  </StandardContentContainer>
 </StandardPage>
