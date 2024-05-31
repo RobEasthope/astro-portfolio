@@ -1,9 +1,11 @@
 ---
+import Gig from "@/components/cv/Gig/Gig.astro";
 import { GigList } from "@/components/cv/GigList/GigList";
 import { Box } from "@/components/ui/Box/Box";
 
 import StandardPage from "@/layouts/StandardPage.astro";
 import { getCollection } from "astro:content";
+import { v4 as uuidv4 } from "uuid";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -16,5 +18,9 @@ const allGigsByDate = gigs.sort((a, b) => {
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="grid justify-center gap-3 md:gap-6">
     <GigList gigs={allGigsByDate} />
+
+    <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
+      {gigs?.map((gig) => <Gig key={uuidv4()} gig={gig} />)}
+    </Box>
   </Box>
 </StandardPage>
