@@ -7,6 +7,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 import { Dot } from "@/components/decoration/Dot/Dot";
+import { StandardContentContainer } from "@/components/misc/StandardContentContainer/StandardContentContainer";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -16,7 +17,7 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
 });
 ---
 
-<StandardPage title="Work by Rob Easthope">
+<StandardContentContainer>
   <Box as="section" id="work" className="mx-auto">
     <Box as="section" id="work" className="mx-auto max-w-5xl">
       <Type as="h1" className="mb-0.5 text-center text-2xl leading-tight">
@@ -48,4 +49,4 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
       }
     </Box>
   </Box>
-</StandardPage>
+</StandardContentContainer>
