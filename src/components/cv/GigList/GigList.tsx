@@ -1,4 +1,4 @@
-import { Gig } from "@/components/cv/Gig/Gig";
+import Gig from "@/components/cv/Gig/Gig.astro";
 import { Box } from "@/components/ui/Box/Box";
 import type { GigSchemaProps } from "@/schemas/gig.schema";
 import type { z } from "astro:content";
