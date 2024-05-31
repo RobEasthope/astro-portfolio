@@ -7,7 +7,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import StandardPage from "@/layouts/StandardPage.astro";
-import Work from "@/pages/work.astro";
+import Work from "@/content/index/work.astro";
 import MarkdownRender from "@/components/MarkdownRender.astro";
 
 const indexSections = await getCollection("index");
@@ -55,7 +55,9 @@ const aboutSection = indexSections.find((section) => section.slug === "about");
     </Box>
   </Box>
 
+  <!-- About section -->
   <MarkdownRender page={aboutSection} />
 
+  <!-- Work section -->
   <Work />
 </StandardPage>
