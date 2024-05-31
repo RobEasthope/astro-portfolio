@@ -1,4 +1,7 @@
 ---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+
 import MuxPlayer from "@mux/mux-player-react/lazy";
 
 import "@/components/blocks/MuxPlayer/MuxPlayer.css";
@@ -8,7 +11,6 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import StandardPage from "@/layouts/StandardPage.astro";
 import Work from "@/pages/work.astro";
 import MarkdownRender from "@/components/MarkdownRender.astro";
-import { getCollection } from "astro:content";
 // import * as aboutSection from "@/content/index/about.mdx";
 
 const indexSections = await getCollection("index");
