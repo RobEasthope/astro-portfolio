@@ -2,10 +2,10 @@
 import type { Render } from "astro:content";
 
 interface Props {
-  page: { data: { title: string }; render(): Render[".mdx"] };
+  markdown: { data: { title: string }; render(): Render[".mdx"] };
 }
 
-const { Content } = await Astro.props.page.render();
+const { Content } = await Astro.props.markdown.render();
 ---
 
 <div>
