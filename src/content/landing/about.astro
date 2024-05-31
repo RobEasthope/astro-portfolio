@@ -9,7 +9,7 @@ import { StandardContentContainer } from "@/components/containers/StandardConten
 
 import MarkdownRender from "@/components/MarkdownRender.astro";
 
-const indexSections = await getCollection("index");
+const indexSections = await getCollection("landing");
 
 const aboutBlurb = indexSections.find(
   (section) => section.slug === "about-blurb",

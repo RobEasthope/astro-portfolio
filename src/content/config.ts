@@ -26,7 +26,7 @@ const gigCollection = defineCollection({
     }),
 });
 
-const indexCollection = defineCollection({
+const landingCollection = defineCollection({
   type: "content", // v2.5.0 and later
   schema: () => z.object({}),
 });
@@ -36,5 +36,5 @@ const indexCollection = defineCollection({
 export const collections = {
   work: workCollection,
   gigs: gigCollection,
-  index: indexCollection,
+  landing: landingCollection,
 };
