@@ -22,12 +22,10 @@ export function Diamond({
         `mt-${spacingTop}`,
         `mb-${spacingBottom}`,
         "print:my-0.5",
-        "rotate-45 text-[0.5rem]",
-        "mx-auto",
         className,
       )}
     >
-      <FaSquareFull />
+      <FaSquareFull className="rotate-45 text-[0.5rem]" />
     </div>
   );
 }
