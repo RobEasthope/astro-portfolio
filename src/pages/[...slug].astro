@@ -8,10 +8,9 @@ import { Type } from "@/components/ui/Type/Type";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import type { ImageMetadata } from "astro";
-import { LineBreak } from "@/components/decoration/LineBreak/LineBreak";
 import StandardPage from "@/layouts/StandardPage.astro";
-import { Dot } from "@/components/decoration/Dot/Dot";
 import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -89,7 +88,7 @@ const {
         )
       }
 
-      <Dot className="" />
+      <Diamond />
     </Box>
 
     <Prose as="div" className="mx-auto">
@@ -100,7 +99,7 @@ const {
       as="div"
       className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
     >
-      <Dot className="mb-1 " />
+      <Diamond className="mb-1 " />
       {
         projectUrlTitle && (
           <Type as="p" className="mb-1 text-center">

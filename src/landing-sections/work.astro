@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
-import { Dot } from "@/components/decoration/Dot/Dot";
 import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -27,7 +27,7 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
         Some of the projects I have worked on
       </Type>
 
-      <Dot className="my-1 " />
+      <Diamond className="my-1 " />
     </Box>
 
     <Box
