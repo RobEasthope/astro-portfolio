@@ -3,8 +3,6 @@
 import { getCollection } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
 import { Prose } from "@/components/ui/Prose/Prose";
-import { Type } from "@/components/ui/Type/Type";
-
 import MarkdownRender from "@/components/MarkdownRender.astro";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
@@ -16,7 +14,7 @@ const aboutBlurb = indexSections.find(
 ---
 
 <Box as="section" id="about">
-  <Box as="div" className="mx-auto max-w-prose">
+  <Box as="div" className="mx-auto grid max-w-prose gap-3">
     <Diamond />
 
     <Prose as="section" className="text-base">
