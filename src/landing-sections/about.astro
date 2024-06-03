@@ -1,13 +1,13 @@
 ---
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
-import { Dot } from "@/components/decoration/Dot/Dot";
 import { Box } from "@/components/ui/Box/Box";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
 import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 
 import MarkdownRender from "@/components/MarkdownRender.astro";
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 const indexSections = await getCollection("landing");
 
@@ -21,7 +21,7 @@ const aboutBlurb = indexSections.find(
     <Box as="div" className="mx-auto max-w-prose">
       <Type as="h1" className="text-center text-2xl leading-tight">About</Type>
 
-      <Dot className="my-1" />
+      <Diamond className="my-1" />
 
       <Prose as="section" className="text-base">
         {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
