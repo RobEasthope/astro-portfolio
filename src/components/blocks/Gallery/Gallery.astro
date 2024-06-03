@@ -41,10 +41,14 @@ const {
           />
         ))
     }
-    <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
-      <Type as="figcaption" className="text-sm italic text-gray-600">
-        {galleryCaption}
-      </Type>
-    </Box>
+    {
+      galleryCaption && (
+        <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
+          <Type as="figcaption" className="text-gray-600 text-sm italic">
+            {galleryCaption}
+          </Type>
+        </Box>
+      )
+    }
   </Box>
 </Box>
