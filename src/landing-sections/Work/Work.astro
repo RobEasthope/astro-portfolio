@@ -5,7 +5,6 @@ import { getCollection } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
-import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 const listedProjects = await getCollection("work");
@@ -16,36 +15,34 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
 });
 ---
 
-<StandardContentContainer>
-  <Box as="section" id="work" className="mx-auto">
-    <Box as="section" id="work" className="mx-auto max-w-5xl">
-      <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
-        Work
-      </Type>
+<Box as="section" id="work" className="mx-auto">
+  <Box as="section" id="work" className="mx-auto max-w-5xl">
+    <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
+      Work
+    </Type>
 
-      <!-- <Type as="p" className="mb-1 text-center text-md italic">
+    <!-- <Type as="p" className="mb-1 text-center text-md italic">
         Some of the projects I have worked on
       </Type> -->
 
-      <Diamond className="my-1" />
-    </Box>
-
-    <Box
-      as="ul"
-      className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-4"
-    >
-      {
-        listedProjectsByDate?.map((project) => (
-          <Type as="li">
-            <InternalLink
-              href={project.data.url}
-              className="flex h-full flex-row gap-0.5"
-            >
-              {project.data.title}
-            </InternalLink>
-          </Type>
-        ))
-      }
-    </Box>
+    <Diamond className="my-1" />
   </Box>
-</StandardContentContainer>
+
+  <Box
+    as="ul"
+    className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-4"
+  >
+    {
+      listedProjectsByDate?.map((project) => (
+        <Type as="li">
+          <InternalLink
+            href={project.data.url}
+            className="flex h-full flex-row gap-0.5"
+          >
+            {project.data.title}
+          </InternalLink>
+        </Type>
+      ))
+    }
+  </Box>
+</Box>

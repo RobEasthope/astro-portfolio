@@ -4,7 +4,6 @@ import { getCollection } from "astro:content";
 import { Box } from "@/components/ui/Box/Box";
 import { Prose } from "@/components/ui/Prose/Prose";
 import { Type } from "@/components/ui/Type/Type";
-import { StandardContentContainer } from "@/components/containers/StandardContentContainer/StandardContentContainer";
 
 import MarkdownRender from "@/components/MarkdownRender.astro";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
@@ -17,15 +16,13 @@ const aboutBlurb = indexSections.find(
 ---
 
 <Box as="section" id="about">
-  <StandardContentContainer>
-    <Box as="div" className="mx-auto max-w-prose">
-      <Type as="h1" className="text-center text-2xl leading-none">About</Type>
+  <Box as="div" className="mx-auto max-w-prose">
+    <Type as="h1" className="text-center text-2xl leading-none">About</Type>
 
-      <Diamond className="my-1" />
+    <Diamond className="my-1" />
 
-      <Prose as="section" className="text-base">
-        {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
-      </Prose>
-    </Box>
-  </StandardContentContainer>
+    <Prose as="section" className="text-base">
+      {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+    </Prose>
+  </Box>
 </Box>
