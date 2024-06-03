@@ -15,12 +15,16 @@ export function LandingPageSection({
 }: LandingPageSectionProps) {
   return (
     <Box as="section" id={id} className="w-full">
-      <Box as="div" className="mx-auto flex max-w-7xl flex-row gap-2">
-        <Type as="h2" className="tracking-none mt-1 w-1/3 text-2xl">
+      <Box
+        as="div"
+        className="mx-auto flex max-w-7xl flex-col gap-1 md:flex-row md:gap-2"
+      >
+        <Type as="h2" className="tracking-none text-center text-2xl md:w-1/3">
           {heading}
         </Type>
-
-        {children}
+        <Box as="div" className="md:w-2/3">
+          {children}
+        </Box>
       </Box>
     </Box>
   );
