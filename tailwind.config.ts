@@ -75,6 +75,11 @@ export default {
       fontFamily: {
         sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
         plantin: ["plantin", ...defaultTheme.fontFamily.serif],
+        lapture: ["jaf-lapture", ...defaultTheme.fontFamily.serif],
+        "lapture-display": [
+          "jaf-lapture-display",
+          ...defaultTheme.fontFamily.serif,
+        ],
       },
       fontSize: {
         xs: fluidTypeSize({
