@@ -4,6 +4,7 @@ import { Type } from "@/components/ui/Type/Type";
 import GalleryImage from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage.astro";
 import type { GalleryImageProps } from "@/components/blocks/Gallery/components/GalleryImage/GalleryImage";
 import { v4 as uuidv4 } from "uuid";
+import { cn } from "@/utils/tailwind";
 
 interface Props {
   images: GalleryImageProps[];
@@ -23,10 +24,15 @@ const {
 } = Astro.props;
 ---
 
-<Box as="section" className={className} breakout blockSpacing>
+<Box
+  as="section"
+  className={cn("sm:px-2 md:px-3", className)}
+  breakout
+  blockSpacing
+>
   <Box
     as="div"
-    className="mx-auto grid gap-0.75"
+    className="mx-auto grid gap-1"
     maxWidth={maxWidth}
     columns={columns}
   >
@@ -41,10 +47,14 @@ const {
           />
         ))
     }
-    <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
-      <Type as="figcaption" className="text-sm italic text-gray-600">
-        {galleryCaption}
-      </Type>
-    </Box>
+    {
+      galleryCaption && (
+        <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
+          <Type as="figcaption" className="text-gray-600 text-sm italic">
+            {galleryCaption}
+          </Type>
+        </Box>
+      )
+    }
   </Box>
 </Box>
