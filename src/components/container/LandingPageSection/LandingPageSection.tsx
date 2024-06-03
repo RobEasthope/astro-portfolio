@@ -22,7 +22,7 @@ export function LandingPageSection({
       >
         <Type
           as="h2"
-          className="tracking-none text-center text-2xl md:w-1/3 md:text-left"
+          className="text-center text-2xl leading-none md:w-1/3 md:text-left"
         >
           {heading}
         </Type>
