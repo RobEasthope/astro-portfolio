@@ -17,8 +17,12 @@ const aboutBlurb = indexSections.find(
 
 <Box as="section" id="about">
   <Box as="div" className="mx-auto max-w-prose">
+    <Diamond />
+
     <Prose as="section" className="text-base">
       {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
     </Prose>
+
+    <Diamond />
   </Box>
 </Box>
