@@ -5,6 +5,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { Prose } from "@/components/ui/Prose/Prose";
 import MarkdownRender from "@/components/MarkdownRender.astro";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
+import { Type } from "@/components/ui/Type/Type";
 
 const indexSections = await getCollection("landing");
 
@@ -13,13 +14,15 @@ const aboutBlurb = indexSections.find(
 );
 ---
 
-<Box as="section" id="about">
-  <Box as="div" className="mx-auto grid max-w-prose gap-2">
+<Box as="section" id="about" className="w-full">
+  <Box as="div" className="mx-auto grid max-w-7xl gap-2">
     <Diamond />
-
-    <Prose as="section" className="text-md">
-      {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
-    </Prose>
+    <Box as="div" className="flex flex-row gap-2">
+      <Type as="h2" className="tracking-none mt-1 w-1/3 text-2xl">About</Type>
+      <Prose as="section" className="w-2/3 text-md">
+        {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+      </Prose>
+    </Box>
 
     <Diamond />
   </Box>
