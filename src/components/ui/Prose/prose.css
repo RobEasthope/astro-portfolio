@@ -8,6 +8,14 @@
   --tw-prose-bullets: rgb(21, 23, 24);
 }
 
+/* Remove top and bottom margin from the first and last child of the prose container */
+.prose *:first-child {
+  margin-top: 0;
+}
+.prose *:last-child {
+  margin-bottom: 0;
+}
+
 @media print {
   .prose
     :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
