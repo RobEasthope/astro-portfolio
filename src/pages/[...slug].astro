@@ -50,7 +50,7 @@ const {
 ---
 
 <StandardPage title={title} description={description}>
-  <StandardContentContainer>
+  <Box as="div" className="py-2 md:py-4 lg:py-6">
     <Box
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
@@ -114,5 +114,5 @@ const {
 
       {writtenDate && <Type as="p">{writtenDate}</Type>}
     </Box>
-  </StandardContentContainer>
+  </Box>
 </StandardPage>
