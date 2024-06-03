@@ -1,5 +1,5 @@
 ---
-import Header from "@/components/navigation/Header/Header.astro";
+import Footer from "@/components/navigation/Footer/Footer.astro";
 import { Box } from "@/components/ui/Box/Box";
 import Root from "@/layouts/Root.astro";
 
@@ -12,12 +12,14 @@ const { title, description } = Astro.props;
 ---
 
 <Root title={title} description={description}>
-  <Header />
-
   <Box
     as="main"
-    className="relative min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*3)] bg-off-white md:mx-2 md:min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*5)]"
+    className="flex min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*6)] flex-col justify-center"
   >
-    <slot />
+    <Box as="div" className="w-full">
+      <slot />
+    </Box>
   </Box>
+
+  <Footer />
 </Root>

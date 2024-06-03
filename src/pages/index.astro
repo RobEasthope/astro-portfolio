@@ -1,44 +1,20 @@
 ---
+import Intro from "@/landing-sections/Jumbotron/Jumbotron.astro";
 import LandingPage from "@/layouts/LandingPage.astro";
-import MuxPlayer from "@mux/mux-player-react/lazy";
-
-import "@/components/blocks/MuxPlayer/MuxPlayer.css";
+import Work from "@/landing-sections/Work/Work.astro";
+import About from "@/landing-sections/About/About.astro";
 import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
-import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 ---
 
 <LandingPage title="Rob Easthope">
-  <MuxPlayer
-    playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
-    metadata={{
-      video_id: "Yytp7lXoNk1ndRc8a01TK3nbn02XdNmhq7",
-      video_title: "Flight off Great End",
-      viewer_user_id: "user-id-007",
-    }}
-    streamType="on-demand"
-    playbackRate={0.5}
-    loop
-    autoPlay
-    muted
-    client:load
-  />
+  <Intro />
 
   <Box
-    as="section"
-    id="about"
-    className="absolute bottom-0 left-0 mx-auto w-full max-w-6xl p-1 md:p-2"
+    as="div"
+    className="grid gap-2 bg-sage-2/80 px-1 py-2 md:gap-4 md:px-2 md:py-4 lg:gap-6 lg:py-6"
   >
-    <Type as="h1" className="text-2xl leading-tight text-white">
-      Hello there!
-      <br />I am Rob Easthope, a front end developer working on the web.
-    </Type>
+    <About />
 
-    <Type as="p" className="prose mt-1 text-md text-white">
-      Want to chat? Feel free to{" "}
-      <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-        >email me</EmailLink
-      >.
-    </Type>
+    <Work />
   </Box>
 </LandingPage>

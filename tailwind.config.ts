@@ -33,6 +33,7 @@ export default {
         "imperial-red": "rgb(170, 0, 0)",
         "japanese-red": "rgb(193, 78, 95)",
         "off-white": "rgba(170, 163, 128, 0.03)",
+        terracotta: "hsl(var(--terracotta))",
         link: "hsl(var(--terracotta))",
         decoration: "hsl(var(--terracotta))",
 
@@ -74,6 +75,11 @@ export default {
       fontFamily: {
         sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
         plantin: ["plantin", ...defaultTheme.fontFamily.serif],
+        lapture: ["jaf-lapture", ...defaultTheme.fontFamily.serif],
+        "lapture-display": [
+          "jaf-lapture-display",
+          ...defaultTheme.fontFamily.serif,
+        ],
       },
       fontSize: {
         xs: fluidTypeSize({

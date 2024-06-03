@@ -1,0 +1,26 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+import { Box } from "@/components/ui/Box/Box";
+import { Prose } from "@/components/ui/Prose/Prose";
+import MarkdownRender from "@/components/MarkdownRender.astro";
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
+
+const indexSections = await getCollection("landing");
+
+const aboutBlurb = indexSections.find(
+  (section) => section.slug === "about-blurb",
+);
+---
+
+<Box as="section" id="about">
+  <Box as="div" className="mx-auto grid max-w-prose gap-2">
+    <Diamond />
+
+    <Prose as="section" className="text-md">
+      {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+    </Prose>
+
+    <Diamond />
+  </Box>
+</Box>
