@@ -1,20 +1,20 @@
-import { BsDot } from "react-icons/bs";
+import { FaSquareFull } from "react-icons/fa";
 
 import { cn } from "@/utils/tailwind";
 
 import type { SpacerProps } from "@/components/decoration/Spacer/Spacer";
 
-export type DotProps = {
+export type DiamondProps = {
   spacingTop?: SpacerProps["height"];
   spacingBottom?: SpacerProps["height"];
   className?: string;
 };
 
-export function Dot({
+export function Diamond({
   spacingTop = "0",
   spacingBottom = "0",
   className,
-}: DotProps) {
+}: DiamondProps) {
   return (
     <div
       className={cn(
@@ -22,13 +22,12 @@ export function Dot({
         `mt-${spacingTop}`,
         `mb-${spacingBottom}`,
         "print:my-0.5",
-        "h-0.25 w-0.25 rotate-45",
-        "bg-tomato-10",
+        "rotate-45 text-[0.5rem]",
         "mx-auto",
         className,
       )}
     >
-      {/* <BsDot /> */}
+      <FaSquareFull />
     </div>
   );
 }
