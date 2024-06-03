@@ -6,6 +6,7 @@ import { Box } from "@/components/ui/Box/Box";
 import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 import { Type } from "@/components/ui/Type/Type";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
+import { LandingPageSection } from "@/components/container/LandingPageSection/LandingPageSection";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -15,26 +16,22 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
 });
 ---
 
-<Box as="section" id="work" className="mx-auto w-full">
-  <Box as="div" className="mx-auto flex max-w-7xl flex-row gap-2">
-    <Type as="h2" className="tracking-none w-1/3 text-2xl">Work</Type>
-    <Box
-      as="ul"
-      className="mx-auto grid w-2/3 max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-3"
-    >
-      {
-        listedProjectsByDate?.map((project) => (
-          <Type as="li" className="text-md">
-            <InternalLink
-              href={project.data.url}
-              className="flex h-full flex-row gap-0.5"
-            >
-              {project.data.title}
-            </InternalLink>
-          </Type>
-        ))
-      }
-    </Box>
+<LandingPageSection id="work" heading="Work">
+  <Box
+    as="ul"
+    className="mx-auto grid w-2/3 max-w-5xl grid-cols-1 gap-x-1 gap-y-0.5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-2 md:gap-y-1 lg:grid-cols-3"
+  >
+    {
+      listedProjectsByDate?.map((project) => (
+        <Type as="li" className="text-md">
+          <InternalLink
+            href={project.data.url}
+            className="flex h-full flex-row gap-0.5"
+          >
+            {project.data.title}
+          </InternalLink>
+        </Type>
+      ))
+    }
   </Box>
-  <Diamond className="my-2" />
-</Box>
+</LandingPageSection>
