@@ -1,3 +1,4 @@
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
 import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import type { ReactNode } from "react";
@@ -25,6 +26,7 @@ export function LandingPageSection({
         >
           {heading}
         </Type>
+        <Diamond className="flex sm:my-0.5 md:hidden" />
         <Box as="div" className="md:w-2/3">
           {children}
         </Box>
