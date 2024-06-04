@@ -280,7 +280,7 @@ export const TOOLS = {
     url: null,
   },
   CSS_MODULES: {
-    name: "CSS modules",
+    name: "CSS Modules",
     url: "https://github.com/css-modules/css-modules",
   },
   SCROLLMAGIC: {
