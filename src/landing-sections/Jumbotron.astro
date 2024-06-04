@@ -55,11 +55,19 @@ import { TbArrowDownRhombus } from "react-icons/tb";
   </Box>
   <Box
     as="div"
-    className="absolute bottom-0 flex w-full -translate-y-1 justify-center md:-translate-y-1"
+    className="absolute bottom-0 left-1/2 flex w-4 -translate-x-1/2  justify-center "
   >
-    <a href="#about" class="text-white">
-      <span class="sr-only">Scroll down</span>
-      <TbArrowDownRhombus className="text-xl text-white" /></a
+    <Box
+      as="div"
+      className="flex h-4 w-4 translate-y-1/2 rotate-45 items-center justify-center bg-white"
     >
+      <a
+        href="#about"
+        class="-translate-x-0.5 -translate-y-0.5 -rotate-45 text-center"
+      >
+        <span class="sr-only">Scroll down</span>
+        <TbArrowDownRhombus className="-rotate-0 text-xl" /></a
+      >
+    </Box>
   </Box>
 </Box>
