@@ -50,7 +50,7 @@ const {
 ---
 
 <StandardPage title={title} description={description}>
-  <Box as="div" className="mx-auto max-w-prose py-2 md:py-4 lg:py-6">
+  <Box as="div" className="mx-auto py-2 md:py-4 lg:py-6">
     <Box
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
@@ -83,13 +83,14 @@ const {
           </Type>
         )
       }
-
-      <DiamondPageBreak />
     </Box>
+
+    <DiamondPageBreak />
 
     <Prose as="div" className="mx-auto my-1">
       <Content />
     </Prose>
+
     <DiamondPageBreak />
 
     <Box
