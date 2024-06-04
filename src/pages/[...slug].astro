@@ -10,6 +10,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
 import type { ImageMetadata } from "astro";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
+import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -49,7 +50,7 @@ const {
 ---
 
 <StandardPage title={title} description={description}>
-  <Box as="div" className="py-2 md:py-4 lg:py-6">
+  <Box as="div" className="mx-auto py-2 md:py-4 lg:py-6">
     <Box
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
@@ -74,7 +75,7 @@ const {
         (client || agency) && (
           <Type
             as="p"
-            className="my-1 flex items-center justify-center gap-0.25"
+            className="mt-1 mb-2 flex items-center justify-center gap-0.25"
           >
             {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
             {client && agency && <Type as="span">&</Type>}
@@ -82,22 +83,27 @@ const {
           </Type>
         )
       }
-
-      <Diamond />
     </Box>
 
-    <Prose as="div" className="mx-auto">
+    <Box as="div" className="mx-auto max-w-[calc(65ch_+_2rem)]">
+      <DiamondPageBreak />
+    </Box>
+
+    <Prose as="div" className="mx-auto my-1">
       <Content />
     </Prose>
 
+    <Box as="div" className="mx-auto max-w-[calc(65ch_+_2rem)]">
+      <DiamondPageBreak />
+    </Box>
+
     <Box
       as="div"
-      className="mx-auto mt-1 flex max-w-prose flex-col gap-0.5 text-center"
+      className="mx-auto mt-2 flex max-w-prose flex-col gap-0.5 text-center"
     >
-      <Diamond className="mb-1 " />
       {
         projectUrlTitle && (
-          <Type as="p" className="mb-1 text-center">
+          <Type as="p" className="my-1 text-center">
             <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
           </Type>
         )
