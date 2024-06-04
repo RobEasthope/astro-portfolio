@@ -64,7 +64,7 @@ const {
 
       {
         description && (
-          <Type as="p" className="mb-1 text-center text-md italic">
+          <Type as="p" className="mb-1 text-center">
             {description}
           </Type>
         )
@@ -72,18 +72,14 @@ const {
 
       {
         (client || agency) && (
-          <Box
-            as="section"
+          <Type
+            as="p"
             className="my-1 flex items-center justify-center gap-0.25"
           >
             {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
-            {client && agency && (
-              <Type as="span" className="text-sm">
-                x
-              </Type>
-            )}
+            {client && agency && <Type as="span">&</Type>}
             {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
-          </Box>
+          </Type>
         )
       }
 
