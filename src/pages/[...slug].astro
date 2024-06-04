@@ -72,14 +72,14 @@ const {
 
       {
         (client || agency) && (
-          <Box
-            as="section"
+          <Type
+            as="p"
             className="my-1 flex items-center justify-center gap-0.25"
           >
             {client && <ExternalLink href={clientUrl}>{client}</ExternalLink>}
             {client && agency && <Type as="span">&</Type>}
             {agency && <ExternalLink href={agencyUrl}>{agency}</ExternalLink>}
-          </Box>
+          </Type>
         )
       }
 
