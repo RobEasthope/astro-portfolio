@@ -8,6 +8,7 @@ import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
 
 import { TbArrowDownRhombus } from "react-icons/tb";
+import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 ---
 
 <Box
@@ -46,7 +47,9 @@ import { TbArrowDownRhombus } from "react-icons/tb";
       <Type as="p" className="prose mt-1 text-lg text-white">
         <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
           >Contact me</EmailLink
-        > or learn a little <a href="#about" class="text-white">about me</a> first.
+        > or learn a little <InternalLink href="#about" className="text-white"
+          >about me</InternalLink
+        > first.
       </Type>
     </Box>
   </Box>
