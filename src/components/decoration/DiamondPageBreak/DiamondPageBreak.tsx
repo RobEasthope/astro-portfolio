@@ -12,19 +12,15 @@ const DiamondPageBreak = React.forwardRef<
     { className, orientation = "horizontal", decorative = true, ...props },
     ref,
   ) => (
-    <div className="relative">
-      <SeparatorPrimitive.Root
-        ref={ref}
-        decorative={decorative}
-        orientation={orientation}
-        className={cn(
-          "shrink-0 bg-border",
-          orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
-          className,
-        )}
-        {...props}
-      />
-      <Diamond className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <div
+      ref={ref}
+      className="mx-auto flex w-full flex-row items-center gap-0.5"
+    >
+      <div className="h-[1px] w-1/2 bg-ink" />
+
+      <Diamond />
+
+      <div className="h-[1px] w-1/2 bg-ink" />
     </div>
   ),
 );
