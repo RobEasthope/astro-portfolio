@@ -15,11 +15,11 @@ const DiamondPageBreak = React.forwardRef<
       ref={ref}
       className="mx-auto flex w-full flex-row items-center gap-0.5"
     >
-      <div className="h-[1px] w-1/2 bg-gray-6" />
+      <div className="h-[1px] w-1/2 bg-decoration" />
 
       <Diamond />
 
-      <div className="h-[1px] w-1/2 bg-gray-6" />
+      <div className="h-[1px] w-1/2 bg-decoration" />
     </div>
   ),
 );

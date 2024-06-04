@@ -35,7 +35,7 @@ export default {
         "off-white": "rgba(170, 163, 128, 0.03)",
         terracotta: "hsl(var(--terracotta))",
         link: "hsl(var(--terracotta))",
-        decoration: "hsl(var(--terracotta))",
+        decoration: "rgb(21, 23, 24)",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
