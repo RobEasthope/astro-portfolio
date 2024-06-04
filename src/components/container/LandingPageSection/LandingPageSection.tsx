@@ -27,7 +27,7 @@ export function LandingPageSection({
           {heading}
         </Type>
         <Diamond className="flex sm:my-0.5 md:hidden" />
-        <Box as="div" className="md:w-2/3">
+        <Box as="div" className="w-full max-w-prose">
           {children}
         </Box>
       </Box>
