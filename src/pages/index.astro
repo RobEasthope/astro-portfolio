@@ -1,8 +1,8 @@
 ---
-import Intro from "@/landing-sections/Jumbotron/Jumbotron.astro";
+import Intro from "@/landing-sections/Jumbotron.astro";
 import LandingPage from "@/layouts/LandingPage.astro";
-import Work from "@/landing-sections/Work/Work.astro";
-import About from "@/landing-sections/About/About.astro";
+import Work from "@/landing-sections/Work.astro";
+import About from "@/landing-sections/About.astro";
 import { Box } from "@/components/ui/Box/Box";
 ---
 
@@ -11,9 +11,11 @@ import { Box } from "@/components/ui/Box/Box";
 
   <Box
     as="div"
-    className="grid gap-2 bg-sage-2/80 px-1 py-2 md:gap-4 md:px-2 md:py-4 lg:gap-6 lg:py-6"
+    className="grid gap-2 bg-sage-2/80 px-1 py-3 sm:py-4 md:gap-4 md:px-2 lg:gap-6 lg:py-6"
   >
     <About />
+
+    <hr />
 
     <Work />
   </Box>

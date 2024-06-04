@@ -1,0 +1,19 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+import { Prose } from "@/components/ui/Prose/Prose";
+import MarkdownRender from "@/components/MarkdownRender.astro";
+import { LandingPageSection } from "@/components/container/LandingPageSection/LandingPageSection";
+
+const indexSections = await getCollection("landing");
+
+const aboutBlurb = indexSections.find(
+  (section) => section.slug === "about-blurb",
+);
+---
+
+<LandingPageSection id="about" heading="About">
+  <Prose as="section">
+    {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
+  </Prose>
+</LandingPageSection>
