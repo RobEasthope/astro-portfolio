@@ -13,7 +13,7 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
 
 <Box
   as="main"
-  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)] bg-off-white"
+  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)] overflow-hidden bg-off-white"
 >
   <MuxPlayer
     playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
@@ -28,11 +28,12 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
     autoPlay
     muted
     client:load
+    className="grayscale filter"
   />
 
   <Box
     as="section"
-    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center p-1 tracking-tight md:p-2"
+    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-sage-12/20 p-1 tracking-tight md:p-2"
   >
     <Box
       as="section"
@@ -58,11 +59,19 @@ import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
   </Box>
   <Box
     as="div"
-    className="absolute bottom-0 flex w-full -translate-y-1 justify-center md:-translate-y-1"
+    className="absolute bottom-0 left-1/2 flex w-4 -translate-x-1/2  justify-center "
   >
-    <a href="#about" class="text-white">
-      <span class="sr-only">Scroll down</span>
-      <TbArrowDownRhombus className="text-xl text-white" /></a
+    <Box
+      as="div"
+      className="flex h-3 w-3 translate-y-1/2 rotate-45 items-center justify-center bg-white outline outline-[4px] outline-offset-[4px] outline-white"
     >
+      <a
+        href="#about"
+        class="-translate-x-0.5 -translate-y-0.5 -rotate-45 text-center"
+      >
+        <span class="sr-only">Scroll down</span>
+        <TbArrowDownRhombus className="-rotate-0 text-lg text-sage-12" /></a
+      >
+    </Box>
   </Box>
 </Box>
