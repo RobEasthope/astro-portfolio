@@ -26,9 +26,12 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
         <Type as="li">
           <InternalLink
             href={project.data.url}
-            className="flex h-full flex-row gap-0.5"
+            className="flex h-full flex-col gap-0.5"
           >
-            {project.data.title}
+            <Type as="div">{project.data.title}</Type>
+            <Type as="div" className="text-sm italic">
+              {project.data.description}
+            </Type>
           </InternalLink>
         </Type>
       ))
