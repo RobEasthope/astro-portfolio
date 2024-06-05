@@ -5,6 +5,7 @@ import About from "@/components/landing-sections/About.astro";
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
+import { Anchor } from "@/components/_base/Anchor/Anchor";
 ---
 
 <StandardPage title="Rob Easthope">
@@ -14,10 +15,12 @@ import StandardPage from "@/layouts/StandardPage.astro";
     as="div"
     className="grid gap-2 bg-sage-2/80 px-1 py-3 sm:py-4 md:gap-4 md:px-2 lg:gap-6 lg:py-6"
   >
+    <Anchor id="about" />
     <About />
 
     <DiamondPageBreak className="bg-ink" />
 
+    <Anchor id="work" />
     <Work />
   </Box>
 </StandardPage>
