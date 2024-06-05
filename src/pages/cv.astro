@@ -15,9 +15,11 @@ const allGigsByDate = gigs.sort((a, b) => {
 ---
 
 <StandardPage title="Work by Rob Easthope">
-  <TwoColContainer id="cv" heading="Experience">
-    <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
-      {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
-    </Box>
-  </TwoColContainer>
+  <Box as="div" className="mx-auto px-1 py-2 md:px-2 md:py-4 lg:py-6">
+    <TwoColContainer id="cv" heading="Experience">
+      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
+        {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
+      </Box>
+    </TwoColContainer>
+  </Box>
 </StandardPage>
