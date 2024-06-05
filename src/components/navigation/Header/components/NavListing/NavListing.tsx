@@ -8,20 +8,17 @@ import { Type } from "@/components/_base/Type/Type";
 import { cn } from "@/utils/tailwind";
 import { cva } from "class-variance-authority";
 
-const navlistingVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-  {
-    variants: {
-      mode: {
-        light: "text-white",
-        dark: "text-ink",
-      },
-    },
-    defaultVariants: {
-      mode: "dark",
+const navlistingVariants = cva({
+  variants: {
+    mode: {
+      light: "text-white",
+      dark: "text-ink",
     },
   },
-);
+  defaultVariants: {
+    mode: "dark",
+  },
+});
 
 export type NavListingProps = {
   links: SuperLinkProps[];
