@@ -1,6 +1,6 @@
-import { Box } from "@/components/ui/Box/Box";
 import { cn } from "@/utils/tailwind";
 import type { ReactNode } from "react";
+import { Box } from "@/components/_base/Box/Box";
 import "./prose.css";
 
 export type ProseProps = {

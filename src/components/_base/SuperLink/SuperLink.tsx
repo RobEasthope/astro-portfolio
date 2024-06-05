@@ -1,7 +1,7 @@
-import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
-import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
-import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
 import type React from "react";
+import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
 
 export type SuperLinkProps = {
   title: string;

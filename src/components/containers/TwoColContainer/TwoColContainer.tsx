@@ -1,19 +1,19 @@
 import { Diamond } from "@/components/decoration/Diamond/Diamond";
-import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
 import type { ReactNode } from "react";
+import { Box } from "@/components/_base/Box/Box";
+import { Type } from "@/components/_base/Type/Type";
 
-type LandingPageSectionProps = {
+type TwoColContainerProps = {
   id: string;
   heading: string;
   children: ReactNode;
 };
 
-export function LandingPageSection({
+export function TwoColContainer({
   id,
   heading,
   children,
-}: LandingPageSectionProps) {
+}: TwoColContainerProps) {
   return (
     <Box as="section" id={id} className="w-full">
       <Box

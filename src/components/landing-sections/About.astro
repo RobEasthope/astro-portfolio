@@ -1,9 +1,9 @@
 ---
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
-import { Prose } from "@/components/ui/Prose/Prose";
-import MarkdownRender from "@/components/MarkdownRender.astro";
-import { LandingPageSection } from "@/components/container/LandingPageSection/LandingPageSection";
+import { Prose } from "@/components/_base/Prose/Prose";
+import MarkdownRender from "@/components/misc/MarkdownRender/MarkdownRender.astro";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const indexSections = await getCollection("landing");
 
@@ -12,8 +12,8 @@ const aboutBlurb = indexSections.find(
 );
 ---
 
-<LandingPageSection id="about" heading="About">
+<TwoColContainer id="about" heading="About">
   <Prose as="section">
     {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
   </Prose>
-</LandingPageSection>
+</TwoColContainer>
