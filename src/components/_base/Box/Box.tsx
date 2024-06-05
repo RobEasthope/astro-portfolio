@@ -30,6 +30,7 @@ const boxVariants = cva(
         medium: "max-w-5xl",
         large: "max-w-7xl",
         full: "max-w-full",
+        "wide-content": "max-w-wide-content",
         screen: "max-w-screen",
       },
     },

@@ -1,7 +1,11 @@
 /* Remove top and bottom margin from the first and last child of the prose container */
-.prose *:first-child {
+.prose p:first-child,
+.prose ul:first-child,
+.prose ol:first-child {
   margin-top: 0;
 }
-.prose *:last-child {
+.prose p:last-child,
+.prose ul:last-child,
+.prose ol:last-child {
   margin-bottom: 0;
 }
