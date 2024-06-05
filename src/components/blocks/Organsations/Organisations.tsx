@@ -1,8 +1,8 @@
-import { Box } from "@/components/ui/Box/Box";
-import { ExternalLink } from "@/components/ui/ExternalLink/ExternalLink";
-import { Prose } from "@/components/ui/Prose/Prose";
-import { Type } from "@/components/ui/Type/Type";
 import { v4 as uuidv4 } from "uuid";
+import { Box } from "@/components/_base/Box/Box";
+import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import { Prose } from "@/components/_base/Prose/Prose";
+import { Type } from "@/components/_base/Type/Type";
 
 export type OrganisationProps = {
   name?: string;
@@ -27,7 +27,7 @@ export function Organisations({
     <Box as="section" blockSpacing>
       <Box as="div" className="mx-auto max-w-6xl">
         <Type as="h2">{heading}</Type>
-        <Prose as="div" className="text-md mx-auto mb-2 text-center">
+        <Prose as="div" className="mx-auto mb-2 text-center text-md">
           {description}
         </Prose>
         <Box

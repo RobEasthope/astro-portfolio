@@ -2,9 +2,9 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 
-import { Box } from "@/components/ui/Box/Box";
-import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
-import { Type } from "@/components/ui/Type/Type";
+import { Box } from "@/components/_base/Box/Box";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Type } from "@/components/_base/Type/Type";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const listedProjects = await getCollection("work");

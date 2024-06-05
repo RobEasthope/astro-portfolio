@@ -1,6 +1,6 @@
 import YouTube from "react-youtube";
-import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
+import { Box } from "@/components/_base/Box/Box";
+import { Type } from "@/components/_base/Type/Type";
 
 import "./YoutubeVideo.css";
 import { getYoutubeIdfromUrl } from "./getYoutubeIdfromUrl";
@@ -30,7 +30,7 @@ export function YoutubeVideo({
           />
         </Box>
         <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
-          <Type as="figcaption" className="text-sm italic text-gray-600 ">
+          <Type as="figcaption" className="text-gray-600 text-sm italic ">
             {caption}
           </Type>
         </Box>
