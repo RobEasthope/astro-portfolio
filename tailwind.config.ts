@@ -37,7 +37,7 @@ export default {
 
         // UI colours
         "content-bkg": "var(--sage-2)",
-        typography: "var(--sage-12)",
+        typography: "rgb(21, 23, 24)",
         link: "hsl(var(--terracotta))",
         decoration: "hsl(var(--terracotta))",
 
