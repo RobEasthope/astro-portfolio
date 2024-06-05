@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
+import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 type TwoColContainerProps = {
   heading: string;
@@ -22,7 +23,7 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
             {heading}
           </Type>
         </Box>
-        {/* <Diamond className="flex sm:my-0.5 md:hidden" /> */}
+        <Diamond className="flex md:hidden" />
         <Box as="div" className="w-full max-w-prose">
           {children}
         </Box>
