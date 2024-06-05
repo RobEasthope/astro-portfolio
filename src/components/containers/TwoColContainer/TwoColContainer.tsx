@@ -10,7 +10,7 @@ type TwoColContainerProps = {
 
 export function TwoColContainer({ heading, children }: TwoColContainerProps) {
   return (
-    <Box as="section" className="w-full py-1.5 md:py-2 lg:py-3">
+    <Box as="section" className="w-full py-4 md:py-6 lg:py-8">
       <Box
         as="div"
         className="mx-auto flex max-w-prose flex-col justify-center gap-1 md:max-w-7xl md:flex-row md:gap-2"
