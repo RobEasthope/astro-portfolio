@@ -163,7 +163,7 @@ export default {
         64: `calc(${BASE_UNIT} * 64)`,
 
         // UI spacing
-        "wide-content": "calc(44ch+65ch+2rem)",
+        "wide-content": "calc(44ch + 65ch + 2rem)",
       },
       borderRadius: {
         lg: "var(--radius)",
