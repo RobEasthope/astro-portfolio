@@ -124,6 +124,7 @@ export default {
         }),
       },
       spacing: {
+        // Space scale
         0: "0",
         px: "1px",
         "2px": "2px",
