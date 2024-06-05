@@ -6,19 +6,6 @@ import {
 } from "@/components/_base/SuperLink/SuperLink";
 import { Type } from "@/components/_base/Type/Type";
 import { cn } from "@/utils/tailwind";
-import { cva } from "class-variance-authority";
-
-const navlistingVariants = cva({
-  variants: {
-    mode: {
-      light: "text-white",
-      dark: "text-ink",
-    },
-  },
-  defaultVariants: {
-    mode: "dark",
-  },
-});
 
 export type NavListingProps = {
   links: SuperLinkProps[];
@@ -32,7 +19,10 @@ export function NavListing({ links, mode }: NavListingProps) {
         <Type
           as="li"
           key={uuidv4()}
-          className={cn(`text-base`, navlistingVariants({ mode }))}
+          className={cn(
+            `text-base`,
+            mode === "light" ? "text-white" : "text-ink",
+          )}
         >
           <SuperLink href={link?.href} type={link?.type}>
             {link?.title}
