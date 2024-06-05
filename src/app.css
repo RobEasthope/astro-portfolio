@@ -1,7 +1,9 @@
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Radix UI colours */
 @import "@radix-ui/colors/gray.css";
 @import "@radix-ui/colors/mauve.css";
 @import "@radix-ui/colors/slate.css";
@@ -36,6 +38,7 @@
 @import "@radix-ui/colors/mint.css";
 @import "@radix-ui/colors/sky.css";
 
+/* shadcn/ui */
 @layer base {
   :root {
     --terracotta: 9.76, 69.17%, 52.94%;
