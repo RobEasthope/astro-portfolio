@@ -26,7 +26,7 @@ export default {
         xs: "420px",
       },
       colors: {
-        // Saffron colours
+        // Custom colours
         ink: "rgb(21, 23, 24)",
         saffron: "rgba(255, 153, 51, 1)",
         "dark-saffron": "rgba(250, 145, 46, 1)",
@@ -34,6 +34,8 @@ export default {
         "japanese-red": "rgb(193, 78, 95)",
         "off-white": "rgba(170, 163, 128, 0.03)",
         terracotta: "hsl(var(--terracotta))",
+
+        // UI colours
         link: "hsl(var(--terracotta))",
         decoration: "hsl(var(--terracotta))",
 
