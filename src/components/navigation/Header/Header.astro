@@ -2,6 +2,12 @@
 import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
 import { NavListing } from "@/components/navigation/Header/components/NavListing/NavListing";
 import { Box } from "@/components/_base/Box/Box";
+
+type Props = {
+  mode: "light" | "dark";
+};
+
+const { mode } = Astro.props;
 ---
 
 <Box as="header" className="px-1 py-1 md:py-1.5">
@@ -22,6 +28,7 @@ import { Box } from "@/components/_base/Box/Box";
           type: "internal",
         },
       ]}
+      mode={mode}
     />
 
     <HeaderLogo />
@@ -39,6 +46,7 @@ import { Box } from "@/components/_base/Box/Box";
           type: "email",
         },
       ]}
+      mode={mode}
     />
   </Box>
 </Box>
