@@ -2,18 +2,18 @@
 // eslint-disable-next-line import/no-unresolved
 import MuxPlayer from "@mux/mux-player-react/lazy";
 import "@/components/blocks/MuxPlayer/MuxPlayer.css";
-import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
-import { EmailLink } from "@/components/ui/EmailLink/EmailLink";
+import { Box } from "@/components/_base/Box/Box";
+import { Type } from "@/components/_base/Type/Type";
+import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
 import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
 
 import { TbArrowDownRhombus } from "react-icons/tb";
-import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
 ---
 
 <Box
   as="main"
-  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)] overflow-hidden bg-off-white"
+  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)] overflow-hidden"
 >
   <MuxPlayer
     playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"

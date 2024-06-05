@@ -1,7 +1,7 @@
-import { Box } from "@/components/ui/Box/Box";
-import { Type } from "@/components/ui/Type/Type";
 import type { GigSchemaProps } from "@/schemas/gig.schema";
 import type { z } from "astro:content";
+import { Box } from "@/components/_base/Box/Box";
+import { Type } from "@/components/_base/Type/Type";
 
 export type GigDateProps = {
   startDate: z.infer<typeof GigSchemaProps>["startDate"];

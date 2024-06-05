@@ -2,9 +2,8 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 import Gig from "@/components/cv/Gig/Gig.astro";
-import StandardPage from "@/layouts/StandardPage.astro";
 import { Box } from "@/components/_base/Box/Box";
-
+import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const gigs = await getCollection("gigs");

@@ -2,11 +2,10 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 
-import { Box } from "@/components/ui/Box/Box";
-import { InternalLink } from "@/components/ui/InternalLink/InternalLink";
-import { Type } from "@/components/ui/Type/Type";
-import { Diamond } from "@/components/decoration/Diamond/Diamond";
-import { LandingPageSection } from "@/components/container/LandingPageSection/LandingPageSection";
+import { Box } from "@/components/_base/Box/Box";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Type } from "@/components/_base/Type/Type";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -16,7 +15,7 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
 });
 ---
 
-<LandingPageSection id="work" heading="Work">
+<TwoColContainer id="work" heading="Work">
   <Box
     as="ul"
     className="grid grid-cols-1 gap-x-1 gap-y-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-1 md:gap-x-2 md:gap-y-1 lg:grid-cols-2"
@@ -37,4 +36,4 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
       ))
     }
   </Box>
-</LandingPageSection>
+</TwoColContainer>

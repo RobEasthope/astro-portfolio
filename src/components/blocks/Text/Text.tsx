@@ -1,6 +1,6 @@
-import { Box } from "@/components/ui/Box/Box";
-import { Prose } from "@/components/ui/Prose/Prose";
 import type React from "react";
+import { Box } from "@/components/_base/Box/Box";
+import { Prose } from "@/components/_base/Prose/Prose";
 
 export type TextProps = {
   children?: React.ReactNode;

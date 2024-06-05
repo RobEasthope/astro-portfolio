@@ -1,10 +1,10 @@
-import { Box } from "@/components/ui/Box/Box";
+import { v4 as uuidv4 } from "uuid";
+import { Box } from "@/components/_base/Box/Box";
 import {
   SuperLink,
   type SuperLinkProps,
-} from "@/components/ui/SuperLink/SuperLink";
-import { Type } from "@/components/ui/Type/Type";
-import { v4 as uuidv4 } from "uuid";
+} from "@/components/_base/SuperLink/SuperLink";
+import { Type } from "@/components/_base/Type/Type";
 
 export type NavListingProps = {
   links: SuperLinkProps[];
