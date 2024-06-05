@@ -6,17 +6,15 @@ import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
 import logoAsset from "./saffron-roundel-circle@2x.png";
 ---
 
-<Box as="div" className="absolute left-1/2 -translate-x-1/2">
-  <Box as="div" className="flex items-center">
-    <InternalLink href="/">
-      <Type as="span" className="sr-only"> Rob Easthope </Type>
-      <AstroImage
-        src={logoAsset}
-        width={64}
-        height={64}
-        className="h-1.5 w-1.5 md:h-2 md:w-2"
-        alt="Rob Easthope"
-      />
-    </InternalLink>
-  </Box>
+<Box as="div" className="flex items-center">
+  <InternalLink href="/">
+    <Type as="span" className="sr-only"> Rob Easthope </Type>
+    <AstroImage
+      src={logoAsset}
+      width={64}
+      height={64}
+      className="h-1.5 w-1.5 md:h-2 md:w-2"
+      alt="Rob Easthope"
+    />
+  </InternalLink>
 </Box>
