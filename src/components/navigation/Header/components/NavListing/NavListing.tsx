@@ -12,7 +12,7 @@ export type NavListingProps = {
 
 export function NavListing({ links }: NavListingProps) {
   return (
-    <Box as="ul" className="flex flex-row gap-1 xl:gap-2">
+    <Box as="ul" className="flex flex-row gap-1 md:gap-1.5 xl:gap-2">
       {links?.map((link) => (
         <Type as="li" key={uuidv4()} className="text-base">
           <SuperLink href={link?.href} type={link?.type}>
