@@ -2,14 +2,10 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 import Gig from "@/components/cv/Gig/Gig.astro";
+import { CVHeader } from "@/components/cv/CVHeader/CVHeader";
 import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
-import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
-import { Type } from "@/components/_base/Type/Type";
-import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
-import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
-import logoAsset from "@/components/navigation/Header/components/HeaderLogo/saffron-roundel-circle@2x.png";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -21,51 +17,8 @@ const allGigsByDate = gigs.sort((a, b) => {
 
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="mx-auto px-1 py-2 md:px-2 md:py-4 lg:py-6">
-    <Box as="section" blockSpacing>
-      <Box
-        as="div"
-        className="mx-auto flex max-w-prose flex-col items-center gap-0.5"
-      >
-        <AstroImage
-          src={logoAsset}
-          alt="Rob Easthope"
-          className="hidden h-1.25 w-1.25 print:block"
-        />
-        <Type as="h1" className="font-bold"> Rob Easthope </Type>
-        <Box as="div" className="flex flex-wrap justify-center gap-0.25">
-          <EmailLink
-            emailAddress="hello@robeasthope.com"
-            className="inline-block"
-          >
-            hello@robeasthope.com
-          </EmailLink>
-          /
-          <ExternalLink href="tel:07545839971" className="inline-block">
-            07545 83 99 71
-          </ExternalLink>
-        </Box>
+    <CVHeader />
 
-        <Box
-          as="div"
-          className="flex flex-wrap justify-center italic print:gap-0.25"
-        >
-          <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
-            LinkedIn<span class="hidden print:inline">:</span>
-            <span class="hidden print:inline"> LinkedIn </span>
-          </ExternalLink>
-          <Type as="span" className="mx-0.125"> / </Type>
-          <ExternalLink href="https://github.com/RobEasthope">
-            Github<span class="hidden print:inline">:</span>
-            <span class="hidden print:inline"> GitHub </span>
-          </ExternalLink>
-          <Type as="span" className="mx-0.125 print:hidden"> / </Type>
-          <ExternalLink href="https://www.robeasthope.com">
-            Portfolio<span class="hidden print:inline">:</span>
-            <span class="hidden print:inline"> robeasthope.com </span>
-          </ExternalLink>
-        </Box>
-      </Box>
-    </Box>
     <TwoColContainer heading="Experience">
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
         {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
