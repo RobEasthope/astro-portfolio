@@ -3,7 +3,7 @@
 import { getCollection } from "astro:content";
 import { Prose } from "@/components/ui/Prose/Prose";
 import MarkdownRender from "@/components/MarkdownRender.astro";
-import { LandingPageSection } from "@/components/containers/LandingPageSection/LandingPageSection";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const indexSections = await getCollection("landing");
 
@@ -12,8 +12,8 @@ const aboutBlurb = indexSections.find(
 );
 ---
 
-<LandingPageSection id="about" heading="About">
+<TwoColContainer id="about" heading="About">
   <Prose as="section">
     {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
   </Prose>
-</LandingPageSection>
+</TwoColContainer>

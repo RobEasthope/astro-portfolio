@@ -3,17 +3,17 @@ import { Box } from "@/components/ui/Box/Box";
 import { Type } from "@/components/ui/Type/Type";
 import type { ReactNode } from "react";
 
-type LandingPageSectionProps = {
+type TwoColContainerProps = {
   id: string;
   heading: string;
   children: ReactNode;
 };
 
-export function LandingPageSection({
+export function TwoColContainer({
   id,
   heading,
   children,
-}: LandingPageSectionProps) {
+}: TwoColContainerProps) {
   return (
     <Box as="section" id={id} className="w-full">
       <Box
