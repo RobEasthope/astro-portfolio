@@ -1,76 +1,45 @@
 ---
 // eslint-disable-next-line import/no-unresolved
-import MuxPlayer from "@mux/mux-player-react/lazy";
 import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 import { Box } from "@/components/_base/Box/Box";
-import { Type } from "@/components/_base/Type/Type";
 import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
-import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
-
-import { TbArrowDownRhombus } from "react-icons/tb";
+import { TbChevronsDown } from "react-icons/tb";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Prose } from "@/components/_base/Prose/Prose";
 ---
 
 <Box
   as="main"
-  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*2)] overflow-hidden"
+  className="relative mb-1 min-h-[calc(100vh-(calc(16px+(19-16)*((100vw-320px)/(1934-320))))*4.5)] overflow-hidden"
 >
-  <MuxPlayer
-    playbackId="gznQLOy00BLhHn2UJEYM8GmLe46L02kC02T"
-    metadata={{
-      video_id: "Yytp7lXoNk1ndRc8a01TK3nbn02XdNmhq7",
-      video_title: "Flight off Great End",
-      viewer_user_id: "user-id-007",
-    }}
-    streamType="on-demand"
-    playbackRate={0.5}
-    loop
-    autoPlay
-    muted
-    client:load
-  />
-
   <Box
     as="section"
-    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-sage-12/20 p-1 tracking-tight md:p-2"
+    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-sage-2 p-1 tracking-tight md:p-2"
   >
     <Box
       as="section"
-      className="mx-auto max-w-prose md:max-w-[calc(44ch+65ch+2rem)]"
+      className="mx-auto max-w-prose -translate-y-1.5 md:max-w-[calc(44ch+65ch+2rem)] "
     >
-      <Type as="h1" className="text-3xl leading-tight text-white">
-        Hello there!
-        <br />I am Rob Easthope, a front end developer working on the web.
-      </Type>
-
-      <Type as="p" className="prose mt-1 text-lg text-white">
-        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-          >Contact me</EmailLink
-        > or learn a little <InternalLink href="#about" className="text-white"
-          >about me</InternalLink
+      <Prose as="h1" className="text-xl leading-tight text-ink">
+        Hello there! I am Rob Easthope, a front end developer working on the
+        web. <EmailLink
+          emailAddress="hello@robeasthope.com"
+          className="text-inherit">Get in touch</EmailLink
+        >. Or learn a little <InternalLink
+          href="#about"
+          className="text-inherit">about me</InternalLink
         > first.
-      </Type>
+      </Prose>
     </Box>
   </Box>
 
-  <Box as="div" className="translate-y-1 md:translate-y-1">
-    <HeaderLogo />
-  </Box>
   <Box
     as="div"
-    className="absolute bottom-0 left-1/2 flex w-4 -translate-x-1/2  justify-center "
+    className="absolute bottom-1 left-1/2 flex w-4 -translate-x-1/2  justify-center "
   >
-    <Box
-      as="div"
-      className="flex h-3 w-3 translate-y-1/2 rotate-45 items-center justify-center bg-white outline outline-[4px] outline-offset-[4px] outline-white"
-    >
-      <a
-        href="#about"
-        class="-translate-x-0.5 -translate-y-0.5 -rotate-45 text-center"
-      >
-        <span class="sr-only">Scroll down</span>
-        <TbArrowDownRhombus className="-rotate-0 text-lg text-sage-12" /></a
-      >
-    </Box>
+    <InternalLink href="#about">
+      <span class="sr-only">Scroll down</span>
+      <TbChevronsDown className="text-lg text-ink" />
+    </InternalLink>
   </Box>
 </Box>

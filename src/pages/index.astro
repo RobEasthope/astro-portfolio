@@ -1,20 +1,19 @@
 ---
 import Jumbotron from "@/components/landing-sections/Jumbotron.astro";
-import LandingPage from "@/layouts/LandingPage.astro";
 import Work from "@/components/landing-sections/Work.astro";
 import About from "@/components/landing-sections/About.astro";
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 import { Box } from "@/components/_base/Box/Box";
+import StandardPage from "@/layouts/StandardPage.astro";
 import { Anchor } from "@/components/_base/Anchor/Anchor";
 ---
 
-<LandingPage title="Rob Easthope">
+<StandardPage title="Rob Easthope">
   <Jumbotron />
-
-  <Box
-    as="div"
-    className="grid gap-2 bg-sage-2/80 px-1 py-3 sm:py-4 md:gap-4 md:px-2 lg:gap-6 lg:py-6"
-  >
+  <Box as="div" className="mx-2 pt-1">
+    <DiamondPageBreak className="bg-ink" />
+  </Box>
+  <Box as="div" className="grid bg-sage-2 px-1 sm:py-2 md:px-2 lg:py-3">
     <Anchor id="about" />
     <About />
 
@@ -23,4 +22,4 @@ import { Anchor } from "@/components/_base/Anchor/Anchor";
     <Anchor id="work" />
     <Work />
   </Box>
-</LandingPage>
+</StandardPage>
