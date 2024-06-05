@@ -39,7 +39,7 @@ export default {
         "content-bkg": "var(--sage-2)",
         typography: "rgb(21, 23, 24)",
         link: "hsl(var(--terracotta))",
-        decoration: "hsl(var(--terracotta))",
+        decoration: "var(--ink-2)",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
