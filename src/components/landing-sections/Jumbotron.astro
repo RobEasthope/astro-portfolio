@@ -39,17 +39,14 @@ import Header from "@/components/navigation/Header/Header.astro";
       as="section"
       className="mx-auto max-w-prose md:max-w-[calc(44ch+65ch+2rem)]"
     >
-      <Type as="h1" className="text-3xl leading-tight text-white">
+      <Type as="h1" className="text-3xl leading-tight">
         Hello there!
         <br />I am Rob Easthope, a front end developer working on the web.
       </Type>
 
-      <Type as="p" className="prose mt-1 text-lg text-white">
-        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-          >Contact me</EmailLink
-        > or learn a little <InternalLink href="#about" className="text-white"
-          >about me</InternalLink
-        > first.
+      <Type as="p" className="prose mt-1 text-lg ">
+        <EmailLink emailAddress="hello@robeasthope.com">Contact me</EmailLink> or
+        learn a little <InternalLink href="#about">about me</InternalLink> first.
       </Type>
     </Box>
   </Box>
