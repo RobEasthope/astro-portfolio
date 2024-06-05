@@ -5,7 +5,6 @@ import "@/components/blocks/MuxPlayer/MuxPlayer.css";
 import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
 import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
-import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/HeaderLogo.astro";
 
 import { TbArrowDownRhombus } from "react-icons/tb";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
@@ -57,22 +56,5 @@ import Header from "@/components/navigation/Header/Header.astro";
 
   <Box as="div" className="translate-y-0 md:translate-y-0">
     <Header mode="light" />
-  </Box>
-  <Box
-    as="div"
-    className="absolute bottom-0 left-1/2 flex w-4 -translate-x-1/2  justify-center "
-  >
-    <Box
-      as="div"
-      className="flex h-3 w-3 translate-y-1/2 rotate-45 items-center justify-center bg-white outline outline-[4px] outline-offset-[4px] outline-white"
-    >
-      <a
-        href="#about"
-        class="-translate-x-0.5 -translate-y-0.5 -rotate-45 text-center"
-      >
-        <span class="sr-only">Scroll down</span>
-        <TbArrowDownRhombus className="-rotate-0 text-lg text-sage-12" /></a
-      >
-    </Box>
   </Box>
 </Box>
