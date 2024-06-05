@@ -3,8 +3,8 @@
 import { getCollection } from "astro:content";
 import Gig from "@/components/cv/Gig/Gig.astro";
 import { Box } from "@/components/_base/Box/Box";
-
 import StandardPage from "@/layouts/StandardPage.astro";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -15,9 +15,11 @@ const allGigsByDate = gigs.sort((a, b) => {
 ---
 
 <StandardPage title="Work by Rob Easthope">
-  <Box as="div" className="grid justify-center gap-3 md:gap-6">
-    <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
-      {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
-    </Box>
+  <Box as="div" className="mx-auto px-1 py-2 md:px-2 md:py-4 lg:py-6">
+    <TwoColContainer id="cv" heading="Experience">
+      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
+        {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
+      </Box>
+    </TwoColContainer>
   </Box>
 </StandardPage>
