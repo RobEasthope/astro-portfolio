@@ -18,15 +18,18 @@ import Header from "@/components/navigation/Header/Header.astro";
   >
     <Box
       as="section"
-      className=" flex h-full  items-center justify-center p-1 tracking-tight md:p-2"
+      className="flex h-full items-center justify-end p-1 tracking-tight md:p-2"
     >
-      <Box as="section" className="mx-auto max-w-prose md:max-w-[calc(65ch)]">
-        <Type as="h1" className="text-xl leading-tight">
+      <Box
+        as="section"
+        className="w-full max-w-prose md:max-w-[calc((65ch+40ch)/2)]"
+      >
+        <Type as="h1" className="text-lg leading-tight">
           Hello there!
           <br />I am Rob Easthope, a front end developer working on the web.
         </Type>
 
-        <Prose as="p" className="mt-1 text-md">
+        <Prose as="p" className="mt-1 text-base">
           <EmailLink emailAddress="hello@robeasthope.com">Contact me</EmailLink>
           or learn a little <InternalLink href="#about">about me</InternalLink> first.
         </Prose>
