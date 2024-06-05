@@ -10,7 +10,7 @@ export function CVHeader() {
         as="div"
         className="mx-auto flex max-w-prose flex-col items-center gap-0.5"
       >
-        <Type as="h1" className="font-bold">
+        <Type as="h1" className="text-lg font-bold">
           {" "}
           Rob Easthope{" "}
         </Type>
@@ -29,23 +29,21 @@ export function CVHeader() {
 
         <Box
           as="div"
-          className="flex flex-wrap justify-center italic print:gap-0.25"
+          className="flex flex-wrap justify-center gap-0.5 print:gap-0.25"
         >
           <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
             LinkedIn<span className="hidden print:inline">:</span>
             <span className="hidden print:inline"> LinkedIn </span>
           </ExternalLink>
           <Type as="span" className="mx-0.125">
-            {" "}
-            /{" "}
+            {" & "}
           </Type>
           <ExternalLink href="https://github.com/RobEasthope">
             Github<span className="hidden print:inline">:</span>
             <span className="hidden print:inline"> GitHub </span>
           </ExternalLink>
           <Type as="span" className="mx-0.125 print:hidden">
-            {" "}
-            /{" "}
+            {" & "}
           </Type>
           <ExternalLink href="https://www.robeasthope.com">
             Portfolio<span className="hidden print:inline">:</span>
