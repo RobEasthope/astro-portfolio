@@ -9,6 +9,7 @@ import HeaderLogo from "@/components/navigation/Header/components/HeaderLogo/Hea
 
 import { TbArrowDownRhombus } from "react-icons/tb";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Prose } from "@/components/_base/Prose/Prose";
 ---
 
 <Box
@@ -32,24 +33,21 @@ import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
 
   <Box
     as="section"
-    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-sage-12/20 p-1 tracking-tight md:p-2"
+    className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-sage-2 p-1 tracking-tight md:p-2"
   >
     <Box
       as="section"
-      className="mx-auto max-w-prose md:max-w-[calc(44ch+65ch+2rem)]"
+      className="mx-auto max-w-prose -translate-y-1.5 md:max-w-[calc(44ch+65ch+2rem)] "
     >
-      <Type as="h1" className="text-3xl leading-tight text-white">
-        Hello there!
-        <br />I am Rob Easthope, a front end developer working on the web.
-      </Type>
-
-      <Type as="p" className="prose mt-1 text-lg text-white">
-        <EmailLink emailAddress="hello@robeasthope.com" className="text-white"
-          >Contact me</EmailLink
-        > or learn a little <InternalLink href="#about" className="text-white"
+      <Prose as="h1" className="text-xl leading-tight text-ink">
+        Hello there! I am Rob Easthope, a front end developer working on the
+        web. <EmailLink
+          emailAddress="hello@robeasthope.com"
+          className="text-inherit">Contact me</EmailLink
+        > or learn a little <InternalLink href="#about" className="text-inherit"
           >about me</InternalLink
         > first.
-      </Type>
+      </Prose>
     </Box>
   </Box>
 
@@ -59,7 +57,7 @@ import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
   >
     <InternalLink href="#about">
       <span class="sr-only">Scroll down</span>
-      <TbArrowDownRhombus className="text-lg text-white" />
+      <TbArrowDownRhombus className="text-lg text-ink" />
     </InternalLink>
   </Box>
 </Box>
