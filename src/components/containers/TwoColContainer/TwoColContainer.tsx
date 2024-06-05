@@ -4,18 +4,13 @@ import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
 
 type TwoColContainerProps = {
-  id: string;
   heading: string;
   children: ReactNode;
 };
 
-export function TwoColContainer({
-  id,
-  heading,
-  children,
-}: TwoColContainerProps) {
+export function TwoColContainer({ heading, children }: TwoColContainerProps) {
   return (
-    <Box as="section" id={id} className="w-full">
+    <Box as="section" className="w-full">
       <Box
         as="div"
         className="mx-auto flex max-w-prose flex-col justify-center gap-1 md:max-w-7xl md:flex-row md:gap-2"
