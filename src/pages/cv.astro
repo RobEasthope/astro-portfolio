@@ -9,6 +9,7 @@ import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
 import { Type } from "@/components/_base/Type/Type";
 import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import logoAsset from "@/components/navigation/Header/components/HeaderLogo/saffron-roundel-circle@2x.png";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -25,13 +26,11 @@ const allGigsByDate = gigs.sort((a, b) => {
         as="div"
         className="mx-auto flex max-w-prose flex-col items-center gap-0.5"
       >
-        <!-- {displayLogo && (
         <AstroImage
-          src={logo?.asset}
-          alt={METADATA_HARD_CODED_FALLBACKS.TITLE}
-          className="h-1.25 w-1.25 hidden print:block"
+          src={logoAsset}
+          alt="Rob Easthope"
+          className="hidden h-1.25 w-1.25 print:block"
         />
-      )} -->
         <Type as="h1" className="font-bold"> Rob Easthope </Type>
         <Box as="div" className="flex flex-wrap justify-center gap-0.25">
           <EmailLink
