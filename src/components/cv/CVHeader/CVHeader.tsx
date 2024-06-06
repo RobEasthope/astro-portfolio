@@ -2,19 +2,22 @@ import { Box } from "@/components/_base/Box/Box";
 import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
 import { Type } from "@/components/_base/Type/Type";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 
 export function CVHeader() {
   return (
-    <Box as="section">
+    <TwoColContainer heading="">
       <Box
         as="div"
-        className="mx-auto flex max-w-prose flex-col items-center gap-0.5"
+        className="mx-auto flex max-w-prose flex-col items-center gap-0.5 md:items-start"
       >
         <Type as="h1" className="text-lg font-bold">
-          {" "}
-          Rob Easthope{" "}
+          Rob Easthope
         </Type>
-        <Box as="div" className="flex flex-wrap justify-center gap-0.25">
+        <Box
+          as="div"
+          className="flex flex-wrap justify-center gap-0.25 md:justify-start"
+        >
           <EmailLink
             emailAddress="hello@robeasthope.com"
             className="inline-block"
@@ -29,7 +32,7 @@ export function CVHeader() {
 
         <Box
           as="div"
-          className="flex flex-wrap justify-center gap-0.5 print:gap-0.25"
+          className="flex flex-wrap justify-center gap-0.5 md:justify-start print:gap-0.25"
         >
           <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
             LinkedIn<span className="hidden print:inline">:</span>
@@ -51,6 +54,6 @@ export function CVHeader() {
           </ExternalLink>
         </Box>
       </Box>
-    </Box>
+    </TwoColContainer>
   );
 }
