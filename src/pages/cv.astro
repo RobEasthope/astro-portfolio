@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from "astro:content";
 import Gig from "@/components/cv/Gig/Gig.astro";
+import { CVHeader } from "@/components/cv/CVHeader/CVHeader";
 import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
@@ -16,6 +17,8 @@ const allGigsByDate = gigs.sort((a, b) => {
 
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="mx-auto px-1 py-1.5 md:px-2 md:py-2 lg:py-3">
+    <CVHeader />
+
     <TwoColContainer heading="Experience">
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
         {allGigsByDate?.map((gig) => <Gig gig={gig} />)}

@@ -39,7 +39,7 @@ export default {
         "content-bkg": "var(--sage-2)",
         typography: "var(--sage-12)",
         link: "hsl(var(--terracotta))",
-        decoration: "hsl(var(--terracotta))",
+        decoration: "var(--ink-2)",
 
         // Shadcn ui colors
         border: "hsl(var(--border))",
@@ -124,6 +124,7 @@ export default {
         }),
       },
       spacing: {
+        // Space scale
         0: "0",
         px: "1px",
         "2px": "2px",
@@ -160,6 +161,9 @@ export default {
         56: `calc(${BASE_UNIT} * 56)`,
         60: `calc(${BASE_UNIT} * 60)`,
         64: `calc(${BASE_UNIT} * 64)`,
+
+        // UI spacing
+        "wide-content": "calc(44ch + 65ch + 2rem)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -179,6 +183,21 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            ul: {
+              paddingLeft: "1.375em",
+            },
+            "ul > li": {
+              paddingLeft: "calc(0.375em*2)",
+            },
+            "ul > li::marker": {
+              color: "rgb(21, 23, 24)",
+            },
+          },
+        },
       },
     },
   },
