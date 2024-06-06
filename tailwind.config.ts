@@ -184,6 +184,21 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            ul: {
+              paddingLeft: "1.375em",
+            },
+            "ul > li": {
+              paddingLeft: "calc(0.375em*2)",
+            },
+            "ul > li::marker": {
+              color: "rgb(21, 23, 24)",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [tailwindTypography, tailwindcssRadixColors],
