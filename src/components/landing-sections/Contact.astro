@@ -1,0 +1,23 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+import { Prose } from "@/components/_base/Prose/Prose";
+import MarkdownRender from "@/components/misc/MarkdownRender/MarkdownRender.astro";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
+
+const indexSections = await getCollection("landing");
+
+const aboutBlurb = indexSections.find(
+  (section) => section.slug === "about-blurb",
+);
+---
+
+<TwoColContainer heading="Get in touch">
+  {
+    aboutBlurb && (
+      <Prose as="section">
+        <MarkdownRender markdown={aboutBlurb} />
+      </Prose>
+    )
+  }
+</TwoColContainer>
