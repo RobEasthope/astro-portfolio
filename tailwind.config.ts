@@ -187,6 +187,12 @@ export default {
       typography: {
         DEFAULT: {
           css: {
+            ul: {
+              paddingLeft: "1.375em",
+            },
+            "ul > li": {
+              paddingLeft: "calc(0.375em*2)",
+            },
             "ul > li::marker": {
               color: "rgb(21, 23, 24)",
             },
