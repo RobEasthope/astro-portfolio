@@ -13,3 +13,10 @@
 .prose ul {
   list-style-type: "—";
 }
+
+.prose
+  :where(ul > li):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::marker {
+  color: red !important;
+}
