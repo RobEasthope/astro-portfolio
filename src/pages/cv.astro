@@ -6,6 +6,7 @@ import { CVHeader } from "@/components/cv/CVHeader/CVHeader";
 import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
+import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -18,6 +19,8 @@ const allGigsByDate = gigs.sort((a, b) => {
 <StandardPage title="Work by Rob Easthope">
   <Box as="div" className="mx-auto px-1 py-1.5 md:px-2 md:py-2 lg:py-3">
     <CVHeader />
+
+    <DiamondPageBreak />
 
     <TwoColContainer heading="Experience">
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
