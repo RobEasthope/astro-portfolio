@@ -67,7 +67,12 @@ export const ORGANISATIONS = {
   "Civic Space": {
     name: "Civic Space",
     url: "https://civic-space.org",
-    hidden: true,
+    hidden: false,
+  },
+  "Clementine Productions": {
+    name: "Clementine Productions",
+    url: null,
+    hidden: false,
   },
   Cobot: {
     name: "Cobot",
@@ -112,6 +117,11 @@ export const ORGANISATIONS = {
   Earthwave: {
     name: "Earthwave",
     url: "https://earthwave.co.uk/",
+    hidden: false,
+  },
+  Essensuals: {
+    name: "Essensuals",
+    url: "https://toniandguy.com/",
     hidden: false,
   },
   "European Union Families Network": {
@@ -167,6 +177,11 @@ export const ORGANISATIONS = {
   Haygarth: {
     name: "Haygarth",
     url: "https://haygarth.co.uk/",
+    hidden: false,
+  },
+  "Haymarket Media Group": {
+    name: "Haymarket Media Group",
+    url: "https://haymarket.com/",
     hidden: false,
   },
   Heinz: {
@@ -501,6 +516,11 @@ export const ORGANISATIONS = {
   },
   Waterleaf: {
     name: "Waterleaf",
+    url: null,
+    hidden: false,
+  },
+  WrappedUk: {
+    name: "Wrapped UK",
     url: null,
     hidden: false,
   },
