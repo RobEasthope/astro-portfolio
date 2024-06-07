@@ -6,6 +6,8 @@ import { Box } from "@/components/_base/Box/Box";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
 import { Type } from "@/components/_base/Type/Type";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
+import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
+import thumbnail from "../../assets/ambr/ambr-thumbnail.png";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -27,8 +29,15 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
             href={project.data.url}
             className="flex h-full flex-col"
           >
-            <Type as="div">{project.data.title}</Type>
-            <Type as="div" className="text-sm italic">
+            <Box as="div" className="flex items-center gap-1">
+              <AstroImage
+                src={thumbnail}
+                alt={project.data.title}
+                className="w-2 h-2 rounded-full object-cover"
+              />
+              <Type as="div">{project.data.title}</Type>
+            </Box>
+            <Type as="div" className="text-sm italic ml-3">
               {project.data.description}
             </Type>
           </InternalLink>
