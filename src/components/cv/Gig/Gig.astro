@@ -11,7 +11,7 @@ interface Props {
   gig: { data: z.infer<typeof GigSchemaProps>; render(): Render[".mdx"] };
 }
 
-const { employer, employerUrl, jobTitle, startDate, endDate } =
+const { employer, employerUrl, jobTitle, jobType, startDate, endDate } =
   Astro.props.gig.data;
 
 const { Content } = await Astro.props.gig.render();
@@ -22,7 +22,10 @@ const { Content } = await Astro.props.gig.render();
     <ExternalLink href={employerUrl}>{employer}</ExternalLink> / {jobTitle}
   </Type>
 
-  <GigDate startDate={startDate} endDate={endDate} />
+  <Box as="section" className="flex">
+    <GigDate startDate={startDate} endDate={endDate} />
+    <Type as="p">{jobType}</Type>
+  </Box>
 
   <Prose as="section"> <Content /></Prose>
 </Box>
