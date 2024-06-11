@@ -24,6 +24,7 @@ const { Content } = await Astro.props.gig.render();
 
   <Box as="section" className="flex gap-0.5">
     <GigDate startDate={startDate} endDate={endDate} />
+    <Type as="span" className="capitalize italic">&bullet;</Type>
     <Type as="p" className="capitalize italic">{jobType}</Type>
   </Box>
 
