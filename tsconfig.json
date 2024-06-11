@@ -21,6 +21,7 @@
     "/.vercel",
     "/node_modules",
     "/dist",
+    "/.astro",
     "/public",
     "*.d.ts"
   ]
