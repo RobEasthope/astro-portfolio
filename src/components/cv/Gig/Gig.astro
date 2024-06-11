@@ -22,9 +22,9 @@ const { Content } = await Astro.props.gig.render();
     <ExternalLink href={employerUrl}>{employer}</ExternalLink> / {jobTitle}
   </Type>
 
-  <Box as="section" className="flex">
+  <Box as="section" className="flex gap-0.5">
     <GigDate startDate={startDate} endDate={endDate} />
-    <Type as="p">{jobType}</Type>
+    <Type as="p" className="capitalize italic">{jobType}</Type>
   </Box>
 
   <Prose as="section"> <Content /></Prose>
