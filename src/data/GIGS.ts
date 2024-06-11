@@ -488,7 +488,7 @@ export const GIGS = [
     jobType: "contract",
   },
   {
-    jobTitle: "React/Wordpress developer",
+    jobTitle: "React/WordPress developer",
     employer: "Prescient Healthcare Group",
     employerUrl: "https://prescienthg.com/",
     jobType: null,
@@ -497,7 +497,7 @@ export const GIGS = [
   },
   {
     endDate: "2017-03-10",
-    jobTitle: "React/Wordpress developer",
+    jobTitle: "React/WordPress developer",
     employer: "Prescient Healthcare Group",
     employerUrl: "https://prescienthg.com/",
     jobType: "contract",
@@ -532,11 +532,11 @@ export const GIGS = [
     jobType: null,
     startDate: "2016-09-07",
     endDate: "2016-10-21",
-    jobTitle: "Wordpress developer",
+    jobTitle: "WordPress developer",
     employer: "?What If! Innovation",
   },
   {
-    jobTitle: "Wordpress developer",
+    jobTitle: "WordPress developer",
     employer: "?What If! Innovation",
     employerUrl: "https://whatifinnovation.com/",
     jobType: "contract",
@@ -588,7 +588,7 @@ export const GIGS = [
     jobType: "contract",
     startDate: "2016-04-18",
     endDate: "2016-05-10",
-    jobTitle: "Wordpress developer",
+    jobTitle: "WordPress developer",
     employer: "H+K Strategies (formally Bisqit)",
   },
   {
@@ -596,7 +596,7 @@ export const GIGS = [
     jobType: "contract",
     startDate: "2016-02-15",
     endDate: "2016-02-19",
-    jobTitle: "Wordpress developer",
+    jobTitle: "WordPress developer",
     employer: "River Digital",
   },
   {

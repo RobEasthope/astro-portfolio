@@ -13,7 +13,11 @@ const aboutBlurb = indexSections.find(
 ---
 
 <TwoColContainer heading="About">
-  <Prose as="section">
-    {aboutBlurb && <MarkdownRender markdown={aboutBlurb} />}
-  </Prose>
+  {
+    aboutBlurb && (
+      <Prose as="section">
+        <MarkdownRender markdown={aboutBlurb} />
+      </Prose>
+    )
+  }
 </TwoColContainer>
