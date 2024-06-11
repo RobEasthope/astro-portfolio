@@ -7,7 +7,13 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind({
-    applyBaseStyles: false
-  }), mdx(), robotsTxt()]
+  site: "https://robeasthope.com",
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false
+    }),
+    mdx(),
+    robotsTxt()
+  ]
 });
