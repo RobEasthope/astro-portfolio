@@ -10,6 +10,8 @@ import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
 import { Prose } from "@/components/_base/Prose/Prose";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
+import thumbnailAsset from "@/assets/ambr/ambr-thumbnail.png";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -54,6 +56,11 @@ const {
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
+      <AstroImage
+        src={thumbnailAsset}
+        alt={title}
+        className="h-2 w-2 rounded-full object-cover"
+      />
       {
         title && (
           <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
