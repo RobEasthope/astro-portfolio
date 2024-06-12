@@ -56,11 +56,16 @@ const {
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
-      <AstroImage
-        src={thumbnailAsset}
-        alt={title}
-        className="h-2 w-2 rounded-full object-cover"
-      />
+      {
+        thumbnailAsset && (
+          <AstroImage
+            src={thumbnailAsset}
+            alt={title}
+            className="h-4 w-4 rounded-full object-cover mx-auto mb-2"
+          />
+        )
+      }
+
       {
         title && (
           <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
