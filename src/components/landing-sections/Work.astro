@@ -6,6 +6,8 @@ import { Box } from "@/components/_base/Box/Box";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
 import { Type } from "@/components/_base/Type/Type";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
+import AstroImage from "@/components/_base/AstroImage/AstroImage.astro";
+import Image from "astro/components/Image.astro";
 
 const listedProjects = await getCollection("work");
 const listedProjectsByDate = listedProjects.sort((a, b) => {
@@ -18,19 +20,35 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
 <TwoColContainer heading="Work">
   <Box
     as="ul"
-    className="grid grid-cols-1 gap-x-1 gap-y-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-1 md:gap-x-2 md:gap-y-1 lg:grid-cols-2"
+    className="grid grid-cols-1 gap-x-1 gap-y-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-1 md:gap-x-2 md:gap-y-1 lg:grid-cols-2"
   >
     {
       listedProjectsByDate?.map((project) => (
         <Type as="li">
           <InternalLink
             href={project.data.url}
-            className="flex h-full flex-col"
+            className="flex h-full flex-row items-start gap-0.5"
           >
-            <Type as="div">{project.data.title}</Type>
-            <Type as="div" className="text-sm italic">
-              {project.data.description}
-            </Type>
+            <Box as="div" className="flex items-center">
+              {project.data.logo && (
+                <Image
+                  src={project.data.logo}
+                  alt={project.data.title}
+                  width={100}
+                  height={100}
+                  class="h-2 w-2 rounded-full object-cover"
+                />
+              )}
+            </Box>
+            <Box as="div">
+              <Type as="h3" className={project.data.logo && "mt-0.25"}>
+                {project.data.title}
+              </Type>
+
+              <Type as="div" className="text-sm italic">
+                {project.data.description}
+              </Type>
+            </Box>
           </InternalLink>
         </Type>
       ))
