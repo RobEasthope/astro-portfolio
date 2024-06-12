@@ -36,7 +36,7 @@ export default {
         terracotta: "hsl(var(--terracotta))",
 
         // UI colours
-        "content-bkg": "var(--sage-2)",
+        "content-bkg": "var(--gray-2)",
         typography: "var(--sage-12)",
         link: "hsl(var(--terracotta))",
         decoration: "var(--ink-2)",
