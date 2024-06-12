@@ -27,9 +27,9 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
         <Type as="li">
           <InternalLink
             href={project.data.url}
-            className="flex h-full flex-col"
+            className="flex h-full flex-row items-start gap-0.5"
           >
-            <Box as="div" className="flex items-center gap-1">
+            <Box as="div" className="flex items-center">
               {project.data.logo && (
                 <Image
                   src={project.data.logo}
@@ -39,12 +39,16 @@ const listedProjectsByDate = listedProjects.sort((a, b) => {
                   class="h-2 w-2 rounded-full object-cover"
                 />
               )}
-
-              <Type as="div">{project.data.title}</Type>
             </Box>
-            <Type as="div" className="text-sm italic ml-3">
-              {project.data.description}
-            </Type>
+            <Box as="div">
+              <Type as="h3" className={project.data.logo && "mt-0.25"}>
+                {project.data.title}
+              </Type>
+
+              <Type as="div" className="text-sm italic">
+                {project.data.description}
+              </Type>
+            </Box>
           </InternalLink>
         </Type>
       ))
