@@ -1,6 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import tailwindTypography from "@tailwindcss/typography";
 import tailwindcssRadixColors from "tailwindcss-radix-colors";
+import { a } from "vitest/dist/suite-IbNSsUWN.js";
 import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
 // Handle fluid spacing with clamp function
@@ -36,8 +37,8 @@ export default {
         terracotta: "hsl(var(--terracotta))",
 
         // UI colours
-        "content-bkg": "var(--gray-1)",
-        typography: "rgb(21, 23, 24)",
+        "content-bkg": "var(--gray-2)",
+        typography: "var(--sage-12)",
         link: "hsl(var(--terracotta))",
         decoration: "var(--ink-2)",
 
@@ -187,6 +188,9 @@ export default {
       typography: {
         DEFAULT: {
           css: {
+            a: {
+              color: "var(--sage-12)",
+            },
             ul: {
               paddingLeft: "1.375em",
             },
