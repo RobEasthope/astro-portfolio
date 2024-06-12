@@ -7,16 +7,16 @@ import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColC
 
 const indexSections = await getCollection("landing");
 
-const aboutBlurb = indexSections.find(
-  (section) => section.slug === "about-blurb",
+const contactBlurb = indexSections.find(
+  (section) => section.slug === "contact-blurb",
 );
 ---
 
-<TwoColContainer heading="About">
+<TwoColContainer heading="Get in touch">
   {
-    aboutBlurb && (
+    contactBlurb && (
       <Prose as="section">
-        <MarkdownRender markdown={aboutBlurb} />
+        <MarkdownRender markdown={contactBlurb} />
       </Prose>
     )
   }

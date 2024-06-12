@@ -10,11 +10,6 @@ const workCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...WorkSchemaDataProps,
-      thumbnailImage: image()
-        .refine((img) => img.width >= 64, {
-          message: "Cover image must be at least 64 pixels wide!",
-        })
-        .optional(),
     }),
 });
 

@@ -104,7 +104,7 @@ export const TOOLS = {
     url: "https://zod.dev/",
   },
   WORDPRESS: {
-    name: "Wordpress",
+    name: "WordPress",
     url: "https://wordpress.org/",
   },
   DAY_JS: {

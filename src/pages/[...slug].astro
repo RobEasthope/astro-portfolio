@@ -3,7 +3,7 @@
 import { getCollection, z } from "astro:content";
 import { WorkSchemaProps } from "@/schemas/work.schema";
 import type { Render } from "astro:content";
-import type { ImageMetadata } from "astro";
+import Image from "astro/components/Image.astro";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 import { Box } from "@/components/_base/Box/Box";
@@ -22,9 +22,7 @@ export async function getStaticPaths() {
 interface Props {
   entry: {
     slug: string;
-    data: z.infer<typeof WorkSchemaProps> & {
-      thumbnailImage: ImageMetadata;
-    };
+    data: z.infer<typeof WorkSchemaProps>;
     render(): Render[".mdx"];
   };
 }
@@ -45,15 +43,28 @@ const {
   repoUrl,
   tools,
   writtenDate,
+  logo,
 } = Astro.props.entry.data;
 ---
 
-<StandardPage title={title} description={description}>
+<StandardPage title={`${title} | Rob Easthope`} description={description}>
   <Box as="div" className="mx-auto px-1 py-2 md:px-2 md:py-4 lg:py-6">
     <Box
       as="div"
       className="mx-auto mb-1 flex max-w-prose flex-col justify-center"
     >
+      {
+        logo && (
+          <Image
+            src={logo}
+            alt={title}
+            width={400}
+            height={400}
+            class="mx-auto mb-2 h-4 w-4 rounded-full object-cover"
+          />
+        )
+      }
+
       {
         title && (
           <Type as="h1" className="mb-0.5 text-center text-2xl leading-none">
