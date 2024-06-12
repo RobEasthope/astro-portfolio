@@ -1,6 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import tailwindTypography from "@tailwindcss/typography";
 import tailwindcssRadixColors from "tailwindcss-radix-colors";
+import { a } from "vitest/dist/suite-IbNSsUWN.js";
 import { fluidTypeSize } from "./src/utils/fluidTypeSize";
 
 // Handle fluid spacing with clamp function
@@ -187,6 +188,9 @@ export default {
       typography: {
         DEFAULT: {
           css: {
+            a: {
+              color: "var(--sage-12)",
+            },
             ul: {
               paddingLeft: "1.375em",
             },
