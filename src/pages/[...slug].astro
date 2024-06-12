@@ -23,9 +23,7 @@ export async function getStaticPaths() {
 interface Props {
   entry: {
     slug: string;
-    data: z.infer<typeof WorkSchemaProps> & {
-      logo: ImageMetadata;
-    };
+    data: z.infer<typeof WorkSchemaProps>;
     render(): Render[".mdx"];
   };
 }
