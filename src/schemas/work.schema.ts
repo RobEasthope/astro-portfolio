@@ -17,7 +17,6 @@ export const WorkSchemaDataProps = {
   writtenDate: z.string(),
   startDate: z.string(),
   endDate: z.string(),
-  logo: z.string().optional(),
 };
 
 export const WorkSchemaProps = z.object({ ...WorkSchemaDataProps });

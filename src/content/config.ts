@@ -10,6 +10,9 @@ const workCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...WorkSchemaDataProps,
+      logo: image().refine((img) => img.width >= 800, {
+        message: "Logo image must be at least 800 pixels wide!",
+      }),
     }),
 });
 
