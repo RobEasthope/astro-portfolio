@@ -10,7 +10,6 @@ import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
 import { Prose } from "@/components/_base/Prose/Prose";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
-import { Diamond } from "@/components/decoration/Diamond/Diamond";
 
 export async function getStaticPaths() {
   const work = await getCollection("work");
@@ -114,12 +113,9 @@ const {
     >
       {
         projectUrlTitle && (
-          <>
-            <Type as="p" className="text-center">
-              <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
-            </Type>
-            <Diamond className="my-1" />
-          </>
+          <Type as="p" className="text-center">
+            <ExternalLink href={projectUrl}>{projectUrlTitle}</ExternalLink>
+          </Type>
         )
       }
 
