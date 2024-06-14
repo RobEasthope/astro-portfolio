@@ -1,5 +1,6 @@
 import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
+import MuxPlayer from "@mux/mux-player-react/lazy";
 
 export function MuxVideo({ videoID, caption }: { videoID: string, caption: string }) {
   return (<Box as="section" breakout blockSpacing>
