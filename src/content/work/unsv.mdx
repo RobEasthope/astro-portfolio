@@ -15,6 +15,8 @@ tools: "Next.js, Sanity, Mux, ActionKit, Vercel"
 ---
 
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import Gallery from "../../components/blocks/Gallery/Gallery.astro";
+import landingAsset from "../../assets/unsv/Verified Combo Shot.png";
 
 Verified is a <ExternalLink href="https://www.un.org/en/coronavirus/%E2%80%98verified%E2%80%99-initiative-aims-flood-digital-space-facts-amid-covid-19-crisis">United Nations initiative</ExternalLink>, in collaboration with Purpose, to provide life-saving information, fact-based advice and stories as the world copes with the coronavirus pandemic.
 
@@ -27,3 +29,14 @@ This SSG Next.js app features:
 - A bespoke Sanity headless CMS studio serving all text content and image assets
 - MUX headless video support integrated via the Sanity studio
 - ActionKit newsletter sign up and unsubscribe functionality
+
+<Gallery
+  images={[
+    {
+      image: landingAsset,
+      alt: "Share Verified content in multiple languages",
+    },
+  ]}
+  columns={1}
+  className="mt-2"
+/>
