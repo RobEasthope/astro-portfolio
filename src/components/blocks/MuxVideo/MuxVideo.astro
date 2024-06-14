@@ -13,13 +13,13 @@ export type MuxVideoProps = {
 const { videoID, caption, className } = Astro.props as MuxVideoProps;
 ---
 
-  <Box as="figure" className="mx-auto">
 <Box
   as="section"
   className={cn("sm:px-2 md:px-3", className)}
   breakout
   blockSpacing
 >
+  <Box as="figure" className="mx-auto max-w-wide-content">
     <MuxPlayer
       playbackId={videoID}
       metadata={{
