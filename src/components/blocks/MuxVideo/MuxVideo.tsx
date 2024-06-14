@@ -21,11 +21,13 @@ export function MuxVideo({ videoID, caption }: MuxVideoProps) {
           streamType="on-demand"
           client:load
         />
-        <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
-          <Type as="figcaption" className="text-gray-600 text-sm italic ">
-            {caption}
-          </Type>
-        </Box>
+        {caption && (
+          <Box as="div" className="mx-auto sm:max-w-lg lg:max-w-5xl">
+            <Type as="figcaption" className="text-gray-600 text-sm italic ">
+              {caption}
+            </Type>
+          </Box>
+        )}
       </Box>
     </Box>
   );
