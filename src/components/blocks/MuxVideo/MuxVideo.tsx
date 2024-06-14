@@ -2,13 +2,12 @@ import { Box } from "@/components/_base/Box/Box";
 import { Type } from "@/components/_base/Type/Type";
 import MuxPlayer from "@mux/mux-player-react/lazy";
 
-export function MuxVideo({
-  videoID,
-  caption,
-}: {
+export type MuxVideoProps = {
   videoID: string;
   caption: string;
-}) {
+};
+
+export function MuxVideo({ videoID, caption }: MuxVideoProps) {
   return (
     <Box as="section" breakout blockSpacing>
       <Box as="figure" className="mx-auto">
