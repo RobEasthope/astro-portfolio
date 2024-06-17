@@ -1,6 +1,5 @@
 import { Box } from "@/components/_base/Box/Box";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
-import { Prose } from "@/components/_base/Prose/Prose";
 import { Type } from "@/components/_base/Type/Type";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 import { GigDate } from "@/components/cv/GigDate/GigDate";
@@ -11,7 +10,7 @@ export function Education() {
     <TwoColContainer heading="Education">
       <Box
         as="div"
-        className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start"
+        className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start print:max-w-full print:flex-row print:items-start print:gap-3"
       >
         {EDUCATION.map((edu) => (
           <Box as="article" key={edu.name}>

@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 
-import { Diamond } from "@/components/decoration/Diamond/Diamond";
 import { cn } from "@/utils/tailwind";
+import { FaSquareFull } from "react-icons/fa";
 
 const DiamondPageBreak = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
@@ -15,11 +15,11 @@ const DiamondPageBreak = React.forwardRef<
       className,
     )}
   >
-    <div className="h-[1px] w-1/2 bg-gray-6" />
+    <hr className="h-[1px] w-1/2 bg-gray-6 print:h-[1pt] print:bg-typography" />
 
-    <Diamond />
+    <FaSquareFull className="rotate-45 text-[0.5rem]" />
 
-    <div className="h-[1px] w-1/2 bg-gray-6" />
+    <hr className="h-[1px] w-1/2 bg-gray-6 print:h-[1pt] print:bg-typography" />
   </div>
 ));
 DiamondPageBreak.displayName = SeparatorPrimitive.Root.displayName;
