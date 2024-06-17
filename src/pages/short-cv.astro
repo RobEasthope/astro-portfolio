@@ -1,0 +1,40 @@
+---
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from "astro:content";
+import Gig from "@/components/cv/Gig/Gig.astro";
+import { CVHeader } from "@/components/cv/CVHeader/CVHeader";
+import { Box } from "@/components/_base/Box/Box";
+import StandardPage from "@/layouts/StandardPage.astro";
+import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
+import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Type } from "@/components/_base/Type/Type";
+
+const gigs = await getCollection("gigs");
+const allGigsByDate = gigs.sort((a, b) => {
+  return (
+    new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
+  );
+});
+
+const recentGigs = allGigsByDate.slice(0, 5);
+---
+
+<StandardPage title="CV | Rob Easthope">
+  <Box as="div" className="mx-auto px-1 py-1.5 md:px-2 md:py-2 lg:py-3">
+    <CVHeader />
+
+    <DiamondPageBreak />
+
+    <TwoColContainer heading="Experience">
+      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
+        {recentGigs?.map((gig) => <Gig gig={gig} />)}
+      </Box>
+      <Type as="p" className="mt-2 italic"
+        ><InternalLink href="/full-cv"
+          >See the full CV for roles from 2012 - 2022</InternalLink
+        ></Type
+      >
+    </TwoColContainer>
+  </Box>
+</StandardPage>
