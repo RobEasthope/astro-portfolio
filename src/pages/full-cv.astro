@@ -7,6 +7,7 @@ import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
+import { Education } from "@/components/cv/Education/Education";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -27,5 +28,9 @@ const allGigsByDate = gigs.sort((a, b) => {
         {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
       </Box>
     </TwoColContainer>
+
+    <DiamondPageBreak />
+
+    <Education />
   </Box>
 </StandardPage>

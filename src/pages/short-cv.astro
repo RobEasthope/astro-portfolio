@@ -9,6 +9,7 @@ import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColC
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
 import { Type } from "@/components/_base/Type/Type";
+import { Education } from "@/components/cv/Education/Education";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -36,5 +37,9 @@ const recentGigs = allGigsByDate.slice(0, 5);
         ></Type
       >
     </TwoColContainer>
+
+    <DiamondPageBreak />
+
+    <Education />
   </Box>
 </StandardPage>
