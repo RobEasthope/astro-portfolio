@@ -28,5 +28,5 @@ const { Content } = await Astro.props.gig.render();
     <Type as="p" className="capitalize italic">{jobType}</Type>
   </Box>
 
-  <Prose as="section"> <Content /></Prose>
+  <Prose as="section" className="print:max-w-full"> <Content /></Prose>
 </Box>

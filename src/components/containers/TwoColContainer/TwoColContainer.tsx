@@ -18,13 +18,13 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
         <Box as="div" className="mb-1 md:w-full md:max-w-[44ch] print:mb-0">
           <Type
             as="h2"
-            className="text-center text-2xl leading-none md:text-left print:text-left print:text-lg"
+            className="text-center text-2xl leading-none md:text-left print:text-lg"
           >
             {heading}
           </Type>
         </Box>
         <Diamond className="flex md:hidden" />
-        <Box as="div" className="w-full max-w-prose">
+        <Box as="div" className="w-full max-w-prose print:max-w-full">
           {children}
         </Box>
       </Box>

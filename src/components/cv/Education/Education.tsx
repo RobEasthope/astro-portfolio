@@ -10,7 +10,7 @@ export function Education() {
     <TwoColContainer heading="Education">
       <Box
         as="div"
-        className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start print:items-start"
+        className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start print:max-w-full print:flex-row print:items-start print:gap-3"
       >
         {EDUCATION.map((edu) => (
           <Box as="article" key={edu.name}>

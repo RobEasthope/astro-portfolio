@@ -31,7 +31,10 @@ const recentGigs = allGigsByDate.slice(0, 7);
     <DiamondPageBreak />
 
     <TwoColContainer heading="Experience">
-      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-1">
+      <Box
+        as="ul"
+        className="flex w-full max-w-prose flex-col gap-1.5 print:max-w-full print:gap-1"
+      >
         {recentGigs?.map((gig) => <Gig gig={gig} />)}
       </Box>
       <Type as="p" className="mt-2 italic print:hidden"
