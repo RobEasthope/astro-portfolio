@@ -32,7 +32,7 @@ export function CVHeader() {
 
         <Box
           as="div"
-          className="flex flex-wrap justify-center gap-0.5 md:justify-start print:gap-0.25"
+          className="flex flex-wrap justify-center gap-0.5 md:justify-start print:hidden"
         >
           <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
             LinkedIn<span className="hidden print:inline">:</span>
@@ -45,7 +45,7 @@ export function CVHeader() {
             Github<span className="hidden print:inline">:</span>
             <span className="hidden print:inline"> GitHub </span>
           </ExternalLink>
-          <Type as="span" className="mx-0.125 print:hidden">
+          <Type as="span" className="mx-0.125">
             {" & "}
           </Type>
           <ExternalLink href="https://www.robeasthope.com">
