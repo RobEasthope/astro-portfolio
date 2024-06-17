@@ -13,9 +13,12 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
     <Box as="section" className="w-full py-2 md:py-3 lg:py-6 print:py-2">
       <Box
         as="div"
-        className="mx-auto flex w-full max-w-prose flex-col justify-center gap-1 md:max-w-7xl md:flex-row md:gap-2 print:mx-0 print:max-w-full"
+        className="mx-auto flex w-full max-w-prose flex-col justify-center gap-1 md:max-w-7xl md:flex-row md:gap-2 print:mx-0 print:max-w-full print:flex-row print:gap-3"
       >
-        <Box as="div" className="mb-1 md:w-full md:max-w-[44ch] print:mb-0">
+        <Box
+          as="div"
+          className="mb-1 w-full md:max-w-[44ch] print:mb-0 print:w-1/6"
+        >
           <Type
             as="h2"
             className="text-center text-2xl leading-none md:text-left print:text-lg"
