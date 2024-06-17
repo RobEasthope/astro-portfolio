@@ -21,7 +21,7 @@ export function Diamond({
         `flex h-1 items-center justify-center text-center text-lg text-decoration`,
         `mt-${spacingTop}`,
         `mb-${spacingBottom}`,
-        "print:my-0.5",
+        "print:hidden",
         className,
       )}
     >
