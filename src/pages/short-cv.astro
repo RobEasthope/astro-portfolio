@@ -7,6 +7,8 @@ import { Box } from "@/components/_base/Box/Box";
 import StandardPage from "@/layouts/StandardPage.astro";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 import { DiamondPageBreak } from "@/components/decoration/DiamondPageBreak/DiamondPageBreak";
+import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
+import { Type } from "@/components/_base/Type/Type";
 
 const gigs = await getCollection("gigs");
 const allGigsByDate = gigs.sort((a, b) => {
@@ -28,6 +30,11 @@ const recentGigs = allGigsByDate.slice(0, 5);
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
         {recentGigs?.map((gig) => <Gig gig={gig} />)}
       </Box>
+      <Type as="p" className="mt-2 italic"
+        ><InternalLink href="/full-cv"
+          >See the full CV for roles from 2012 - 2022</InternalLink
+        ></Type
+      >
     </TwoColContainer>
   </Box>
 </StandardPage>
