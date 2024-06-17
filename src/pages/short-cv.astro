@@ -14,6 +14,8 @@ const allGigsByDate = gigs.sort((a, b) => {
     new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime()
   );
 });
+
+const recentGigs = allGigsByDate.slice(0, 5);
 ---
 
 <StandardPage title="CV | Rob Easthope">
@@ -24,7 +26,7 @@ const allGigsByDate = gigs.sort((a, b) => {
 
     <TwoColContainer heading="Experience">
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
-        {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
+        {recentGigs?.map((gig) => <Gig gig={gig} />)}
       </Box>
     </TwoColContainer>
   </Box>
