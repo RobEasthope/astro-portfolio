@@ -34,10 +34,13 @@ const recentGigs = allGigsByDate.slice(0, 5);
       <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-1">
         {recentGigs?.map((gig) => <Gig gig={gig} />)}
       </Box>
-      <Type as="p" className="mt-2 italic"
+      <Type as="p" className="mt-2 italic print:hidden"
         ><InternalLink href="/full-cv"
           >See the full CV for roles from 2012 - 2022</InternalLink
         ></Type
+      >
+      <Type as="p" className="mt-2 hidden italic print:block"
+        >See LinkedIn for a full listing of all roles</Type
       >
     </TwoColContainer>
 
