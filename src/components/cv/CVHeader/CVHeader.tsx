@@ -11,7 +11,7 @@ export function CVHeader() {
         as="div"
         className="mx-auto flex max-w-prose flex-col items-center gap-0.5 md:items-start"
       >
-        <Type as="h1" className="text-lg font-bold">
+        <Type as="h1" className="text-lg">
           Rob Easthope
         </Type>
         <Box
