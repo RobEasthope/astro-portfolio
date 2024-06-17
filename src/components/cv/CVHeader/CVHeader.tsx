@@ -9,7 +9,7 @@ export function CVHeader() {
     <TwoColContainer heading="">
       <Box
         as="div"
-        className="mx-auto flex max-w-prose flex-col items-center gap-0.5 md:items-start"
+        className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start print:items-start print:gap-0"
       >
         <Type as="h1" className="text-lg">
           Rob Easthope

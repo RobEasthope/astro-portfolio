@@ -15,7 +15,7 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
         as="div"
         className="mx-auto flex w-full max-w-prose flex-col justify-center gap-1 md:max-w-7xl md:flex-row md:gap-2 print:mx-0 print:max-w-full"
       >
-        <Box as="div" className="mb-1 md:w-full md:max-w-[44ch]">
+        <Box as="div" className="mb-1 md:w-full md:max-w-[44ch] print:mb-0">
           <Type
             as="h2"
             className="text-center text-2xl leading-none md:text-left print:text-left print:text-lg"
