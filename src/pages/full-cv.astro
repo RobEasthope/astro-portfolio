@@ -24,7 +24,7 @@ const allGigsByDate = gigs.sort((a, b) => {
     <DiamondPageBreak />
 
     <TwoColContainer heading="Experience">
-      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-0.5">
+      <Box as="ul" className="flex max-w-prose flex-col gap-1.5 print:gap-1">
         {allGigsByDate?.map((gig) => <Gig gig={gig} />)}
       </Box>
     </TwoColContainer>
