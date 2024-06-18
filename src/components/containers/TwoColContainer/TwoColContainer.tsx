@@ -17,7 +17,7 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
       >
         <Box
           as="div"
-          className="mb-1 w-full md:max-w-[44ch] print:mb-0 print:w-1/6"
+          className="mb-1 w-full md:flex md:max-w-[44ch] md:flex-shrink print:mb-0 print:w-1/6"
         >
           <Type
             as="h2"
