@@ -9,6 +9,23 @@ const typeVariants = cva(
     variants: {
       variant: {
         base: "text-base",
+        "landing-heading": "",
+        "section-heading": "",
+
+        "work-heading": "",
+
+        "work-thumbnail-subheading": "text-sm italic",
+
+        // Navigation
+        "header-links": "",
+        copyright: "",
+
+        // CV
+        "cv-name": "",
+        "cv-details": "",
+        "cv-section-heading": "",
+        "gig-heading": "",
+        "gig-subheading": "",
       },
     },
     defaultVariants: {
