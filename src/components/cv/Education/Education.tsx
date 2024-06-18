@@ -21,10 +21,10 @@ export function Education() {
             <Type
               as="p"
               variant="gig-subheading"
-              className="flex w-full gap-0.5"
+              className="flex w-full gap-0.5 print:flex-col print:gap-0"
             >
               {edu.name}
-              <span>•</span>
+              <span className="print:hidden">•</span>
               <GigDate startDate={edu.startDate} endDate={edu.endDate} />
             </Type>
           </Box>
