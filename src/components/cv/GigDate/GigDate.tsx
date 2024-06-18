@@ -1,7 +1,5 @@
 import type { GigSchemaProps } from "@/schemas/gig.schema";
 import type { z } from "astro:content";
-import { Box } from "@/components/_base/Box/Box";
-import { Type } from "@/components/_base/Type/Type";
 
 export type GigDateProps = {
   startDate: z.infer<typeof GigSchemaProps>["startDate"];
@@ -31,10 +29,10 @@ export function GigDate({ startDate, endDate = new Date() }: GigDateProps) {
   const endYear = parsedEndDate.getFullYear();
 
   return (
-    <Type as="span" className="inline-flex flex-wrap">
+    <span className="inline-flex flex-wrap">
       {startMonth} {startYear !== endYear && startYear}
       {startDateFull !== endDateFull ? <>&nbsp;&ndash;&nbsp;</> : <>&nbsp;</>}
       {startDateFull !== endDateFull && endMonth} {endYear}
-    </Type>
+    </span>
   );
 }
