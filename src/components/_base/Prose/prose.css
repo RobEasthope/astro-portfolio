@@ -10,6 +10,18 @@
   margin-bottom: 0;
 }
 
+.prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .prose ul {
   list-style-type: "—";
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.prose ul li,
+.prose ol li {
+  margin-top: 0;
+  margin-bottom: 0;
 }

@@ -9,8 +9,8 @@ const typeVariants = cva(
     variants: {
       variant: {
         // General
-        base: "text-base",
-        "section-heading": "text-2xl leading-none print:text-lg",
+        base: "text-base print:text-[11pt]",
+        "section-heading": "text-2xl leading-none print:text-[14pt]",
 
         // Landing
         "landing-heading": "text-xl leading-tight",
@@ -22,8 +22,8 @@ const typeVariants = cva(
         "work-thumbnail-subheading": "text-sm italic",
 
         // CV
-        "cv-name": "text-lg",
-        "gig-heading": "font-bold",
+        "cv-name": "text-lg print:text-[14pt]",
+        "gig-heading": "font-bold print:text-[12pt]",
         "gig-subheading": "italic",
 
         // Navigation

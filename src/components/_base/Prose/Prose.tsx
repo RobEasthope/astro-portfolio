@@ -15,7 +15,13 @@ export function Prose({ as = "div", className, children }: ProseProps) {
   }
 
   return (
-    <Box as={as} className={cn("prose text-base text-typography", className)}>
+    <Box
+      as={as}
+      className={cn(
+        "prose text-base text-typography print:text-[11pt]",
+        className,
+      )}
+    >
       {children}
     </Box>
   );
