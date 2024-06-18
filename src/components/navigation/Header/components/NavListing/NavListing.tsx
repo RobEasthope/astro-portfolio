@@ -14,7 +14,7 @@ export function NavListing({ links }: NavListingProps) {
   return (
     <Box as="ul" className="flex flex-row gap-1 sm:gap-1.5 xl:gap-2">
       {links?.map((link) => (
-        <Type as="li" key={uuidv4()} className="text-base">
+        <Type as="li" key={uuidv4()}>
           <SuperLink href={link?.href} type={link?.type}>
             {link?.title}
           </SuperLink>

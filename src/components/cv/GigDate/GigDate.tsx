@@ -31,19 +31,10 @@ export function GigDate({ startDate, endDate = new Date() }: GigDateProps) {
   const endYear = parsedEndDate.getFullYear();
 
   return (
-    <Box as="div" className="flex flex-wrap italic">
-      <Type as="p">
-        {startMonth} {startYear !== endYear && startYear}
-      </Type>
-      {startDateFull !== endDateFull ? (
-        <Type as="span">&nbsp;&ndash;&nbsp;</Type>
-      ) : (
-        <>&nbsp;</>
-      )}
-
-      <Type as="p">
-        {startDateFull !== endDateFull && endMonth} {endYear}
-      </Type>
-    </Box>
+    <Type as="span" className="inline-flex flex-wrap">
+      {startMonth} {startYear !== endYear && startYear}
+      {startDateFull !== endDateFull ? <>&nbsp;&ndash;&nbsp;</> : <>&nbsp;</>}
+      {startDateFull !== endDateFull && endMonth} {endYear}
+    </Type>
   );
 }

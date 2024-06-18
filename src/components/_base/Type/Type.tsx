@@ -1,7 +1,47 @@
-import type { ReactNode } from "react";
 import { createElement } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn, stylesCheck } from "@/utils/tailwind";
 
-export type TypeProps = React.HTMLAttributes<HTMLDivElement> & {
+const typeVariants = cva(
+  // Base styles
+  null,
+  {
+    variants: {
+      variant: {
+        // General
+        base: "text-base",
+        "section-heading": "text-2xl leading-none print:text-lg",
+
+        // Landing
+        "landing-heading": "text-xl leading-tight",
+
+        // Project
+        "work-heading": "text-2xl leading-none",
+
+        // Project index
+        "work-thumbnail-subheading": "text-sm italic",
+
+        // CV
+        "cv-name": "text-lg",
+        "gig-heading": "font-bold",
+        "gig-subheading": "italic",
+
+        // Navigation
+        "header-links": "",
+
+        // Footer
+        copyright: "text-sm",
+      },
+    },
+    defaultVariants: {
+      variant: "base",
+    },
+  },
+);
+
+export interface TypeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof typeVariants> {
   as: // All valid HTML text elements
   | "h1"
     | "h2"
@@ -18,11 +58,15 @@ export type TypeProps = React.HTMLAttributes<HTMLDivElement> & {
     | "figcaption"
     | "q"
     | "li";
-  className?: string;
-  children: ReactNode;
-};
+}
 
-export function Type({ as = "p", className, children, ...rest }: TypeProps) {
+export function Type({
+  as = "p",
+  variant = "base",
+  className,
+  children,
+  ...rest
+}: TypeProps) {
   if (!children) {
     return null;
   }
@@ -30,7 +74,7 @@ export function Type({ as = "p", className, children, ...rest }: TypeProps) {
   return createElement(
     as,
     {
-      className,
+      className: stylesCheck(cn(typeVariants({ variant }), className)),
       ...rest,
     },
     children,
