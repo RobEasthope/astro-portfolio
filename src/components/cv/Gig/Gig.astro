@@ -18,15 +18,15 @@ const { Content } = await Astro.props.gig.render();
 ---
 
 <Box as="article">
-  <Type as="h4" className="font-bold">
+  <Type as="h4" variant="gig-heading">
     <ExternalLink href={employerUrl}>{employer}</ExternalLink> / {jobTitle}
   </Type>
 
-  <Box as="section" className="flex gap-0.5">
+  <Type as="p" variant="gig-subheading" className="flex w-full gap-0.5">
     <GigDate startDate={startDate} endDate={endDate} />
-    <Type as="span" className="capitalize italic">&bullet;</Type>
-    <Type as="p" className="capitalize italic">{jobType}</Type>
-  </Box>
+    &bullet;
+    <Type as="span" className="capitalize">{jobType}</Type>
+  </Type>
 
   <Prose as="section" className="print:max-w-full"> <Content /></Prose>
 </Box>

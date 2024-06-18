@@ -4,7 +4,7 @@ import { Box } from "@/components/_base/Box/Box";
 import { EmailLink } from "@/components/_base/EmailLink/EmailLink";
 import { TbChevronsDown } from "react-icons/tb";
 import { InternalLink } from "@/components/_base/InternalLink/InternalLink";
-import { Prose } from "@/components/_base/Prose/Prose";
+import { Type } from "@/components/_base/Type/Type";
 ---
 
 <Box
@@ -19,7 +19,7 @@ import { Prose } from "@/components/_base/Prose/Prose";
       as="section"
       className="mx-auto max-w-prose -translate-y-1.5 md:max-w-wide-content"
     >
-      <Prose as="h1" className="text-xl leading-tight">
+      <Type as="h1" variant="landing-heading">
         Hello there! I am Rob Easthope, a front end developer working on the
         web. <EmailLink
           emailAddress="hello@robeasthope.com"
@@ -28,7 +28,7 @@ import { Prose } from "@/components/_base/Prose/Prose";
           href="#about"
           className="text-inherit">about me</InternalLink
         > first.
-      </Prose>
+      </Type>
     </Box>
   </Box>
 

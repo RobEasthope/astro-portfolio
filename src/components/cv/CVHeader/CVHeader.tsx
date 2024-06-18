@@ -9,7 +9,7 @@ export function CVHeader() {
       as="div"
       className="mx-auto flex w-full max-w-prose flex-col items-center gap-0.5 py-2 text-center md:py-3 lg:py-6 print:gap-0 print:py-2"
     >
-      <Type as="h1" className="text-lg">
+      <Type as="h1" variant="cv-name">
         Rob Easthope
       </Type>
       <Box
