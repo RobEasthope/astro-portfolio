@@ -8,24 +8,29 @@ const typeVariants = cva(
   {
     variants: {
       variant: {
+        // General
         base: "text-base",
-        "landing-heading": "",
-        "section-heading": "",
+        "section-heading": "text-2xl leading-none print:text-lg",
 
-        "work-heading": "",
+        // Landing
+        "landing-heading": "text-xl leading-tight",
 
+        // Project
+        "work-heading": "text-2xl leading-none",
+
+        // Project index
         "work-thumbnail-subheading": "text-sm italic",
+
+        // CV
+        "cv-name": "text-lg",
+        "gig-heading": "font-bold",
+        "gig-subheading": "italic",
 
         // Navigation
         "header-links": "",
-        copyright: "",
 
-        // CV
-        "cv-name": "",
-        "cv-details": "",
-        "cv-section-heading": "",
-        "gig-heading": "",
-        "gig-subheading": "",
+        // Footer
+        copyright: "text-sm",
       },
     },
     defaultVariants: {
