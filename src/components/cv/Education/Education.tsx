@@ -18,15 +18,15 @@ export function Education() {
               <ExternalLink href={edu.url}>{edu.qualification}</ExternalLink>
             </Type>
 
-            <Box as="section" className="flex gap-0.5">
-              <Type as="p" className="capitalize italic">
-                {edu.name}
-              </Type>
-              <Type as="span" className="capitalize italic">
-                •
-              </Type>
+            <Type
+              as="p"
+              variant="gig-subheading"
+              className="flex w-full gap-0.5 print:flex-col print:gap-0"
+            >
+              {edu.name}
+              <span className="print:hidden">•</span>
               <GigDate startDate={edu.startDate} endDate={edu.endDate} />
-            </Box>
+            </Type>
           </Box>
         ))}
       </Box>
