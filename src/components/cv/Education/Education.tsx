@@ -34,7 +34,7 @@ export function Education() {
 
       <Box as="article" className="mt-1">
         <Type as="h4" className="font-bold">
-          CS2EO project
+          European Space Agency cs2eo project
         </Type>
 
         <Prose as="div" className="italic">
