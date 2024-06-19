@@ -32,7 +32,7 @@ export function Education() {
         ))}
       </Box>
 
-      <Box as="article" className="mt-1">
+      <Box as="article" className="mt-2">
         <Type as="h4" className="font-bold">
           European Space Agency cs2eo project
         </Type>
