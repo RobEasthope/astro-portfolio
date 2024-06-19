@@ -1,5 +1,6 @@
 import { Box } from "@/components/_base/Box/Box";
 import { ExternalLink } from "@/components/_base/ExternalLink/ExternalLink";
+import { Prose } from "@/components/_base/Prose/Prose";
 import { Type } from "@/components/_base/Type/Type";
 import { TwoColContainer } from "@/components/containers/TwoColContainer/TwoColContainer";
 import { GigDate } from "@/components/cv/GigDate/GigDate";
@@ -7,7 +8,7 @@ import { EDUCATION } from "@/data/EDUCATION";
 
 export function Education() {
   return (
-    <TwoColContainer heading="Education">
+    <TwoColContainer heading="Education & academic citations">
       <Box
         as="div"
         className="mx-auto flex max-w-prose flex-col items-center gap-1 md:items-start print:max-w-full print:flex-row print:items-start print:gap-3"
@@ -29,6 +30,20 @@ export function Education() {
             </Type>
           </Box>
         ))}
+      </Box>
+
+      <Box as="article" className="mt-1">
+        <Type as="h4" className="font-bold">
+          CS2EO project
+        </Type>
+
+        <Prose as="div" className="italic">
+          Ewart, M., Bizon, J., Alford, J., Easthope, R., Gourmelen, N., Horton,
+          A., Incatasciato, A., Parrinello, T., Bouffard, J., Di Bella, A.,
+          Goss, T., Michael, C., Meloni, M. 2022. cs2eo Version 3,{" "}
+          <ExternalLink href="http://cs2eo.org">http://cs2eo.org</ExternalLink>.
+          European Space Agency, 19/06/2024
+        </Prose>
       </Box>
     </TwoColContainer>
   );
