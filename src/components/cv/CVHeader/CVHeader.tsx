@@ -27,30 +27,6 @@ export function CVHeader() {
           07545 83 99 71
         </ExternalLink>
       </Box>
-
-      <Box
-        as="div"
-        className="flex flex-wrap justify-center gap-0.5 md:justify-start print:hidden"
-      >
-        <ExternalLink href="https://www.linkedin.com/in/rob-easthope/">
-          LinkedIn<span className="hidden print:inline">:</span>
-          <span className="hidden print:inline"> LinkedIn </span>
-        </ExternalLink>
-        <Type as="span" className="mx-0.125">
-          {" & "}
-        </Type>
-        <ExternalLink href="https://github.com/RobEasthope">
-          Github<span className="hidden print:inline">:</span>
-          <span className="hidden print:inline"> GitHub </span>
-        </ExternalLink>
-        <Type as="span" className="mx-0.125">
-          {" & "}
-        </Type>
-        <ExternalLink href="https://www.robeasthope.com">
-          Portfolio<span className="hidden print:inline">:</span>
-          <span className="hidden print:inline"> robeasthope.com </span>
-        </ExternalLink>
-      </Box>
     </Box>
   );
 }
