@@ -22,7 +22,7 @@ export function TwoColContainer({ heading, children }: TwoColContainerProps) {
           <Type
             as="h2"
             variant="section-heading"
-            className="text-center md:text-left"
+            className="text-center md:text-left print:text-left"
           >
             {heading}
           </Type>
